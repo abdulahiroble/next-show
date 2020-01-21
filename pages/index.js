@@ -15,15 +15,18 @@ const index = props => {
 
       <h2>Popular</h2>
       <div>
-        {props.movie.results.map(test => {
+        {props.movie.results.map(movies => {
           return (
             <ul className="list-group">
               <li className="list-group-item">
-                <h3> {test.title}</h3>
-                <em>{test.release_date}</em> <br />
-                <a href={test.poster_path}>img</a>
-                <div>{test.poster_path}</div>
-                <p>{test.overview}</p>
+                <h3> {movies.title}</h3>
+                <em>{movies.release_date}</em> <br /> <br />
+                <img
+                  src={`https://image.tmdb.org/t/p/w200${movies.poster_path}`}
+                  alt="poster"
+                />
+                <br /> <br />
+                <p>{movies.overview}</p>
               </li>
             </ul>
           );
@@ -41,6 +44,10 @@ const index = props => {
 index.getInitialProps = async function() {
   // const res = await fetch(
   //   "https://api.themoviedb.org/3/movie/550?api_key=3e5072126511096a6377f77c742f2864"
+  // );
+
+  // const res = await fetch(
+  //   "https://image.tmdb.org/t/p/w500/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg"
   // );
 
   const res = await fetch(
