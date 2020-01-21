@@ -12,9 +12,14 @@ const Layout = props => {
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"
         />
+        <script
+          src="https://kit.fontawesome.com/74cb01a65c.js"
+          crossorigin="anonymous"
+        ></script>
       </Head>
       <Nav />
       <div className="container">{props.children}</div>
+      <br />
       <Footer />
     </div>
   );
