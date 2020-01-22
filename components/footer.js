@@ -22,14 +22,14 @@ const footer = () => {
       >
         <li className="nav-item">
           <Link href="/">
-            <a className="nav-link" style={{ paddingRight: "10px" }}>
+            <a className="nav-link" style={{ paddingRight: "40px" }}>
               Home
             </a>
           </Link>
         </li>
         <li className="nav-item">
           <Link href="/profile">
-            <a className="nav-link" style={{ paddingRight: "10px" }}>
+            <a className="nav-link" style={{ paddingRight: "50px" }}>
               Profile
             </a>
           </Link>
@@ -45,12 +45,12 @@ const footer = () => {
         Copyright &copy;2020 <br /> Code and design by Abdulahi Roble
       </p>
       <br />
-      <ul
+      {/* <ul
         className="navbar-nav ml-auto"
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "flex-start"
+          justifyContent: "space-evenly"
         }}
       >
         <li className="nav-item">
@@ -66,17 +66,39 @@ const footer = () => {
           <i className="fab fa-twitter"></i>
           <i className="fas fa-code"></i>
         </li>
-      </ul>
+      </ul> */}
+      <div
+        className="container"
+        style={{
+          display: "flex",
+          justifyContent: "flex-end"
+        }}
+      >
+        <img
+          style={{ width: "60%", marginRight: "50px" }}
+          src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png"
+          alt=""
+        />
+        <div className="item">
+          <a href="https://www.instagram.com/abdulahicodes/" target="_blank">
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
+        <div className="item">
+          <a href="https://twitter.com/AbdulahiRoble" target="_blank">
+            <i
+              className="fab fa-twitter"
+              style={{ padding: "0 20px 0 20px" }}
+            ></i>
+          </a>
+        </div>
+        <div className="item">
+          <a href="https://github.com/abdulahiroble" target="_blank">
+            <i className="fas fa-code"></i>
+          </a>
+        </div>
+      </div>
       <br />
-      {/* <p style={{ color: "#d3d3d3" }}>
-        Copyright &copy;2020 <br /> Code and design by Abdulahi Roble
-      </p>
-      <br />
-      <img
-        style={{ width: "45%" }}
-        src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png"
-        alt=""
-      /> */}
     </footer>
   );
 };

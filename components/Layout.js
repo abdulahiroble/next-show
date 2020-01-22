@@ -15,6 +15,7 @@ const Layout = props => {
         <script
           src="https://kit.fontawesome.com/74cb01a65c.js"
           crossorigin="anonymous"
+          SameSite="Lax"
         ></script>
       </Head>
       <Nav />
