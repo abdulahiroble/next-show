@@ -16,6 +16,7 @@ class Movies extends Component {
           return (
             <ul className="list-group">
               <li className="list-group-item">
+                <div>{movies.vote_average}</div>
                 <h3> {movies.title}</h3>
                 <em>{movies.release_date}</em> <br /> <br />
                 <img
