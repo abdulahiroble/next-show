@@ -1,7 +1,6 @@
 import Fetch from "isomorphic-unfetch";
 import React from "react";
 import Layout from "../components/Layout";
-
 import Movies from "../components/Movies";
 
 const index = props => {
@@ -14,24 +13,10 @@ const index = props => {
       <h2>Upcoming</h2>
 
       <h2>Popular</h2>
-      <div>
-        {props.movie.results.map(movies => {
-          return (
-            <ul className="list-group">
-              <li className="list-group-item">
-                <h3> {movies.title}</h3>
-                <em>{movies.release_date}</em> <br /> <br />
-                <img
-                  src={`https://image.tmdb.org/t/p/w200${movies.poster_path}`}
-                  alt="poster"
-                />
-                <br /> <br />
-                <p>{movies.overview}</p>
-              </li>
-            </ul>
-          );
-        })}
-      </div>
+      <Movies movie={props.movie} />
+
+      {/* <div>{props.movie.total_results}</div> */}
+
       {console.log(props.movie)}
 
       <h2>Now Playing</h2>
