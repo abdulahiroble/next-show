@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Movies from "../components/Movies";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const index = props => {
   var settings = {
@@ -14,22 +15,25 @@ const index = props => {
   };
   return (
     <Layout>
+      {/* {console.log(props.popular)} */}
       <h2>Popular</h2>
       <Slider {...settings}>
         {props.popular.results.map(popularity => {
           return (
-            <ul className="list-group">
-              <li className="list-group-item">
-                <div>{popularity.vote_average}</div>
-                <h3> {popularity.title}</h3>
-                <em>{popularity.release_date}</em> <br /> <br />
-                <img
-                  src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                  alt="poster"
-                />
-                <br /> <br />
-                <p>{popularity.overview}</p>
-              </li>
+            <ul>
+              <Link href="#">
+                <li>
+                  <div>{popularity.vote_average}</div>
+                  <h3> {popularity.title}</h3>
+                  <em>{popularity.release_date}</em> <br /> <br />
+                  <img
+                    src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
+                    alt="poster"
+                  />
+                  <br /> <br />
+                  <p>{popularity.overview}</p>
+                </li>
+              </Link>
             </ul>
           );
         })}
@@ -38,8 +42,8 @@ const index = props => {
       <Slider {...settings}>
         {props.rated.results.map(rating => {
           return (
-            <ul className="list-group">
-              <li className="list-group-item">
+            <ul>
+              <li>
                 <div>{rating.vote_average}</div>
                 <h3> {rating.title}</h3>
                 <em>{rating.release_date}</em> <br /> <br />
@@ -54,12 +58,32 @@ const index = props => {
           );
         })}
       </Slider>
+      <h2>Now Playing</h2>
+      <Slider {...settings}>
+        {props.playing.results.map(play => {
+          return (
+            <ul>
+              <li>
+                <div>{play.vote_average}</div>
+                <h3> {play.title}</h3>
+                <em>{play.release_date}</em> <br /> <br />
+                <img
+                  src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
+                  alt="poster"
+                />
+                <br /> <br />
+                <p>{play.overview}</p>
+              </li>
+            </ul>
+          );
+        })}
+      </Slider>
       <h2>Upcoming</h2>
       <Slider {...settings}>
         {props.upcoming.results.map(soon => {
           return (
-            <ul className="list-group">
-              <li className="list-group-item">
+            <ul>
+              <li>
                 <div>{soon.vote_average}</div>
                 <h3> {soon.title}</h3>
                 <em>{soon.release_date}</em> <br /> <br />
@@ -69,26 +93,6 @@ const index = props => {
                 />
                 <br /> <br />
                 <p>{soon.overview}</p>
-              </li>
-            </ul>
-          );
-        })}
-      </Slider>
-      <h2>Now Playing</h2>
-      <Slider {...settings}>
-        {props.playing.results.map(playing => {
-          return (
-            <ul className="list-group">
-              <li className="list-group-item">
-                <div>{playing.vote_average}</div>
-                <h3> {playing.title}</h3>
-                <em>{playing.release_date}</em> <br /> <br />
-                <img
-                  src={`https://image.tmdb.org/t/p/w200${playing.poster_path}`}
-                  alt="poster"
-                />
-                <br /> <br />
-                <p>{playing.overview}</p>
               </li>
             </ul>
           );
@@ -128,7 +132,7 @@ index.getInitialProps = async function() {
     popular: popular,
     rated: rated,
     upcoming: upcoming,
-    playing: playing
+    playing
   };
 };
 
