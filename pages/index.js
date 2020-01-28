@@ -8,30 +8,42 @@ import Link from "next/link";
 const index = props => {
   var settings = {
     dots: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1
   };
   return (
     <Layout>
-      {/* {console.log(props.popular)} */}
+      {console.log(props.popular)}
       <h2>Popular</h2>
       <Slider {...settings}>
         {props.popular.results.map(popularity => {
           return (
             <ul>
               <Link href="#">
-                <li>
-                  <div>{popularity.vote_average}</div>
-                  <h3> {popularity.title}</h3>
-                  <em>{popularity.release_date}</em> <br /> <br />
+                <li style={{ listStyleType: "none" }}>
+                  <div
+                    style={{
+                      position: "absolute",
+                      marginTop: "7px",
+                      padding: "6px",
+                      color: "#fff",
+                      backgroundColor: "#000",
+                      opacity: "0.7"
+                    }}
+                  >
+                    {popularity.vote_average}
+                  </div>
+                  {/* <em>{popularity.release_date}</em> <br /> <br /> */}
                   <img
                     src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                     alt="poster"
+                    style={{ maxWidth: "100px" }}
                   />
-                  <br /> <br />
-                  <p>{popularity.overview}</p>
+                  <br />
+                  <h6 style={{ textAlign: "center" }}> {popularity.title}</h6>
+                  {/* <p>{popularity.overview}</p> */}
                 </li>
               </Link>
             </ul>
@@ -43,16 +55,28 @@ const index = props => {
         {props.rated.results.map(rating => {
           return (
             <ul>
-              <li>
-                <div>{rating.vote_average}</div>
-                <h3> {rating.title}</h3>
-                <em>{rating.release_date}</em> <br /> <br />
+              <li style={{ listStyleType: "none" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    marginTop: "7px",
+                    padding: "6px",
+                    color: "#fff",
+                    backgroundColor: "#000",
+                    opacity: "0.7"
+                  }}
+                >
+                  {rating.vote_average}
+                </div>
+                {/* <em>{rating.release_date}</em> <br /> <br /> */}
                 <img
                   src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
                   alt="poster"
+                  style={{ maxWidth: "100px" }}
                 />
-                <br /> <br />
-                <p>{rating.overview}</p>
+                <br />
+                <h6 style={{ textAlign: "center" }}> {rating.title}</h6>
+                {/* <p>{rating.overview}</p> */}
               </li>
             </ul>
           );
@@ -63,16 +87,28 @@ const index = props => {
         {props.playing.results.map(play => {
           return (
             <ul>
-              <li>
-                <div>{play.vote_average}</div>
-                <h3> {play.title}</h3>
-                <em>{play.release_date}</em> <br /> <br />
+              <li style={{ listStyleType: "none" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    marginTop: "7px",
+                    padding: "6px",
+                    color: "#fff",
+                    backgroundColor: "#000",
+                    opacity: "0.7"
+                  }}
+                >
+                  {play.vote_average}
+                </div>
+                {/* <em>{play.release_date}</em> <br /> <br /> */}
                 <img
                   src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
                   alt="poster"
+                  style={{ maxWidth: "100px" }}
                 />
-                <br /> <br />
-                <p>{play.overview}</p>
+                <br />
+                <h6 style={{ textAlign: "center" }}> {play.title}</h6>
+                {/* <p>{play.overview}</p> */}
               </li>
             </ul>
           );
@@ -83,16 +119,28 @@ const index = props => {
         {props.upcoming.results.map(soon => {
           return (
             <ul>
-              <li>
-                <div>{soon.vote_average}</div>
-                <h3> {soon.title}</h3>
-                <em>{soon.release_date}</em> <br /> <br />
+              <li style={{ listStyleType: "none" }}>
+                <div
+                  style={{
+                    position: "absolute",
+                    marginTop: "7px",
+                    padding: "6px",
+                    color: "#fff",
+                    backgroundColor: "#000",
+                    opacity: "0.7"
+                  }}
+                >
+                  {soon.vote_average}
+                </div>
+                {/* <em>{soon.release_date}</em> <br /> <br /> */}
                 <img
                   src={`https://image.tmdb.org/t/p/w200${soon.poster_path}`}
                   alt="poster"
+                  style={{ maxWidth: "100px" }}
                 />
-                <br /> <br />
-                <p>{soon.overview}</p>
+                <br />
+                <h6 style={{ textAlign: "center" }}> {soon.title}</h6>
+                {/* <p>{soon.overview}</p> */}
               </li>
             </ul>
           );
