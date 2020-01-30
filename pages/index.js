@@ -13,9 +13,78 @@ const index = props => {
     slidesToShow: 3,
     slidesToScroll: 1
   };
+  var setting = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false
+  };
   return (
     <Layout>
-      {console.log(props.popular)}
+      <Slider {...setting}>
+        {props.popular.results.map(popularity => {
+          return (
+            <ul>
+              <Link href="#">
+                <li style={{ listStyleType: "none" }}>
+                  <div style={{ position: "relative" }}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
+                      alt="poster"
+                      style={{
+                        display: "block",
+                        marginLeft: "auto",
+                        marginRight: "auto",
+                        width: "90%",
+                        opacity: "0.4"
+                      }}
+                    />
+                    <br />
+                    <h2
+                      style={{
+                        color: "#fff",
+                        position: "absolute",
+                        bottom: "80%",
+                        left: "10%",
+                        fontWeight: "bold"
+                      }}
+                    >
+                      Latest
+                    </h2>
+                    <h3
+                      style={{
+                        color: "#fff",
+                        position: "absolute",
+                        bottom: "20%",
+                        left: "10%",
+                        fontWeight: "bold"
+                      }}
+                    >
+                      {" "}
+                      {popularity.title}
+                    </h3>
+
+                    <h4
+                      style={{
+                        position: "absolute",
+                        color: "#fff",
+                        opacity: "0.7",
+                        bottom: "12%",
+                        left: "10%"
+                      }}
+                    >
+                      {popularity.vote_average} Rating
+                    </h4>
+                  </div>
+                </li>
+              </Link>
+            </ul>
+          );
+        })}
+      </Slider>
       <h2>Popular</h2>
       <Slider {...settings}>
         {props.popular.results.map(popularity => {
