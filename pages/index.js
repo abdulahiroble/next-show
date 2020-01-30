@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Movies from "../components/Movies";
 import Slider from "react-slick";
 import Link from "next/link";
+import MovieDetail from "./MovieDetail";
 
 const index = props => {
   var settings = {
@@ -11,7 +12,8 @@ const index = props => {
     infinite: false,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    swipe: false
   };
   var setting = {
     dots: false,
@@ -20,17 +22,21 @@ const index = props => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    arrows: false
+    arrows: false,
+    swipe: false
   };
   return (
     <Layout>
       <Slider {...setting}>
+        {/* {console.log(props.popular.results)} */}
+        {console.log(props.popular.results.map(test => test.id))}
         {props.popular.results.map(popularity => {
           return (
             <ul>
-              <Link href="#">
-                <li style={{ listStyleType: "none" }}>
-                  <div style={{ position: "relative" }}>
+              {/* <MovieDetail popular={props.popular}></MovieDetail> */}
+              <Link href="/MovieDetail">
+                <li style={{ listStyleType: "none", cursor: "pointer" }}>
+                  <div style={{ position: "relative", marginLeft: "-35px" }}>
                     <img
                       src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                       alt="poster"
@@ -49,7 +55,8 @@ const index = props => {
                         position: "absolute",
                         bottom: "80%",
                         left: "10%",
-                        fontWeight: "bold"
+                        fontWeight: "bold",
+                        letterSpacing: "2px"
                       }}
                     >
                       Latest
@@ -85,13 +92,21 @@ const index = props => {
           );
         })}
       </Slider>
-      <h2>Popular</h2>
+      <h2
+        style={{
+          color: "#fff",
+          textTransform: "uppercase",
+          letterSpacing: "2px"
+        }}
+      >
+        Popular
+      </h2>
       <Slider {...settings}>
         {props.popular.results.map(popularity => {
           return (
             <ul>
               <Link href="#">
-                <li style={{ listStyleType: "none" }}>
+                <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
                   <div
                     style={{
                       position: "absolute",
@@ -111,7 +126,10 @@ const index = props => {
                     style={{ maxWidth: "100px" }}
                   />
                   <br />
-                  <h6 style={{ textAlign: "center" }}> {popularity.title}</h6>
+                  <h6 style={{ textAlign: "center", color: "#fff" }}>
+                    {" "}
+                    {popularity.title}
+                  </h6>
                   {/* <p>{popularity.overview}</p> */}
                 </li>
               </Link>
@@ -119,12 +137,20 @@ const index = props => {
           );
         })}
       </Slider>
-      <h2>Top Rated</h2>
+      <h2
+        style={{
+          color: "#fff",
+          textTransform: "uppercase",
+          letterSpacing: "2px"
+        }}
+      >
+        Top Rated
+      </h2>
       <Slider {...settings}>
         {props.rated.results.map(rating => {
           return (
             <ul>
-              <li style={{ listStyleType: "none" }}>
+              <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
                 <div
                   style={{
                     position: "absolute",
@@ -144,19 +170,30 @@ const index = props => {
                   style={{ maxWidth: "100px" }}
                 />
                 <br />
-                <h6 style={{ textAlign: "center" }}> {rating.title}</h6>
+                <h6 style={{ textAlign: "center", color: "#fff" }}>
+                  {" "}
+                  {rating.title}
+                </h6>
                 {/* <p>{rating.overview}</p> */}
               </li>
             </ul>
           );
         })}
       </Slider>
-      <h2>Now Playing</h2>
+      <h2
+        style={{
+          color: "#fff",
+          textTransform: "uppercase",
+          letterSpacing: "2px"
+        }}
+      >
+        Now Playing
+      </h2>
       <Slider {...settings}>
         {props.playing.results.map(play => {
           return (
             <ul>
-              <li style={{ listStyleType: "none" }}>
+              <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
                 <div
                   style={{
                     position: "absolute",
@@ -176,19 +213,30 @@ const index = props => {
                   style={{ maxWidth: "100px" }}
                 />
                 <br />
-                <h6 style={{ textAlign: "center" }}> {play.title}</h6>
+                <h6 style={{ textAlign: "center", color: "#fff" }}>
+                  {" "}
+                  {play.title}
+                </h6>
                 {/* <p>{play.overview}</p> */}
               </li>
             </ul>
           );
         })}
       </Slider>
-      <h2>Upcoming</h2>
+      <h2
+        style={{
+          color: "#fff",
+          textTransform: "uppercase",
+          letterSpacing: "2px"
+        }}
+      >
+        Upcoming
+      </h2>
       <Slider {...settings}>
         {props.upcoming.results.map(soon => {
           return (
             <ul>
-              <li style={{ listStyleType: "none" }}>
+              <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
                 <div
                   style={{
                     position: "absolute",
@@ -208,7 +256,10 @@ const index = props => {
                   style={{ maxWidth: "100px" }}
                 />
                 <br />
-                <h6 style={{ textAlign: "center" }}> {soon.title}</h6>
+                <h6 style={{ textAlign: "center", color: "#fff" }}>
+                  {" "}
+                  {soon.title}
+                </h6>
                 {/* <p>{soon.overview}</p> */}
               </li>
             </ul>
