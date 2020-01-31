@@ -27,14 +27,16 @@ const index = props => {
   };
   return (
     <Layout>
+      {console.log(props.genres)}
       <Slider {...setting}>
-        {/* {console.log(props.popular.results)} */}
-        {console.log(props.popular.results.map(test => test.id))}
+        {console.log(props.popular)}
         {props.popular.results.map(popularity => {
           return (
             <ul>
               {/* <MovieDetail popular={props.popular}></MovieDetail> */}
-              <Link href="/MovieDetail">
+              <a
+                href={`https://api.themoviedb.org/3/movie/${popularity.id}?api_key=3e5072126511096a6377f77c742f2864`}
+              >
                 <li style={{ listStyleType: "none", cursor: "pointer" }}>
                   <div style={{ position: "relative", marginLeft: "-35px" }}>
                     <img
@@ -44,7 +46,7 @@ const index = props => {
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",
-                        width: "90%",
+                        width: "80%",
                         opacity: "0.4"
                       }}
                     />
@@ -54,7 +56,7 @@ const index = props => {
                         color: "#fff",
                         position: "absolute",
                         bottom: "80%",
-                        left: "10%",
+                        left: "12%",
                         fontWeight: "bold",
                         letterSpacing: "2px"
                       }}
@@ -66,7 +68,7 @@ const index = props => {
                         color: "#fff",
                         position: "absolute",
                         bottom: "20%",
-                        left: "10%",
+                        left: "12%",
                         fontWeight: "bold"
                       }}
                     >
@@ -80,14 +82,15 @@ const index = props => {
                         color: "#fff",
                         opacity: "0.7",
                         bottom: "12%",
-                        left: "10%"
+                        left: "12%"
                       }}
                     >
-                      {popularity.vote_average} Rating
+                      {popularity.vote_average} Rating |
+                      {popularity.genre_ids[0]}
                     </h4>
                   </div>
                 </li>
-              </Link>
+              </a>
             </ul>
           );
         })}
@@ -274,6 +277,7 @@ index.getInitialProps = async function() {
   // Popular Movies
   const res = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
+    // "https://api.themoviedb.org/3/movie/419704?api_key=3e5072126511096a6377f77c742f2864"
   );
 
   // Top rated movies
@@ -291,16 +295,23 @@ index.getInitialProps = async function() {
     "https://api.themoviedb.org/3/movie/now_playing?api_key=3e5072126511096a6377f77c742f2864"
   );
 
+  // Genres
+  const genre = await fetch(
+    "https://api.themoviedb.org/3/genre/movie/list?api_key=3e5072126511096a6377f77c742f2864"
+  );
+
   const popular = await res.json();
   const rated = await response.json();
   const upcoming = await answer.json();
   const playing = await reply.json();
+  const genres = await genre.json();
 
   return {
     popular: popular,
     rated: rated,
     upcoming: upcoming,
-    playing
+    playing,
+    genres
   };
 };
 
