@@ -4,8 +4,6 @@ import Layout from "../components/Layout";
 import Movies from "../components/Movies";
 import Slider from "react-slick";
 import Link from "next/link";
-import MovieDetail from "./MovieDetail";
-
 const index = props => {
   var settings = {
     dots: false,
@@ -27,17 +25,15 @@ const index = props => {
   };
   return (
     <Layout>
-      {console.log(props.genres.genres.map(test => test.id))}
-      {console.log(props.genres.genres.map(test => test.name))}
+      {/* <MovieDetail popular={props.popular} /> */}
+      {console.log(props.popular.results)}
+      {/* {console.log(props.genres.genres.map(test => test.id))}
+      {console.log(props.genres.genres.map(test => test.name))} */}
       <Slider {...setting}>
-        {/* {console.log(props.popular)} */}
         {props.popular.results.map(popularity => {
           return (
             <ul>
-              {/* <MovieDetail popular={props.popular}></MovieDetail> */}
-              <a
-                href={`https://api.themoviedb.org/3/movie/${popularity.id}?api_key=3e5072126511096a6377f77c742f2864`}
-              >
+              <Link href="MovieDetail" as={`MovieDetail/${popularity.id}`}>
                 <li style={{ listStyleType: "none", cursor: "pointer" }}>
                   <div style={{ position: "relative", marginLeft: "-35px" }}>
                     <img
@@ -97,7 +93,7 @@ const index = props => {
                     </h4>
                   </div>
                 </li>
-              </a>
+              </Link>
             </ul>
           );
         })}
