@@ -27,9 +27,10 @@ const index = props => {
   };
   return (
     <Layout>
-      {console.log(props.genres)}
+      {console.log(props.genres.genres.map(test => test.id))}
+      {console.log(props.genres.genres.map(test => test.name))}
       <Slider {...setting}>
-        {console.log(props.popular)}
+        {/* {console.log(props.popular)} */}
         {props.popular.results.map(popularity => {
           return (
             <ul>
@@ -86,7 +87,13 @@ const index = props => {
                       }}
                     >
                       {popularity.vote_average} Rating |
-                      {popularity.genre_ids[0]}
+                      {props.genres.genres.map(genre => {
+                        if (genre.id === popularity.genre_ids[0]) {
+                          return genre.name;
+                        } else {
+                          return null;
+                        }
+                      })}
                     </h4>
                   </div>
                 </li>
@@ -133,6 +140,16 @@ const index = props => {
                     {" "}
                     {popularity.title}
                   </h6>
+                  <div style={{ textAlign: "center" }}>
+                    {" "}
+                    {props.genres.genres.map(genre => {
+                      if (genre.id === popularity.genre_ids[0]) {
+                        return genre.name;
+                      } else {
+                        return null;
+                      }
+                    })}
+                  </div>
                   {/* <p>{popularity.overview}</p> */}
                 </li>
               </Link>
@@ -177,6 +194,17 @@ const index = props => {
                   {" "}
                   {rating.title}
                 </h6>
+                <div style={{ textAlign: "center" }}>
+                  {" "}
+                  {props.genres.genres.map(genre => {
+                    if (genre.id === rating.genre_ids[0]) {
+                      return genre.name;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
+
                 {/* <p>{rating.overview}</p> */}
               </li>
             </ul>
@@ -220,6 +248,16 @@ const index = props => {
                   {" "}
                   {play.title}
                 </h6>
+                <div style={{ textAlign: "center" }}>
+                  {" "}
+                  {props.genres.genres.map(genre => {
+                    if (genre.id === play.genre_ids[0]) {
+                      return genre.name;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
                 {/* <p>{play.overview}</p> */}
               </li>
             </ul>
@@ -263,6 +301,16 @@ const index = props => {
                   {" "}
                   {soon.title}
                 </h6>
+                <div style={{ textAlign: "center" }}>
+                  {" "}
+                  {props.genres.genres.map(genre => {
+                    if (genre.id === soon.genre_ids[0]) {
+                      return genre.name;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
                 {/* <p>{soon.overview}</p> */}
               </li>
             </ul>
