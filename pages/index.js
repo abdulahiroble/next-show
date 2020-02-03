@@ -4,8 +4,6 @@ import Layout from "../components/Layout";
 import Movies from "../components/Movies";
 import Slider from "react-slick";
 import Link from "next/link";
-import MovieDetail from "./MovieDetail";
-
 const index = props => {
   var settings = {
     dots: false,
@@ -27,14 +25,15 @@ const index = props => {
   };
   return (
     <Layout>
+      {/* <MovieDetail popular={props.popular} /> */}
+      {console.log(props.popular.results)}
+      {/* {console.log(props.genres.genres.map(test => test.id))}
+      {console.log(props.genres.genres.map(test => test.name))} */}
       <Slider {...setting}>
-        {/* {console.log(props.popular.results)} */}
-        {console.log(props.popular.results.map(test => test.id))}
         {props.popular.results.map(popularity => {
           return (
             <ul>
-              {/* <MovieDetail popular={props.popular}></MovieDetail> */}
-              <Link href="/MovieDetail">
+              <Link href="MovieDetail" as={`MovieDetail/${popularity.id}`}>
                 <li style={{ listStyleType: "none", cursor: "pointer" }}>
                   <div style={{ position: "relative", marginLeft: "-35px" }}>
                     <img
@@ -44,7 +43,7 @@ const index = props => {
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",
-                        width: "90%",
+                        width: "80%",
                         opacity: "0.4"
                       }}
                     />
@@ -54,7 +53,7 @@ const index = props => {
                         color: "#fff",
                         position: "absolute",
                         bottom: "80%",
-                        left: "10%",
+                        left: "12%",
                         fontWeight: "bold",
                         letterSpacing: "2px"
                       }}
@@ -66,7 +65,7 @@ const index = props => {
                         color: "#fff",
                         position: "absolute",
                         bottom: "20%",
-                        left: "10%",
+                        left: "12%",
                         fontWeight: "bold"
                       }}
                     >
@@ -80,10 +79,17 @@ const index = props => {
                         color: "#fff",
                         opacity: "0.7",
                         bottom: "12%",
-                        left: "10%"
+                        left: "12%"
                       }}
                     >
-                      {popularity.vote_average} Rating
+                      {popularity.vote_average} Rating |
+                      {props.genres.genres.map(genre => {
+                        if (genre.id === popularity.genre_ids[0]) {
+                          return genre.name;
+                        } else {
+                          return null;
+                        }
+                      })}
                     </h4>
                   </div>
                 </li>
@@ -130,6 +136,16 @@ const index = props => {
                     {" "}
                     {popularity.title}
                   </h6>
+                  <div style={{ textAlign: "center" }}>
+                    {" "}
+                    {props.genres.genres.map(genre => {
+                      if (genre.id === popularity.genre_ids[0]) {
+                        return genre.name;
+                      } else {
+                        return null;
+                      }
+                    })}
+                  </div>
                   {/* <p>{popularity.overview}</p> */}
                 </li>
               </Link>
@@ -174,6 +190,17 @@ const index = props => {
                   {" "}
                   {rating.title}
                 </h6>
+                <div style={{ textAlign: "center" }}>
+                  {" "}
+                  {props.genres.genres.map(genre => {
+                    if (genre.id === rating.genre_ids[0]) {
+                      return genre.name;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
+
                 {/* <p>{rating.overview}</p> */}
               </li>
             </ul>
@@ -217,6 +244,16 @@ const index = props => {
                   {" "}
                   {play.title}
                 </h6>
+                <div style={{ textAlign: "center" }}>
+                  {" "}
+                  {props.genres.genres.map(genre => {
+                    if (genre.id === play.genre_ids[0]) {
+                      return genre.name;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
                 {/* <p>{play.overview}</p> */}
               </li>
             </ul>
@@ -260,6 +297,16 @@ const index = props => {
                   {" "}
                   {soon.title}
                 </h6>
+                <div style={{ textAlign: "center" }}>
+                  {" "}
+                  {props.genres.genres.map(genre => {
+                    if (genre.id === soon.genre_ids[0]) {
+                      return genre.name;
+                    } else {
+                      return null;
+                    }
+                  })}
+                </div>
                 {/* <p>{soon.overview}</p> */}
               </li>
             </ul>
@@ -274,6 +321,7 @@ index.getInitialProps = async function() {
   // Popular Movies
   const res = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
+    // "https://api.themoviedb.org/3/movie/419704?api_key=3e5072126511096a6377f77c742f2864"
   );
 
   // Top rated movies
@@ -291,16 +339,23 @@ index.getInitialProps = async function() {
     "https://api.themoviedb.org/3/movie/now_playing?api_key=3e5072126511096a6377f77c742f2864"
   );
 
+  // Genres
+  const genre = await fetch(
+    "https://api.themoviedb.org/3/genre/movie/list?api_key=3e5072126511096a6377f77c742f2864"
+  );
+
   const popular = await res.json();
   const rated = await response.json();
   const upcoming = await answer.json();
   const playing = await reply.json();
+  const genres = await genre.json();
 
   return {
     popular: popular,
     rated: rated,
     upcoming: upcoming,
-    playing
+    playing,
+    genres
   };
 };
 
