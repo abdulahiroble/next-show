@@ -1,7 +1,7 @@
 import Fetch from "isomorphic-unfetch";
 import React from "react";
 import Layout from "../components/Layout";
-import Movies from "../components/Movies";
+// import Movies from "../components/Movies";
 import Slider from "react-slick";
 import Link from "next/link";
 //import Router from 'next/router'
@@ -28,7 +28,7 @@ const index = props => {
   return (
     <Layout>
       {/* <MovieDetail popular={props.popular} /> */}
-      {/* {console.log(props.popular.results)} */}
+      {console.log(props.popular.results)}
       {/* {console.log(props.genres.genres.map(test => test.id))}
       {console.log(props.genres.genres.map(test => test.name))} */}
       <Slider {...setting}>
@@ -39,7 +39,17 @@ const index = props => {
                 href={{
                   pathname: "MovieDetail",
                   query: {
-                    name: popularity.id,
+                    id: popularity.id,
+                    rating: popularity.vote_average,
+                    title: popularity.title,
+                    summary: popularity.overview,
+                    genre: props.genres.genres.map(genre => {
+                      if (genre.id === popularity.genre_ids[0]) {
+                        return genre.name;
+                      } else {
+                        return null;
+                      }
+                    }),
                     thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`
                   }
                 }}
