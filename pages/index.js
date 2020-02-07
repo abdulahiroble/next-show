@@ -4,6 +4,8 @@ import Layout from "../components/Layout";
 import Movies from "../components/Movies";
 import Slider from "react-slick";
 import Link from "next/link";
+//import Router from 'next/router'
+
 const index = props => {
   var settings = {
     dots: false,
@@ -26,14 +28,22 @@ const index = props => {
   return (
     <Layout>
       {/* <MovieDetail popular={props.popular} /> */}
-      {console.log(props.popular.results)}
+      {/* {console.log(props.popular.results)} */}
       {/* {console.log(props.genres.genres.map(test => test.id))}
       {console.log(props.genres.genres.map(test => test.name))} */}
       <Slider {...setting}>
         {props.popular.results.map(popularity => {
           return (
             <ul>
-              <Link href="MovieDetail" as={`MovieDetail/${popularity.id}`}>
+              <Link
+                href={{
+                  pathname: "MovieDetail",
+                  query: {
+                    name: popularity.id,
+                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`
+                  }
+                }}
+              >
                 <li style={{ listStyleType: "none", cursor: "pointer" }}>
                   <div style={{ position: "relative", marginLeft: "-35px" }}>
                     <img
@@ -317,7 +327,7 @@ const index = props => {
   );
 };
 
-index.getInitialProps = async function() {
+index.getInitialProps = async function({ query }) {
   // Popular Movies
   const res = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
@@ -355,7 +365,8 @@ index.getInitialProps = async function() {
     rated: rated,
     upcoming: upcoming,
     playing,
-    genres
+    genres,
+    query
   };
 };
 
