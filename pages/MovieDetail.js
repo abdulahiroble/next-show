@@ -1,14 +1,15 @@
+import Fetch from "isomorphic-unfetch";
 import React from "react";
 import Layout from "../components/Layout";
 
 const MovieDetail = ({
   url: {
-    query: { title, rating, thumbnail, genre }
+    query: { id, title, rating, thumbnail, genre, summary, reviews }
   }
 }) => {
   return (
     <Layout>
-      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div>
           <img
             src={thumbnail}
@@ -32,24 +33,28 @@ const MovieDetail = ({
       <br />
 
       <h2>Summary</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure odio
-        asperiores incidunt eum accusamus harum maxime cupiditate molestiae
-        autem tempore perferendis numquam eius aut, repellendus, modi pariatur?
-        Quod, quasi dolores!Facilis nulla, eveniet, sapiente, sequi maiores ea
-        rem omnis vel molestias molestiae quia distinctio aspernatur saepe vero
-        maxime quis assumenda voluptate odio asperiores rerum quidem ad. Dolorem
-        excepturi tempore aperiam!
-      </p>
+      <p>{summary}</p>
 
       <h2>Cast</h2>
 
       <h2>Trailers</h2>
 
       <h2>Popular Reviews</h2>
+      {id}
     </Layout>
   );
 };
+
+// MovieDetail.getInitialProps = async function() {
+//   const test = await fetch(
+//     "https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864&language=en-US&page=1"
+//   );
+
+//   const test2 = await test.json();
+
+//   return {
+//     test2: test2
+//   };
+// };
 
 export default MovieDetail;
