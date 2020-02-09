@@ -27,8 +27,7 @@ const index = props => {
   };
   return (
     <Layout>
-      {/* <MovieDetail popular={props.popular} /> */}
-      {console.log(props.popular.results)}
+      {/* {console.log(props.popular)} */}
       {/* {console.log(props.genres.genres.map(test => test.id))}
       {console.log(props.genres.genres.map(test => test.name))} */}
       <Slider {...setting}>
@@ -145,7 +144,6 @@ const index = props => {
                   >
                     {popularity.vote_average}
                   </div>
-                  {/* <em>{popularity.release_date}</em> <br /> <br /> */}
                   <img
                     src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                     alt="poster"
@@ -166,7 +164,6 @@ const index = props => {
                       }
                     })}
                   </div>
-                  {/* <p>{popularity.overview}</p> */}
                 </li>
               </Link>
             </ul>
@@ -199,7 +196,6 @@ const index = props => {
                 >
                   {rating.vote_average}
                 </div>
-                {/* <em>{rating.release_date}</em> <br /> <br /> */}
                 <img
                   src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
                   alt="poster"
@@ -220,8 +216,6 @@ const index = props => {
                     }
                   })}
                 </div>
-
-                {/* <p>{rating.overview}</p> */}
               </li>
             </ul>
           );
@@ -253,7 +247,6 @@ const index = props => {
                 >
                   {play.vote_average}
                 </div>
-                {/* <em>{play.release_date}</em> <br /> <br /> */}
                 <img
                   src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
                   alt="poster"
@@ -274,7 +267,6 @@ const index = props => {
                     }
                   })}
                 </div>
-                {/* <p>{play.overview}</p> */}
               </li>
             </ul>
           );
@@ -306,7 +298,6 @@ const index = props => {
                 >
                   {soon.vote_average}
                 </div>
-                {/* <em>{soon.release_date}</em> <br /> <br /> */}
                 <img
                   src={`https://image.tmdb.org/t/p/w200${soon.poster_path}`}
                   alt="poster"
@@ -327,7 +318,6 @@ const index = props => {
                     }
                   })}
                 </div>
-                {/* <p>{soon.overview}</p> */}
               </li>
             </ul>
           );
@@ -364,11 +354,24 @@ index.getInitialProps = async function({ query }) {
     "https://api.themoviedb.org/3/genre/movie/list?api_key=3e5072126511096a6377f77c742f2864"
   );
 
+  // const test = await fetch(
+  //   "https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864",
+  //   `https://api.themoviedb.org/3/movie/${}/reviews?api_key=3e5072126511096a6377f77c742f2864`
+  // );
+
+  // const test2 = await test.json();
+
+  // reviews
+  const reviews = await fetch(
+    `https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864`
+  );
+
   const popular = await res.json();
   const rated = await response.json();
   const upcoming = await answer.json();
   const playing = await reply.json();
   const genres = await genre.json();
+  const review = await reviews.json();
 
   return {
     popular: popular,
@@ -376,7 +379,8 @@ index.getInitialProps = async function({ query }) {
     upcoming: upcoming,
     playing,
     genres,
-    query
+    query,
+    review
   };
 };
 
