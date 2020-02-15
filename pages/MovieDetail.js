@@ -47,6 +47,18 @@ const MovieDetail = ({
   );
 };
 
+MovieDetail.getInitialProps = async function() {
+  // const { id } = query;
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864`
+  );
+  const show = await res.json();
+
+  console.log(`Fetched show: ${show.id}`);
+
+  return { show };
+};
+
 // MovieDetail.getInitialProps = async function(query) {
 //   // const { id } = url.query;
 //   const res = await fetch(query.reviews);
