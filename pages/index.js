@@ -1,4 +1,4 @@
-import Fetch from "isomorphic-unfetch";
+import fetch from "isomorphic-unfetch";
 import React from "react";
 import Layout from "../components/Layout";
 // import Movies from "../components/Movies";
@@ -27,7 +27,8 @@ const index = props => {
   };
   return (
     <Layout>
-      {/* {console.log(props.popular)} */}
+      {/* {console.log(props.review.results.map(test => test.content))} */}
+      {/* {console.log(props.popular.results.map(test => test.id))} */}
       {/* {console.log(props.genres.genres.map(test => test.id))}
       {console.log(props.genres.genres.map(test => test.name))} */}
       <Slider {...setting}>
@@ -35,6 +36,9 @@ const index = props => {
           return (
             <ul>
               <Link
+                // href="/MovieDetail/[id]"
+                // as={`/MovieDetail/${popularity.id}`}
+
                 href={{
                   pathname: "MovieDetail",
                   query: {
@@ -45,15 +49,18 @@ const index = props => {
                     genre: props.genres.genres.map(genre => {
                       if (genre.id === popularity.genre_ids[0]) {
                         return genre.name;
-                      } else {
-                        return null;
                       }
                     }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`
+                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
+                    reviews: `https://api.themoviedb.org/3/movie/${popularity.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
                   }
                 }}
+                as={`/MovieDetail/${popularity.id}`}
               >
-                <li style={{ listStyleType: "none", cursor: "pointer" }}>
+                <li
+                  style={{ listStyleType: "none", cursor: "pointer" }}
+                  key={popularity.id}
+                >
                   <div style={{ position: "relative", marginLeft: "-35px" }}>
                     <img
                       src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
@@ -131,7 +138,10 @@ const index = props => {
           return (
             <ul>
               <Link href="#">
-                <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
+                <li
+                  style={{ listStyleType: "none", marginLeft: "-35px" }}
+                  key={popularity.id}
+                >
                   <div
                     style={{
                       position: "absolute",
@@ -183,7 +193,10 @@ const index = props => {
         {props.rated.results.map(rating => {
           return (
             <ul>
-              <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
+              <li
+                style={{ listStyleType: "none", marginLeft: "-35px" }}
+                key={rating.id}
+              >
                 <div
                   style={{
                     position: "absolute",
@@ -234,7 +247,10 @@ const index = props => {
         {props.playing.results.map(play => {
           return (
             <ul>
-              <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
+              <li
+                style={{ listStyleType: "none", marginLeft: "-35px" }}
+                key={play.id}
+              >
                 <div
                   style={{
                     position: "absolute",
@@ -285,7 +301,10 @@ const index = props => {
         {props.upcoming.results.map(soon => {
           return (
             <ul>
-              <li style={{ listStyleType: "none", marginLeft: "-35px" }}>
+              <li
+                style={{ listStyleType: "none", marginLeft: "-35px" }}
+                key={soon.id}
+              >
                 <div
                   style={{
                     position: "absolute",
@@ -328,6 +347,8 @@ const index = props => {
 };
 
 index.getInitialProps = async function({ query }) {
+  // const { id } = query.id;
+
   // Popular Movies
   const res = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
@@ -355,15 +376,16 @@ index.getInitialProps = async function({ query }) {
   );
 
   // const test = await fetch(
-  //   "https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864",
-  //   `https://api.themoviedb.org/3/movie/${}/reviews?api_key=3e5072126511096a6377f77c742f2864`
+  //   "https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864"
+  //  `https://api.themoviedb.org/3/movie/${query.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
   // );
+
+  //"https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864&language=en-US&page=1"
 
   // const test2 = await test.json();
 
-  // reviews
   const reviews = await fetch(
-    `https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864`
+    `https://api.themoviedb.org/3/movie/${query.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
   );
 
   const popular = await res.json();
@@ -371,6 +393,7 @@ index.getInitialProps = async function({ query }) {
   const upcoming = await answer.json();
   const playing = await reply.json();
   const genres = await genre.json();
+  // const t = await test.json();
   const review = await reviews.json();
 
   return {
