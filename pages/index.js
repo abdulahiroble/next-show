@@ -1,7 +1,6 @@
 import fetch from "isomorphic-unfetch";
 import React from "react";
 import Layout from "../components/Layout";
-// import Movies from "../components/Movies";
 import Slider from "react-slick";
 import Link from "next/link";
 //import Router from 'next/router'
@@ -51,8 +50,7 @@ const index = props => {
                         return genre.name;
                       }
                     }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
-                    reviews: `https://api.themoviedb.org/3/movie/${popularity.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
+                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`
                   }
                 }}
                 as={`/MovieDetail/${popularity.id}`}
@@ -347,8 +345,6 @@ const index = props => {
 };
 
 index.getInitialProps = async function({ query }) {
-  // const { id } = query.id;
-
   // Popular Movies
   const res = await fetch(
     "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
@@ -375,26 +371,11 @@ index.getInitialProps = async function({ query }) {
     "https://api.themoviedb.org/3/genre/movie/list?api_key=3e5072126511096a6377f77c742f2864"
   );
 
-  // const test = await fetch(
-  //   "https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864"
-  //  `https://api.themoviedb.org/3/movie/${query.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
-  // );
-
-  //"https://api.themoviedb.org/3/movie/419704/reviews?api_key=3e5072126511096a6377f77c742f2864&language=en-US&page=1"
-
-  // const test2 = await test.json();
-
-  const reviews = await fetch(
-    `https://api.themoviedb.org/3/movie/${query.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
-  );
-
   const popular = await res.json();
   const rated = await response.json();
   const upcoming = await answer.json();
   const playing = await reply.json();
   const genres = await genre.json();
-  // const t = await test.json();
-  const review = await reviews.json();
 
   return {
     popular: popular,
@@ -402,8 +383,7 @@ index.getInitialProps = async function({ query }) {
     upcoming: upcoming,
     playing,
     genres,
-    query,
-    review
+    query
   };
 };
 
