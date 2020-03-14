@@ -82,7 +82,7 @@ const index = props => {
                         letterSpacing: "2px"
                       }}
                     >
-                      Latest
+                      Seneste
                     </h2>
                     <h3
                       style={{
@@ -106,7 +106,7 @@ const index = props => {
                         left: "12%"
                       }}
                     >
-                      {popularity.vote_average} Rating |
+                      {popularity.vote_average} Bedømmelse |
                       {props.genres.genres.map(genre => {
                         if (genre.id === popularity.genre_ids[0]) {
                           return genre.name;
@@ -129,7 +129,7 @@ const index = props => {
           letterSpacing: "2px"
         }}
       >
-        Popular
+        Populære
       </h2>
       <Slider {...settings}>
         {props.popular.results.map(popularity => {
@@ -185,7 +185,7 @@ const index = props => {
           letterSpacing: "2px"
         }}
       >
-        Top Rated
+        Bedst Bedømte
       </h2>
       <Slider {...settings}>
         {props.rated.results.map(rating => {
@@ -239,7 +239,7 @@ const index = props => {
           letterSpacing: "2px"
         }}
       >
-        Now Playing
+        Udsendes I Dag
       </h2>
       <Slider {...settings}>
         {props.playing.results.map(play => {
@@ -286,7 +286,7 @@ const index = props => {
           );
         })}
       </Slider>
-      <h2
+      {/* <h2
         style={{
           color: "#fff",
           textTransform: "uppercase",
@@ -339,7 +339,7 @@ const index = props => {
             </ul>
           );
         })}
-      </Slider>
+      </Slider> */}
     </Layout>
   );
 };
@@ -347,13 +347,14 @@ const index = props => {
 index.getInitialProps = async function({ query }) {
   // Popular Movies
   const res = await fetch(
-    "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
-    // "https://api.themoviedb.org/3/movie/419704?api_key=3e5072126511096a6377f77c742f2864"
+    // "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
+    "https://api.themoviedb.org/3/tv/popular?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
   );
 
   // Top rated movies
   const response = await fetch(
-    "https://api.themoviedb.org/3/movie/top_rated?api_key=3e5072126511096a6377f77c742f2864"
+    // "https://api.themoviedb.org/3/movie/top_rated?api_key=3e5072126511096a6377f77c742f2864"
+    "https://api.themoviedb.org/3/tv/top_rated?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
   );
 
   // Upcoming
@@ -363,7 +364,7 @@ index.getInitialProps = async function({ query }) {
 
   // Now Playing
   const reply = await fetch(
-    "https://api.themoviedb.org/3/movie/now_playing?api_key=3e5072126511096a6377f77c742f2864"
+    "https://api.themoviedb.org/3/tv/on_the_air?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
   );
 
   // Genres

@@ -4,8 +4,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 
 const MovieDetail = ({
-  show,
-  cast,
+  details,
   url: {
     query: { title, rating, thumbnail, genre, summary }
   }
@@ -23,12 +22,8 @@ const MovieDetail = ({
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div>
           <img
-            src={thumbnail}
+            src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
             alt=""
-            style={{
-              height: "100%",
-              width: "100%"
-            }}
           />
         </div>
 
@@ -37,16 +32,20 @@ const MovieDetail = ({
 
           <h4>{rating}</h4>
 
-          <h4>{genre}</h4>
+          <h4>{genre} </h4>
         </div>
       </div>
 
       <br />
 
-      <h2>Summary</h2>
-      <p>{summary}</p>
+      <h2>Resume</h2>
+      {summary ? summary : <p>intet resume endnu</p>}
 
-      <h2>Cast</h2>
+      <h2>Episoder</h2>
+
+      {/* {details.results.map(test => test.original_name)} */}
+
+      {/* <h2>Skuespillere</h2>
       <Slider {...settings}>
         {cast.cast.map(test => {
           return (
@@ -71,7 +70,7 @@ const MovieDetail = ({
 
       <h2>Trailers</h2>
 
-      <h2>Popular Reviews</h2>
+      <h2>Anmeldelser</h2>
       {show.results.map(review => {
         return (
           <ul>
@@ -84,7 +83,7 @@ const MovieDetail = ({
                 textOverflow: "ellipsis",
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",
-                WebkitLineClamp: "10" /* number of lines to show */
+                WebkitLineClamp: "10"
               }}
             >
               {review.content}
@@ -94,25 +93,22 @@ const MovieDetail = ({
             </a>
           </ul>
         );
-      })}
+      })} */}
     </Layout>
   );
 };
 
 MovieDetail.getInitialProps = async function(url) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${url.query.id}/reviews?api_key=3e5072126511096a6377f77c742f2864`
-  );
-  const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${url.query.id}/credits?api_key=3e5072126511096a6377f77c742f2864`
+    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=3e5072126511096a6377f77c742f2864&language=da
+    `
   );
 
-  const cast = await response.json();
-  const show = await res.json();
+  const details = await res.json();
 
-  console.log(`Review Authors: ${show.results.map(test => test.author)}`);
+  console.log(`Details: ${details}`);
 
-  return { show, cast };
+  return { details };
 };
 
 export default MovieDetail;
