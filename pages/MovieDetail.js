@@ -6,7 +6,7 @@ import Slider from "react-slick";
 const MovieDetail = ({
   details,
   url: {
-    query: { title, rating, thumbnail, genre, summary }
+    query: { title, rating, thumbnail, genre, summary, id }
   }
 }) => {
   var settings = {
@@ -32,19 +32,49 @@ const MovieDetail = ({
 
           <h4>{rating}</h4>
 
-          <h4>{genre} </h4>
+          <h4>{genre}</h4>
         </div>
       </div>
-
       <br />
-
       <h2>Resume</h2>
       {summary ? summary : <p>intet resume endnu</p>}
-
-      <h2>Episoder</h2>
-
+      <br /> <br />
+      <h2>Sæsoner</h2>
+      {details.seasons.map(test => {
+        return (
+          <div style={{ padding: "2px 16px" }}>
+            <img
+              src={`https://image.tmdb.org/t/p/w200${test.poster_path}`}
+              alt=""
+            />
+            <br /> <br />
+            <div>
+              <h4>
+                <b>{test.name}</b>
+              </h4>
+              <p>Først udsendt: {test.air_date}</p>
+            </div>
+          </div>
+        );
+      })}
+      <br />
+      <a
+        href="http://www.amazon.com/tryprimefree?tag=serier20-20"
+        target="_blank"
+        style={{
+          color: "#fff",
+          maxWidth: "500px",
+          padding: "5px 15px",
+          textAlign: "center",
+          backgroundColor: "#f90",
+          borderColor: "#f90",
+          textDecoration: "none"
+        }}
+      >
+        {" "}
+        Stream {details.name} på Amazon Prime
+      </a>
       {/* {details.results.map(test => test.original_name)} */}
-
       {/* <h2>Skuespillere</h2>
       <Slider {...settings}>
         {cast.cast.map(test => {
