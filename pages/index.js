@@ -150,7 +150,10 @@ const index = props => {
                       opacity: "0.7"
                     }}
                   >
-                    <i class="fas fa-star" style={{ paddingRight: "5px" }}></i>
+                    <i
+                      className="fas fa-star"
+                      style={{ paddingRight: "5px" }}
+                    ></i>
                     {popularity.vote_average}
                   </div>
                   <img
