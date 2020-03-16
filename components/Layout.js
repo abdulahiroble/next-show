@@ -30,7 +30,12 @@ const Layout = props => {
         />
       </Head>
       <Nav />
-      <div className="container">{props.children}</div>
+      <div
+        className="container"
+        style={{ paddingLeft: "35px", paddingRight: "35px" }}
+      >
+        {props.children}
+      </div>
       <br />
       <Footer />
     </div>
