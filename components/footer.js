@@ -83,16 +83,22 @@ const footer = () => {
           alt=""
         />
         <div className="item">
-          <img src={Instagram} alt="" />
+          <a href="https://www.instagram.com/abdulahicodes" target="_blank">
+            <img src={Instagram} alt="" />
+          </a>
         </div>
         <div
           className="item"
           style={{ paddingLeft: "6px", paddingRight: "6px" }}
         >
-          <img src={Twitter} alt="" />
+          <a href="https://twitter.com/AbdulahiRoble" target="_blank">
+            <img src={Twitter} alt="" />
+          </a>
         </div>
         <div className="item">
-          <img src={Github} alt="" />
+          <a href="https://github.com/abdulahiroble" target="_blank">
+            <img src={Github} alt="" />
+          </a>
         </div>
       </div>
       <br />
