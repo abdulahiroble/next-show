@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import Instagram from "../images/Instagram.png";
+import Twitter from "../images/Twitter.png";
+import Github from "../images/Github.png";
 
 const footer = () => {
   //   const A = styled.a`
@@ -80,22 +83,16 @@ const footer = () => {
           alt=""
         />
         <div className="item">
-          <a href="https://www.instagram.com/abdulahicodes/" target="_blank">
-            <i className="fab fa-instagram"></i>
-          </a>
+          <img src={Instagram} alt="" />
+        </div>
+        <div
+          className="item"
+          style={{ paddingLeft: "6px", paddingRight: "6px" }}
+        >
+          <img src={Twitter} alt="" />
         </div>
         <div className="item">
-          <a href="https://twitter.com/AbdulahiRoble" target="_blank">
-            <i
-              className="fab fa-twitter"
-              style={{ padding: "0 20px 0 20px" }}
-            ></i>
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://github.com/abdulahiroble" target="_blank">
-            <i className="fas fa-code"></i>
-          </a>
+          <img src={Github} alt="" />
         </div>
       </div>
       <br />

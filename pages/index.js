@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 import Link from "next/link";
 //import Router from 'next/router'
+import Star from "../images/rating.png";
 
 const index = props => {
   var settings = {
@@ -67,7 +68,7 @@ const index = props => {
                         display: "block",
                         marginLeft: "auto",
                         marginRight: "auto",
-                        width: "80%",
+                        width: "90%",
                         opacity: "0.4"
                       }}
                     />
@@ -88,13 +89,13 @@ const index = props => {
                       style={{
                         color: "#fff",
                         position: "absolute",
-                        bottom: "20%",
-                        left: "12%",
+                        bottom: "30%",
+                        left: "8%",
                         fontWeight: "bold"
                       }}
                     >
                       {" "}
-                      {popularity.title}
+                      {popularity.original_name}
                     </h3>
 
                     <h4
@@ -103,7 +104,7 @@ const index = props => {
                         color: "#fff",
                         opacity: "0.7",
                         bottom: "12%",
-                        left: "12%"
+                        left: "8%"
                       }}
                     >
                       {popularity.vote_average} Bedømmelse |
@@ -150,10 +151,8 @@ const index = props => {
                       opacity: "0.7"
                     }}
                   >
-                    <i
-                      className="fas fa-star"
-                      style={{ paddingRight: "5px" }}
-                    ></i>
+                    <img src={Star} alt="" />
+
                     {popularity.vote_average}
                   </div>
                   <img
@@ -209,6 +208,7 @@ const index = props => {
                     opacity: "0.7"
                   }}
                 >
+                  <img src={Star} alt="" />
                   {rating.vote_average}
                 </div>
                 <img
@@ -263,6 +263,7 @@ const index = props => {
                     opacity: "0.7"
                   }}
                 >
+                  <img src={Star} alt="" />
                   {play.vote_average}
                 </div>
                 <img
