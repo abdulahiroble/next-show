@@ -13,10 +13,12 @@ const footer = () => {
       <style jsx>{`
         @media (min-width: 1280px) {
           .container {
+            max-width: 500px;
+            margin-left: -1%;
           }
 
-          .tmd {
-            display: none;
+          .item {
+            width: 90%;
           }
         }
       `}</style>
