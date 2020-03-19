@@ -6,13 +6,20 @@ import Twitter from "../images/Twitter.png";
 import Github from "../images/Github.png";
 
 const footer = () => {
-  //   const A = styled.a`
-  //     padding-right: 10px;
-  //   `;
   return (
     <footer
       style={{ backgroundColor: "#110c11", color: "white", padding: "32px" }}
     >
+      <style jsx>{`
+        @media (min-width: 1280px) {
+          .container {
+          }
+
+          .tmd {
+            display: none;
+          }
+        }
+      `}</style>
       <h2 style={{ letterSpacing: "3px" }}>Moviecloud</h2>
 
       <ul
@@ -48,28 +55,6 @@ const footer = () => {
         Copyright &copy;2020 <br /> Code and design by Abdulahi Roble
       </p>
       <br />
-      {/* <ul
-        className="navbar-nav ml-auto"
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-evenly"
-        }}
-      >
-        <li className="nav-item">
-          {" "}
-          <img
-            style={{ width: "50%" }}
-            src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png"
-            alt=""
-          />
-        </li>
-        <li className="nav-item">
-          <i className="fab fa-facebook"></i>
-          <i className="fab fa-twitter"></i>
-          <i className="fas fa-code"></i>
-        </li>
-      </ul> */}
       <div
         className="container"
         style={{
@@ -80,7 +65,7 @@ const footer = () => {
         <img
           style={{ width: "60%", marginRight: "50px" }}
           src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png"
-          alt=""
+          className="tmd"
         />
         <div className="item">
           <a href="https://www.instagram.com/abdulahicodes" target="_blank">
