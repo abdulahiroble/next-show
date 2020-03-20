@@ -35,20 +35,20 @@ const footer = () => {
         <li className="nav-item">
           <Link href="/">
             <a className="nav-link" style={{ paddingRight: "40px" }}>
-              Home
+              Hjem
             </a>
           </Link>
         </li>
         <li className="nav-item">
           <Link href="/profile">
             <a className="nav-link" style={{ paddingRight: "50px" }}>
-              Profile
+              Profil
             </a>
           </Link>
         </li>
         <li className="nav-item">
           <Link href="/discover">
-            <a className="nav-link">Discover</a>
+            <a className="nav-link">Udforsk</a>
           </Link>
         </li>
       </ul>

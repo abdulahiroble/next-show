@@ -27,18 +27,43 @@ const index = props => {
   };
   return (
     <Layout>
-      {/* {console.log(props.review.results.map(test => test.content))} */}
-      {/* {console.log(props.popular.results.map(test => test.id))} */}
-      {/* {console.log(props.genres.genres.map(test => test.id))}
-      {console.log(props.genres.genres.map(test => test.name))} */}
+      <style jsx>{`
+        @media (min-width: 1280px) {
+          img .poster {
+            display: none;
+          }
+
+          .test {
+            width: 50%;
+          }
+
+          .populær {
+          }
+
+          li {
+          }
+
+          .genre {
+            margin-right: 70%;
+            font-size: 20px;
+          }
+
+          .genre2 {
+            margin-right: 70%;
+            font-size: 20px;
+          }
+
+          .genre3 {
+            margin-right: 70%;
+            font-size: 20px;
+          }
+        }
+      `}</style>
       <Slider {...setting}>
         {props.popular.results.map(popularity => {
           return (
             <ul>
               <Link
-                // href="/MovieDetail/[id]"
-                // as={`/MovieDetail/${popularity.id}`}
-
                 href={{
                   pathname: "MovieDetail",
                   query: {
@@ -59,8 +84,12 @@ const index = props => {
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
+                  className="test"
                 >
-                  <div style={{ position: "relative", marginLeft: "-35px" }}>
+                  <div
+                    style={{ position: "relative", marginLeft: "-35px" }}
+                    id="seneste"
+                  >
                     <img
                       src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                       alt="poster"
@@ -71,6 +100,7 @@ const index = props => {
                         width: "90%",
                         opacity: "0.4"
                       }}
+                      className="poster"
                     />
                     <br />
                     <h2
@@ -140,6 +170,7 @@ const index = props => {
                 <li
                   style={{ listStyleType: "none", marginLeft: "-35px" }}
                   key={popularity.id}
+                  className="populær"
                 >
                   <div
                     style={{
@@ -165,7 +196,7 @@ const index = props => {
                     {" "}
                     {popularity.title}
                   </h6>
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center" }} className="genre">
                     {" "}
                     {props.genres.genres.map(genre => {
                       if (genre.id === popularity.genre_ids[0]) {
@@ -221,7 +252,7 @@ const index = props => {
                   {" "}
                   {rating.title}
                 </h6>
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center" }} className="genre2">
                   {" "}
                   {props.genres.genres.map(genre => {
                     if (genre.id === rating.genre_ids[0]) {
@@ -276,7 +307,7 @@ const index = props => {
                   {" "}
                   {play.title}
                 </h6>
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center" }} className="genre3">
                   {" "}
                   {props.genres.genres.map(genre => {
                     if (genre.id === play.genre_ids[0]) {
