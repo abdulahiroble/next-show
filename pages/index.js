@@ -27,18 +27,32 @@ const index = props => {
   };
   return (
     <Layout>
-      {/* {console.log(props.review.results.map(test => test.content))} */}
-      {/* {console.log(props.popular.results.map(test => test.id))} */}
-      {/* {console.log(props.genres.genres.map(test => test.id))}
-      {console.log(props.genres.genres.map(test => test.name))} */}
+      <style jsx>{`
+        @media (min-width: 1280px) {
+          .li {
+            margin-left: 50px;
+          }
+          .genre {
+            margin-right: 70%;
+            font-size: 25px;
+          }
+
+          .genre2 {
+            margin-right: 70%;
+            font-size: 25px;
+          }
+
+          .genre3 {
+            margin-right: 70%;
+            font-size: 25px;
+          }
+        }
+      `}</style>
       <Slider {...setting}>
         {props.popular.results.map(popularity => {
           return (
             <ul>
               <Link
-                // href="/MovieDetail/[id]"
-                // as={`/MovieDetail/${popularity.id}`}
-
                 href={{
                   pathname: "MovieDetail",
                   query: {
@@ -165,7 +179,7 @@ const index = props => {
                     {" "}
                     {popularity.title}
                   </h6>
-                  <div style={{ textAlign: "center" }}>
+                  <div style={{ textAlign: "center" }} className="genre">
                     {" "}
                     {props.genres.genres.map(genre => {
                       if (genre.id === popularity.genre_ids[0]) {
@@ -221,7 +235,7 @@ const index = props => {
                   {" "}
                   {rating.title}
                 </h6>
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center" }} className="genre2">
                   {" "}
                   {props.genres.genres.map(genre => {
                     if (genre.id === rating.genre_ids[0]) {
@@ -276,7 +290,7 @@ const index = props => {
                   {" "}
                   {play.title}
                 </h6>
-                <div style={{ textAlign: "center" }}>
+                <div style={{ textAlign: "center" }} className="genre3">
                   {" "}
                   {props.genres.genres.map(genre => {
                     if (genre.id === play.genre_ids[0]) {
