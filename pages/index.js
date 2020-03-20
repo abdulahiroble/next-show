@@ -21,7 +21,7 @@ const index = props => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     arrows: false,
     swipe: false
   };
@@ -33,10 +33,14 @@ const index = props => {
             display: none;
           }
 
-          #seneste {
+          .test {
+            width: 50%;
           }
 
-          li img {
+          .populær {
+          }
+
+          li {
           }
 
           .genre {
@@ -80,6 +84,7 @@ const index = props => {
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
+                  className="test"
                 >
                   <div
                     style={{ position: "relative", marginLeft: "-35px" }}
