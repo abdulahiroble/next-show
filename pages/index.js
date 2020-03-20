@@ -21,7 +21,7 @@ const index = props => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     arrows: false,
     swipe: false
   };
@@ -29,22 +29,29 @@ const index = props => {
     <Layout>
       <style jsx>{`
         @media (min-width: 1280px) {
-          .li {
-            margin-left: 50px;
+          img .poster {
+            display: none;
           }
+
+          #seneste {
+          }
+
+          li img {
+          }
+
           .genre {
             margin-right: 70%;
-            font-size: 25px;
+            font-size: 20px;
           }
 
           .genre2 {
             margin-right: 70%;
-            font-size: 25px;
+            font-size: 20px;
           }
 
           .genre3 {
             margin-right: 70%;
-            font-size: 25px;
+            font-size: 20px;
           }
         }
       `}</style>
@@ -74,7 +81,10 @@ const index = props => {
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
                 >
-                  <div style={{ position: "relative", marginLeft: "-35px" }}>
+                  <div
+                    style={{ position: "relative", marginLeft: "-35px" }}
+                    id="seneste"
+                  >
                     <img
                       src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                       alt="poster"
@@ -85,6 +95,7 @@ const index = props => {
                         width: "90%",
                         opacity: "0.4"
                       }}
+                      className="poster"
                     />
                     <br />
                     <h2
@@ -154,6 +165,7 @@ const index = props => {
                 <li
                   style={{ listStyleType: "none", marginLeft: "-35px" }}
                   key={popularity.id}
+                  className="populær"
                 >
                   <div
                     style={{
