@@ -19,20 +19,43 @@ const MovieDetail = ({
   };
   return (
     <Layout>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <style jsx>{`
+        @media (min-width: 1280px) {
+          #noflex {
+            display: flex;
+            flex-direction: column !important;
+          }
+
+          // .poster {
+          //   margin-right: 55%;
+          //   display: column;
+          // }
+
+          // .info {
+          //   margin-left: 75%;
+          // }
+        }
+      `}</style>
+      <div
+        style={{ display: "flex", justifyContent: "space-around" }}
+        id="noflex"
+      >
         <div>
           <img
             src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
             alt=""
+            className="poster"
           />
         </div>
 
+        <br />
+
         <div>
-          <h3>{title} </h3>
-
-          <h4>{rating}</h4>
-
-          <h4>{genre}</h4>
+          <div className="info">
+            <h3>{title} </h3>
+            <h4>Bedømmelse: {rating}</h4>
+            <h4>Genre: {genre}</h4>
+          </div>
         </div>
       </div>
       <br />

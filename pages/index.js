@@ -34,7 +34,7 @@ const index = props => {
           }
 
           .test {
-            width: 50%;
+            width: 35%;
           }
 
           .populær {
