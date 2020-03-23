@@ -22,7 +22,7 @@ const footer = () => {
           }
         }
       `}</style>
-      <h2 style={{ letterSpacing: "3px" }}>Moviecloud</h2>
+      <h2 style={{ letterSpacing: "3px" }}>Serier Man Skal Se</h2>
 
       <ul
         className="navbar-nav ml-auto"
