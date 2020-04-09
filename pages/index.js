@@ -6,14 +6,14 @@ import Link from "next/link";
 //import Router from 'next/router'
 import Star from "../images/rating.png";
 
-const index = props => {
+const index = (props) => {
   var settings = {
     dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    swipe: false
+    swipe: false,
   };
   var setting = {
     dots: false,
@@ -23,7 +23,7 @@ const index = props => {
     slidesToScroll: 1,
     autoplay: true,
     arrows: false,
-    swipe: false
+    swipe: false,
   };
   return (
     <Layout>
@@ -41,6 +41,7 @@ const index = props => {
           }
 
           li {
+            margin-left: 27% !important;
           }
 
           .genre {
@@ -60,7 +61,7 @@ const index = props => {
         }
       `}</style>
       <Slider {...setting}>
-        {props.popular.results.map(popularity => {
+        {props.popular.results.map((popularity) => {
           return (
             <ul>
               <Link
@@ -71,13 +72,13 @@ const index = props => {
                     rating: popularity.vote_average,
                     title: popularity.title,
                     summary: popularity.overview,
-                    genre: props.genres.genres.map(genre => {
+                    genre: props.genres.genres.map((genre) => {
                       if (genre.id === popularity.genre_ids[0]) {
                         return genre.name;
                       }
                     }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`
-                  }
+                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
+                  },
                 }}
                 as={`/MovieDetail/${popularity.id}`}
               >
@@ -98,7 +99,7 @@ const index = props => {
                         marginLeft: "auto",
                         marginRight: "auto",
                         width: "90%",
-                        opacity: "0.4"
+                        opacity: "0.4",
                       }}
                       className="poster"
                     />
@@ -110,7 +111,7 @@ const index = props => {
                         bottom: "80%",
                         left: "12%",
                         fontWeight: "bold",
-                        letterSpacing: "2px"
+                        letterSpacing: "2px",
                       }}
                     >
                       Seneste
@@ -121,7 +122,7 @@ const index = props => {
                         position: "absolute",
                         bottom: "30%",
                         left: "8%",
-                        fontWeight: "bold"
+                        fontWeight: "bold",
                       }}
                     >
                       {" "}
@@ -134,11 +135,11 @@ const index = props => {
                         color: "#fff",
                         opacity: "0.7",
                         bottom: "12%",
-                        left: "8%"
+                        left: "8%",
                       }}
                     >
                       {popularity.vote_average} Bedømmelse |
-                      {props.genres.genres.map(genre => {
+                      {props.genres.genres.map((genre) => {
                         if (genre.id === popularity.genre_ids[0]) {
                           return genre.name;
                         } else {
@@ -157,13 +158,13 @@ const index = props => {
         style={{
           color: "#fff",
           textTransform: "uppercase",
-          letterSpacing: "2px"
+          letterSpacing: "2px",
         }}
       >
         Populære
       </h2>
       <Slider {...settings}>
-        {props.popular.results.map(popularity => {
+        {props.popular.results.map((popularity) => {
           return (
             <ul>
               <Link href="#">
@@ -179,7 +180,7 @@ const index = props => {
                       padding: "6px",
                       color: "#fff",
                       backgroundColor: "#000",
-                      opacity: "0.7"
+                      opacity: "0.7",
                     }}
                   >
                     <img src={Star} alt="" />
@@ -198,7 +199,7 @@ const index = props => {
                   </h6>
                   <div style={{ textAlign: "center" }} className="genre">
                     {" "}
-                    {props.genres.genres.map(genre => {
+                    {props.genres.genres.map((genre) => {
                       if (genre.id === popularity.genre_ids[0]) {
                         return genre.name;
                       } else {
@@ -216,13 +217,13 @@ const index = props => {
         style={{
           color: "#fff",
           textTransform: "uppercase",
-          letterSpacing: "2px"
+          letterSpacing: "2px",
         }}
       >
         Bedst Bedømte
       </h2>
       <Slider {...settings}>
-        {props.rated.results.map(rating => {
+        {props.rated.results.map((rating) => {
           return (
             <ul>
               <li
@@ -236,7 +237,7 @@ const index = props => {
                     padding: "6px",
                     color: "#fff",
                     backgroundColor: "#000",
-                    opacity: "0.7"
+                    opacity: "0.7",
                   }}
                 >
                   <img src={Star} alt="" />
@@ -254,7 +255,7 @@ const index = props => {
                 </h6>
                 <div style={{ textAlign: "center" }} className="genre2">
                   {" "}
-                  {props.genres.genres.map(genre => {
+                  {props.genres.genres.map((genre) => {
                     if (genre.id === rating.genre_ids[0]) {
                       return genre.name;
                     } else {
@@ -271,13 +272,13 @@ const index = props => {
         style={{
           color: "#fff",
           textTransform: "uppercase",
-          letterSpacing: "2px"
+          letterSpacing: "2px",
         }}
       >
         Udsendes I Dag
       </h2>
       <Slider {...settings}>
-        {props.playing.results.map(play => {
+        {props.playing.results.map((play) => {
           return (
             <ul>
               <li
@@ -291,7 +292,7 @@ const index = props => {
                     padding: "6px",
                     color: "#fff",
                     backgroundColor: "#000",
-                    opacity: "0.7"
+                    opacity: "0.7",
                   }}
                 >
                   <img src={Star} alt="" />
@@ -309,7 +310,7 @@ const index = props => {
                 </h6>
                 <div style={{ textAlign: "center" }} className="genre3">
                   {" "}
-                  {props.genres.genres.map(genre => {
+                  {props.genres.genres.map((genre) => {
                     if (genre.id === play.genre_ids[0]) {
                       return genre.name;
                     } else {
@@ -380,11 +381,11 @@ const index = props => {
   );
 };
 
-index.getInitialProps = async function({ query }) {
+index.getInitialProps = async function ({ query }) {
   // Popular Movies
   const res = await fetch(
     // "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
-    "https://api.themoviedb.org/3/tv/popular?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
+    "https://api.themoviedb.org/3/tv/on_the_air?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
   );
 
   // Top rated movies
@@ -420,7 +421,7 @@ index.getInitialProps = async function({ query }) {
     upcoming: upcoming,
     playing,
     genres,
-    query
+    query,
   };
 };
 

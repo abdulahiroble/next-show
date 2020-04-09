@@ -3,11 +3,11 @@ import Head from "next/head";
 import Nav from "./nav";
 import Footer from "./footer";
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <div>
       <Head>
-        <title>Serier Man Skal Se</title>
+        <title>Moviecloud</title>
         <link
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"

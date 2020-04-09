@@ -22,14 +22,14 @@ const footer = () => {
           }
         }
       `}</style>
-      <h2 style={{ letterSpacing: "3px" }}>Serier Man Skal Se</h2>
+      <h2 style={{ letterSpacing: "3px" }}>Moviecloud</h2>
 
       <ul
         className="navbar-nav ml-auto"
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "flex-start"
+          justifyContent: "flex-start",
         }}
       >
         <li className="nav-item">
@@ -61,7 +61,7 @@ const footer = () => {
         className="container"
         style={{
           display: "flex",
-          justifyContent: "flex-end"
+          justifyContent: "flex-end",
         }}
       >
         <img
