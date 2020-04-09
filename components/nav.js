@@ -5,7 +5,7 @@ const Nav = () => (
   <nav className="navbar navbar-expand navba-dark bg-dark mb-4">
     <div className="container">
       <a href="/" className="navbar-brand">
-        Serier Man Skal Se
+        Moviecloud
       </a>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
