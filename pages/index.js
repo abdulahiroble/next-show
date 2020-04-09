@@ -29,8 +29,8 @@ const index = (props) => {
     <Layout>
       <style jsx>{`
         @media (min-width: 1280px) {
-          img .poster {
-            display: none;
+          .populære {
+            display: width: 100% !important;
           }
 
           .test {
@@ -42,6 +42,7 @@ const index = (props) => {
 
           li {
             margin-left: 27% !important;
+            padding: 0 !important;
           }
 
           .genre {
@@ -191,6 +192,7 @@ const index = (props) => {
                     src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                     alt="poster"
                     style={{ maxWidth: "100px" }}
+                    className="populære"
                   />
                   <br />
                   <h6 style={{ textAlign: "center", color: "#fff" }}>
@@ -323,60 +325,6 @@ const index = (props) => {
           );
         })}
       </Slider>
-      {/* <h2
-        style={{
-          color: "#fff",
-          textTransform: "uppercase",
-          letterSpacing: "2px"
-        }}
-      >
-        Upcoming
-      </h2>
-      <Slider {...settings}>
-        {props.upcoming.results.map(soon => {
-          return (
-            <ul>
-              <li
-                style={{ listStyleType: "none", marginLeft: "-35px" }}
-                key={soon.id}
-              >
-                <div
-                  style={{
-                    position: "absolute",
-                    marginTop: "7px",
-                    padding: "6px",
-                    color: "#fff",
-                    backgroundColor: "#000",
-                    opacity: "0.7"
-                  }}
-                >
-                  {soon.vote_average}
-                </div>
-                <img
-                  src={`https://image.tmdb.org/t/p/w200${soon.poster_path}`}
-                  alt="poster"
-                  style={{ maxWidth: "100px" }}
-                />
-                <br />
-                <h6 style={{ textAlign: "center", color: "#fff" }}>
-                  {" "}
-                  {soon.title}
-                </h6>
-                <div style={{ textAlign: "center" }}>
-                  {" "}
-                  {props.genres.genres.map(genre => {
-                    if (genre.id === soon.genre_ids[0]) {
-                      return genre.name;
-                    } else {
-                      return null;
-                    }
-                  })}
-                </div>
-              </li>
-            </ul>
-          );
-        })}
-      </Slider> */}
     </Layout>
   );
 };
@@ -384,29 +332,27 @@ const index = (props) => {
 index.getInitialProps = async function ({ query }) {
   // Popular Movies
   const res = await fetch(
-    // "https://api.themoviedb.org/3/discover/movie?api_key=3e5072126511096a6377f77c742f2864"
-    "https://api.themoviedb.org/3/tv/on_the_air?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
+    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.API_SECRET}&language=da&page=1`
   );
 
   // Top rated movies
   const response = await fetch(
-    // "https://api.themoviedb.org/3/movie/top_rated?api_key=3e5072126511096a6377f77c742f2864"
-    "https://api.themoviedb.org/3/tv/top_rated?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
+    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.API_SECRET}&language=da&page=1`
   );
 
   // Upcoming
   const answer = await fetch(
-    "https://api.themoviedb.org/3/movie/upcoming?api_key=3e5072126511096a6377f77c742f2864"
+    `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.API_SECRET}`
   );
 
   // Now Playing
   const reply = await fetch(
-    "https://api.themoviedb.org/3/tv/on_the_air?api_key=3e5072126511096a6377f77c742f2864&language=da&page=1"
+    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.API_SECRET}&language=da&page=1`
   );
 
   // Genres
   const genre = await fetch(
-    "https://api.themoviedb.org/3/genre/movie/list?api_key=3e5072126511096a6377f77c742f2864"
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.API_SECRET}`
   );
 
   const popular = await res.json();
