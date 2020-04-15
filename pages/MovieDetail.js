@@ -6,8 +6,8 @@ import Slider from "react-slick";
 const MovieDetail = ({
   details,
   url: {
-    query: { title, rating, thumbnail, genre, summary, id }
-  }
+    query: { title, rating, thumbnail, genre, summary, id },
+  },
 }) => {
   var settings = {
     dots: false,
@@ -15,7 +15,7 @@ const MovieDetail = ({
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    swipe: false
+    swipe: false,
   };
   return (
     <Layout>
@@ -63,7 +63,7 @@ const MovieDetail = ({
       {summary ? summary : <p>intet resume endnu</p>}
       <br /> <br />
       <h2>Sæsoner</h2>
-      {details.seasons.map(test => {
+      {details.seasons.map((test) => {
         return (
           <div style={{ padding: "2px 16px" }}>
             <img
@@ -91,7 +91,7 @@ const MovieDetail = ({
           textAlign: "center",
           backgroundColor: "#f90",
           borderColor: "#f90",
-          textDecoration: "none"
+          textDecoration: "none",
         }}
       >
         {" "}
@@ -151,9 +151,9 @@ const MovieDetail = ({
   );
 };
 
-MovieDetail.getInitialProps = async function(url) {
+MovieDetail.getInitialProps = async function (url) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=3e5072126511096a6377f77c742f2864&language=da
+    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=${process.env.API_SECRET}&language=da
     `
   );
 
