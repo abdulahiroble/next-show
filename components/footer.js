@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Instagram from "../images/Instagram.png";
 import Twitter from "../images/Twitter.png";
 import Github from "../images/Github.png";
+import CookieConsent from "react-cookie-consent";
 
 const footer = () => {
   return (
@@ -22,7 +23,30 @@ const footer = () => {
           }
         }
       `}</style>
-      <h2 style={{ letterSpacing: "3px" }}>Moviecloud</h2>
+
+      <CookieConsent
+        location="bottom"
+        buttonText="Accepter cookies"
+        cookieName="myAwesomeCookieName2"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        expires={150}
+      >
+        Vi bruger cookies til, at få vores hjemmeside til at virke ordentligt,
+        personalisere indhold og reklamer, tilbyde funktioner i forhold til
+        sociale medier og analysere vores traffik. Vi deler også information
+        vedrørende din brug af vores hjemmeside med analytiske
+        samarbejdspartnere.
+        <Link
+          href="/cookies"
+          style={{ textDecoration: "none", color: "yellow" }}
+        >
+          <a style={{ textDecoration: "none", color: "yellow" }}>
+            Læs mere om cookies
+          </a>
+        </Link>
+      </CookieConsent>
+      <h2 style={{ letterSpacing: "3px" }}>seriermanskalse.dk</h2>
 
       <ul
         className="navbar-nav ml-auto"
@@ -33,23 +57,23 @@ const footer = () => {
         }}
       >
         <li className="nav-item">
-          <Link href="/">
+          {/* <Link href="/">
             <a className="nav-link" style={{ paddingRight: "40px" }}>
               Hjem
             </a>
-          </Link>
+          </Link> */}
         </li>
         <li className="nav-item">
-          <Link href="/profile">
+          <Link href="/omos">
             <a className="nav-link" style={{ paddingRight: "50px" }}>
-              Profil
+              Om
             </a>
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/discover">
-            <a className="nav-link">Udforsk</a>
-          </Link>
+          {/* <Link href="/kontakt">
+            <a className="nav-link">Kontakt</a>
+          </Link> */}
         </li>
       </ul>
       <br />
