@@ -63,24 +63,24 @@ const MovieDetail = ({
       {summary ? summary : <p>intet resume endnu</p>}
       <br /> <br />
       <h2>Sæsoner</h2>
-      {details.seasons.map((test) => {
+      {details.seasons.map((details) => {
         return (
           <div style={{ padding: "2px 16px" }}>
             <img
-              src={`https://image.tmdb.org/t/p/w200${test.poster_path}`}
+              src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
               alt=""
             />
             <br /> <br />
             <div>
               <h4>
-                <b>{test.name}</b>
+                <b>{details.name}</b>
               </h4>
-              <p>Først udsendt: {test.air_date}</p>
+              <p>Først udsendt: {details.air_date}</p>
             </div>
           </div>
         );
       })}
-      <br />
+      {/* <br />
       <a
         href="http://www.amazon.com/tryprimefree?tag=serier20-20"
         target="_blank"
@@ -96,7 +96,7 @@ const MovieDetail = ({
       >
         {" "}
         Stream {details.name} på Amazon Prime
-      </a>
+      </a> */}
       {/* {details.results.map(test => test.original_name)} */}
       {/* <h2>Skuespillere</h2>
       <Slider {...settings}>

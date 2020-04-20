@@ -5,24 +5,19 @@ const Nav = () => (
   <nav className="navbar navbar-expand navba-dark bg-dark mb-4">
     <div className="container">
       <a href="/" className="navbar-brand">
-        Moviecloud
+        seriermanskalse.dk
       </a>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link href="/">
-              <a className="nav-link">Hjem</a>
+            <Link href="/omos">
+              <a className="nav-link">Om</a>
             </Link>
           </li>
           <li className="nav-item">
-            <Link href="/profile">
-              <a className="nav-link">Profil</a>
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="/discover">
-              <a className="nav-link">Udforsk</a>
-            </Link>
+            {/* <Link href="/kontakt">
+              <a className="nav-link">Kontakt</a>
+            </Link> */}
           </li>
         </ul>
       </div>
