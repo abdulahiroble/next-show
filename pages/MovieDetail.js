@@ -153,7 +153,7 @@ const MovieDetail = ({
 
 MovieDetail.getInitialProps = async function (url) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=3e5072126511096a6377f77c742f2864&language=da
+    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=${process.env.API_SECRET}&language=da
     `
   );
 
