@@ -12,13 +12,9 @@ const Layout = (props) => {
         <title>seriermanskalse</title>
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-164270700-1"
+          src="https://www.googletagmanager.com/gtag/js?id=UA-164270700-1
+"
         ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'UA-164270700-1');
-        </script>
         <link
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"
