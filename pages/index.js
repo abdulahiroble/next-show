@@ -332,12 +332,12 @@ const index = (props) => {
 index.getInitialProps = async function ({ query }) {
   // Popular Movies
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.API_SECRET}&language=da&page=1`
   );
 
   // Top rated movies
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.API_SECRET}&language=da&page=1`
   );
 
   // Upcoming
