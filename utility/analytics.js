@@ -1,15 +1,10 @@
 import ReactGA from "react-ga";
 
-const GoogleAnalyticsId = "UA-164270700-1";
+export const initializeGoogleAnalytics = () => {
+  ReactGA.initialize("UA-164270700-1");
+};
 
-class AnalyticsInternal {
-  constructor() {
-    ReactGA.initialize(GoogleAnalyticsId);
-  }
-
-  logPageView(url) {
-    ReactGA.pageview(url);
-  }
-}
-
-export const Analytics = new AnalyticsInternal();
+export const registerPageView = () => {
+  ReactGA.set({ page: window.location.pathname });
+  ReactGA.pageview(window.location.pathname);
+};
