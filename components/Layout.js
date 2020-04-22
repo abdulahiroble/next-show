@@ -2,15 +2,23 @@ import React from "react";
 import Head from "next/head";
 import Nav from "./nav";
 import Footer from "./footer";
-import { Analytics } from "../utility/analytics";
+// import { Analytics } from "../utility/analytics";
 
 const Layout = (props) => {
-  Analytics.logPageView("/");
+  // Analytics.logPageView("/");
   return (
     <div>
       <Head>
         <title>seriermanskalse</title>
-
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-164270700-1"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'UA-164270700-1');
+        </script>
         <link
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"
