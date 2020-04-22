@@ -7,7 +7,7 @@ const Layout = (props) => {
   return (
     <div>
       <Head>
-        <title>seriermanskalse</title>
+        <title>Serier man skal se</title>
         <link
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"
@@ -39,11 +39,7 @@ const Layout = (props) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
       </Head>
-      <noscript
-        dangerouslySetInnerHTML={{
-          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJKVMRK" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
-        }}
-      />
+
       <Nav />
       <div
         className="container"
@@ -52,6 +48,11 @@ const Layout = (props) => {
         {props.children}
       </div>
       <br />
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJKVMRK" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
+        }}
+      />
       <Footer />
     </div>
   );
