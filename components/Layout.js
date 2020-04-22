@@ -3,15 +3,15 @@ import Head from "next/head";
 import Nav from "./nav";
 import Footer from "./footer";
 // import { Analytics } from "../utility/analytics";
-import { initGoogleAnalytics, registerPageView } from "../utility/analytics";
+import { initGA, logPageView } from "../utility/analytics";
 
 const Layout = (props) => {
   useEffect(() => {
     if (!window.GA_INITIALIZED) {
-      initGoogleAnalytics();
+      initGA();
       window.GA_INITIALIZED = true;
     }
-    registerPageView();
+    logPageView();
   });
   // Analytics.logPageView("/");
   return (
