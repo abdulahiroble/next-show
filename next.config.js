@@ -1,19 +1,21 @@
 const withImages = require("next-images");
 const withSass = require("@zeit/next-sass");
-// const sitemap = require("nextjs-sitemap-generator");
+const sitemap = require("nextjs-sitemap-generator");
 
 module.exports = withImages(
-  withSass({
-    env: {
-      API_SECRET: process.env.API_SECRET,
-    },
+  sitemap(
+    withSass({
+      env: {
+        API_SECRET: process.env.API_SECRET,
+      },
 
-    exportPathMap: function () {
-      return {
-        "/": { page: "/" },
-      };
-    },
-  })
+      exportPathMap: function () {
+        return {
+          "/": { page: "/" },
+        };
+      },
+    })
+  )
 );
 
 // module.exports = withImages(
