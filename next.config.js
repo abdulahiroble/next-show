@@ -5,6 +5,10 @@ const sitemap = require("nextjs-sitemap-generator");
 module.exports = withImages(
   sitemap(
     withSass({
+      env: {
+        API_SECRET: process.env.API_SECRET,
+      },
+
       baseUrl: "https://seriermanskalse.dk",
       pagesDirectory: __dirname + "/pages",
       targetDirectory: "static/",
@@ -13,10 +17,6 @@ module.exports = withImages(
         return {
           "/": { page: "/" },
         };
-      },
-
-      env: {
-        API_SECRET: process.env.API_SECRET,
       },
     })
   )
