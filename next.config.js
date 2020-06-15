@@ -1,6 +1,6 @@
 const withImages = require("next-images");
 const withSass = require("@zeit/next-sass");
-const sitemap = require("nextjs-sitemap-generator");
+// const sitemap = require("nextjs-sitemap-generator");
 
 module.exports = withImages(
   withSass(
@@ -14,10 +14,6 @@ module.exports = withImages(
           "/": { page: "/" },
         };
       },
-
-      baseUrl: "https://seriermanskalse.dk",
-      pagesDirectory: __dirname + "/pages",
-      targetDirectory: "static/",
     })
   )
 );
