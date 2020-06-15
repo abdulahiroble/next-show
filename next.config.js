@@ -5,6 +5,10 @@ const withSass = require("@zeit/next-sass");
 module.exports = withImages(
   withSass(
     sitemap({
+      baseUrl: "https://seriermanskalse.dk",
+      pagesDirectory: __dirname + "/pages",
+      targetDirectory: "static/",
+
       env: {
         API_SECRET: process.env.API_SECRET,
       },
@@ -14,10 +18,6 @@ module.exports = withImages(
           "/": { page: "/" },
         };
       },
-
-      baseUrl: "https://seriermanskalse.dk",
-      pagesDirectory: __dirname + "/pages",
-      targetDirectory: "static/",
     })
   )
 );
