@@ -7,7 +7,7 @@ sitemap({
     de: "https://seriermanskalse.dk",
     es: "http://seriermanskalse.es",
     ja: "http://seriermanskalse.jp",
-    fr: "http://seriermanskalse.dk.fr",
+    fr: "http://seriermanskalse.fr",
   },
   baseUrl: "https://seriermanskalse.dk",
   ignoredPaths: ["admin"],

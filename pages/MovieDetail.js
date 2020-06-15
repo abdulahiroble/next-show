@@ -37,10 +37,7 @@ const MovieDetail = ({
           // }
         }
       `}</style>
-      <div
-        style={{ display: "flex", justifyContent: "space-around" }}
-        id="noflex"
-      >
+      <div id="noflex">
         <div>
           <img
             src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
