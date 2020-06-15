@@ -14,6 +14,10 @@ module.exports = withImages(
           "/": { page: "/" },
         };
       },
+
+      baseUrl: "https://seriermanskalse.dk",
+      pagesDirectory: __dirname + "/pages",
+      targetDirectory: "static/",
     })
   )
 );
