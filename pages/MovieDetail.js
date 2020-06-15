@@ -5,6 +5,7 @@ import Slider from "react-slick";
 
 const MovieDetail = ({
   details,
+  trailer,
   url: {
     query: { title, rating, thumbnail, genre, summary, id },
   },
@@ -36,10 +37,7 @@ const MovieDetail = ({
           // }
         }
       `}</style>
-      <div
-        style={{ display: "flex", justifyContent: "space-around" }}
-        id="noflex"
-      >
+      <div id="noflex">
         <div>
           <img
             src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
@@ -63,44 +61,43 @@ const MovieDetail = ({
       {summary ? summary : <p>intet resume endnu</p>}
       <br /> <br />
       <h2>Sæsoner</h2>
-      {details.seasons.map((details) => {
-        return (
-          <div style={{ padding: "2px 16px" }}>
-            <img
-              src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
-              alt=""
-            />
-            <br /> <br />
+      <Slider>
+        {details.seasons.map((details) => {
+          return (
             <div>
-              <h4>
-                <b>{details.name}</b>
-              </h4>
-              <p>Først udsendt: {details.air_date}</p>
+              <img
+                src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
+                alt=""
+                style={{ marginLeft: "20%" }}
+              />
+              <br /> <br />
+              <div>
+                <h4>
+                  <b>{details.name}</b>
+                </h4>
+                <p>Først udsendt: {details.air_date}</p>
+              </div>
             </div>
+          );
+        })}
+      </Slider>
+      <h2>Trailer</h2>
+      {trailer.results.map((test) => {
+        return (
+          <div>
+            {" "}
+            <iframe
+              width="300"
+              height="250"
+              maxLength="11"
+              src={`https://www.youtube.com/embed/${test.key}`}
+            ></iframe>
           </div>
         );
       })}
-      {/* <br />
-      <a
-        href="http://www.amazon.com/tryprimefree?tag=serier20-20"
-        target="_blank"
-        style={{
-          color: "#fff",
-          maxWidth: "500px",
-          padding: "5px 15px",
-          textAlign: "center",
-          backgroundColor: "#f90",
-          borderColor: "#f90",
-          textDecoration: "none",
-        }}
-      >
-        {" "}
-        Stream {details.name} på Amazon Prime
-      </a> */}
-      {/* {details.results.map(test => test.original_name)} */}
       {/* <h2>Skuespillere</h2>
       <Slider {...settings}>
-        {cast.cast.map(test => {
+        {cast.cast.map((test) => {
           return (
             <ul>
               <li style={{ listStyleType: "none" }}>
@@ -111,7 +108,7 @@ const MovieDetail = ({
                     display: "block",
                     marginLeft: "auto",
                     marginRight: "auto",
-                    width: "80%"
+                    width: "80%",
                   }}
                 />
                 {test.name}
@@ -120,11 +117,9 @@ const MovieDetail = ({
           );
         })}
       </Slider>
-
       <h2>Trailers</h2>
-
       <h2>Anmeldelser</h2>
-      {show.results.map(review => {
+      {show.results.map((review) => {
         return (
           <ul>
             <li style={{ listStyleType: "none" }}>
@@ -136,7 +131,7 @@ const MovieDetail = ({
                 textOverflow: "ellipsis",
                 display: "-webkit-box",
                 WebkitBoxOrient: "vertical",
-                WebkitLineClamp: "10"
+                WebkitLineClamp: "10",
               }}
             >
               {review.content}
@@ -157,11 +152,18 @@ MovieDetail.getInitialProps = async function (url) {
     `
   );
 
+  const response = await fetch(
+    `https://api.themoviedb.org/3/tv/${url.query.id}/videos?api_key=${process.env.API_SECRET}&language=en-U"
+    `
+  );
+
   const details = await res.json();
+  const trailer = await response.json();
 
-  console.log(`Details: ${details}`);
+  // console.log(`Details: ${details}`);
+  console.log(`Trailer: ${trailer.id}`);
 
-  return { details };
+  return { details, trailer };
 };
 
 export default MovieDetail;
