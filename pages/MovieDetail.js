@@ -27,6 +27,20 @@ const MovieDetail = ({
             flex-direction: column !important;
           }
 
+          .seasons {
+            width: 40%;
+            margin-left: 28% !important;
+          }
+
+          img {
+            width: 30%;
+          }
+
+          .trailer {
+            width: 100%;
+            height: 600px;
+          }
+
           // .poster {
           //   margin-right: 55%;
           //   display: column;
@@ -69,6 +83,7 @@ const MovieDetail = ({
                 src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
                 alt=""
                 style={{ marginLeft: "20%" }}
+                className="seasons"
               />
               <br /> <br />
               <div>
@@ -90,58 +105,12 @@ const MovieDetail = ({
               width="300"
               height="250"
               maxLength="11"
+              className="trailer"
               src={`https://www.youtube.com/embed/${test.key}`}
             ></iframe>
           </div>
         );
       })}
-      {/* <h2>Skuespillere</h2>
-      <Slider {...settings}>
-        {cast.cast.map((test) => {
-          return (
-            <ul>
-              <li style={{ listStyleType: "none" }}>
-                <img
-                  src={`https://image.tmdb.org/t/p/original/${test.profile_path}`}
-                  alt="poster"
-                  style={{
-                    display: "block",
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    width: "80%",
-                  }}
-                />
-                {test.name}
-              </li>
-            </ul>
-          );
-        })}
-      </Slider>
-      <h2>Trailers</h2>
-      <h2>Anmeldelser</h2>
-      {show.results.map((review) => {
-        return (
-          <ul>
-            <li style={{ listStyleType: "none" }}>
-              <h3>{review.author}</h3>
-            </li>
-            <p
-              style={{
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                display: "-webkit-box",
-                WebkitBoxOrient: "vertical",
-                WebkitLineClamp: "10",
-              }}
-            >
-              {review.content}
-            </p>
-            <a href={review.url} target="_blank">
-              Read Full Review
-            </a>
-          </ul>
-        );
-      })} */}
     </Layout>
   );
 };
@@ -160,7 +129,6 @@ MovieDetail.getInitialProps = async function (url) {
   const details = await res.json();
   const trailer = await response.json();
 
-  // console.log(`Details: ${details}`);
   console.log(`Trailer: ${trailer.id}`);
 
   return { details, trailer };
