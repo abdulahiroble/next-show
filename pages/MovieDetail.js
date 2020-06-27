@@ -29,10 +29,11 @@ const MovieDetail = ({
 
           .seasons {
             width: 40%;
+            margin-left: 28% !important;
           }
 
           img {
-            width: 50%;
+            width: 30%;
           }
 
           .trailer {
@@ -116,12 +117,12 @@ const MovieDetail = ({
 
 MovieDetail.getInitialProps = async function (url) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=3e5072126511096a6377f77c742f2864&language=da
+    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=${process.env.API_SECRET}&language=da
     `
   );
 
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/${url.query.id}/videos?api_key=3e5072126511096a6377f77c742f2864&language=en-U"
+    `https://api.themoviedb.org/3/tv/${url.query.id}/videos?api_key=${process.env.API_SECRET}&language=en-U"
     `
   );
 
