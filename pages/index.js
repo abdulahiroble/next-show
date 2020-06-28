@@ -40,8 +40,14 @@ const index = (props) => {
     <Layout>
       <style jsx>{`
         @media (min-width: 1280px) {
-          .populære {
-            display: width: 100% !important;
+          .populære-poster,
+          .udsendes,
+          .bedømte {
+            max-width: 100% !important;
+          }
+
+          .star {
+            width: 100%;
           }
 
           .test {
@@ -49,6 +55,7 @@ const index = (props) => {
           }
 
           .populær {
+            width: 100% !important;
           }
 
           li {
@@ -56,19 +63,22 @@ const index = (props) => {
             padding: 0 !important;
           }
 
+          li img {
+          }
+
           .genre {
-            margin-right: 70%;
-            font-size: 20px;
+            margin-right: 35%;
+            font-size: 25px;
           }
 
           .genre2 {
-            margin-right: 70%;
-            font-size: 20px;
+            margin-right: 5%;
+            font-size: 25px;
           }
 
           .genre3 {
-            margin-right: 70%;
-            font-size: 20px;
+            margin-right: 5%;
+            font-size: 25px;
           }
         }
       `}</style>
@@ -93,6 +103,7 @@ const index = (props) => {
                   },
                 }}
                 as={`/MovieDetail/${popularity.id}`}
+                style={{ cursor: "pointer" }}
               >
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
@@ -198,7 +209,11 @@ const index = (props) => {
                 as={`/MovieDetail/${popularity.id}`}
               >
                 <li
-                  style={{ listStyleType: "none", marginLeft: "-35px" }}
+                  style={{
+                    listStyleType: "none",
+                    marginLeft: "-35px",
+                    cursor: "pointer",
+                  }}
                   key={popularity.id}
                   className="populær"
                 >
@@ -212,7 +227,7 @@ const index = (props) => {
                       opacity: "0.7",
                     }}
                   >
-                    <img src={Star} alt="" />
+                    <img src={Star} alt="" className="star" />
 
                     {popularity.vote_average}
                   </div>
@@ -220,7 +235,7 @@ const index = (props) => {
                     src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                     alt="poster"
                     style={{ maxWidth: "100px" }}
-                    className="populære"
+                    className="populære-poster"
                   />
                   <br />
                   <h6 style={{ textAlign: "center", color: "#fff" }}>
@@ -275,7 +290,11 @@ const index = (props) => {
                 as={`/MovieDetail/${rating.id}`}
               >
                 <li
-                  style={{ listStyleType: "none", marginLeft: "-35px" }}
+                  style={{
+                    listStyleType: "none",
+                    marginLeft: "-35px",
+                    cursor: "pointer",
+                  }}
                   key={rating.id}
                 >
                   <div
@@ -288,13 +307,14 @@ const index = (props) => {
                       opacity: "0.7",
                     }}
                   >
-                    <img src={Star} alt="" />
+                    <img src={Star} alt="" className="star" />
                     {rating.vote_average}
                   </div>
                   <img
                     src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
                     alt="poster"
                     style={{ maxWidth: "100px" }}
+                    className="bedømte"
                   />
                   <br />
                   <h6 style={{ textAlign: "center", color: "#fff" }}>
@@ -349,7 +369,11 @@ const index = (props) => {
                 as={`/MovieDetail/${play.id}`}
               >
                 <li
-                  style={{ listStyleType: "none", marginLeft: "-35px" }}
+                  style={{
+                    listStyleType: "none",
+                    marginLeft: "-35px",
+                    cursor: "pointer",
+                  }}
                   key={play.id}
                 >
                   <div
@@ -362,13 +386,14 @@ const index = (props) => {
                       opacity: "0.7",
                     }}
                   >
-                    <img src={Star} alt="" />
+                    <img src={Star} alt="" className="star" />
                     {play.vote_average}
                   </div>
                   <img
                     src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
                     alt="poster"
                     style={{ maxWidth: "100px" }}
+                    className="udsendes"
                   />
                   <br />
                   <h6 style={{ textAlign: "center", color: "#fff" }}>
