@@ -3,8 +3,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import Link from "next/link";
-//import Router from 'next/router'
-import Star from "../images/rating.png";
+import Star from "../images/star.png";
 import Head from "next/head";
 
 const index = (props) => {
@@ -103,7 +102,7 @@ const index = (props) => {
                   },
                 }}
                 as={`/MovieDetail/${popularity.id}`}
-                style={{ cursor: "pointer" }}
+                // style={{ cursor: "pointer" }}
               >
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
