@@ -1,6 +1,6 @@
 const withImages = require("next-images");
 const withSass = require("@zeit/next-sass");
-const sitemap = require("nextjs-sitemap-generator");
+// const sitemap = require("nextjs-sitemap-generator");
 
 // sitemap({
 //   baseUrl: "https://seriermanskalse.dk",
