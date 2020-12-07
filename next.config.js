@@ -11,7 +11,7 @@ sitemap({
 module.exports = withImages(
   withSass({
     env: {
-      API_SECRET: process.env.API_SECRET,
+      NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
     },
 
     exportPathMap: function () {
