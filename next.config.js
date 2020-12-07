@@ -9,7 +9,7 @@ const withSass = require("@zeit/next-sass");
 // });
 
 module.exports = withImages(
-  withSass({
+  {
     env: {
       NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
     },
@@ -19,5 +19,5 @@ module.exports = withImages(
         "/": { page: "/" },
       };
     },
-  })
+  }
 );
