@@ -422,27 +422,27 @@ const index = (props) => {
 index.getInitialProps = async function ({ query }) {
   // Popular Movies
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
   );
 
   // Top rated movies
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
   );
 
   // Upcoming
   const answer = await fetch(
-    `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.API_SECRET}`
+    `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
   );
 
   // Now Playing
   const reply = await fetch(
-    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
   );
 
   // Genres
   const genre = await fetch(
-    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.API_SECRET}`
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
   );
 
   const popular = await res.json();
