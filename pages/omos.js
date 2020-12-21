@@ -22,6 +22,7 @@ const profile = () => {
         <a href="mailto: abdulahi_2610@hotmail.com" target="_blank">
           abdulahi_2610@hotmail.com
         </a>
+        .
       </p>
     </Layout>
   );
