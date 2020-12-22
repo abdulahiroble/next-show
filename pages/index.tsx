@@ -5,8 +5,14 @@ import Slider from "react-slick";
 import Link from "next/link";
 import Star from "../images/star.png";
 import Head from "next/head";
+import { StarIcon } from "../components/StarIcon";
 
-const index = (props) => {
+const index = (props: {
+  popular: { results: any[] };
+  genres: { genres: any[] };
+  rated: { results: any[] };
+  playing: { results: any[] };
+}) => {
   <Head>
     <meta
       name="description"
@@ -218,15 +224,20 @@ const index = (props) => {
                 >
                   <div
                     style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
                       position: "absolute",
-                      marginTop: "7px",
+                      marginTop: "0px",
                       padding: "6px",
                       color: "#fff",
                       backgroundColor: "#000",
                       opacity: "0.7",
                     }}
                   >
-                    <img src={Star} alt="" className="star" />
+                    <div>
+                      <StarIcon />
+                    </div>
 
                     {popularity.vote_average}
                   </div>
@@ -298,15 +309,20 @@ const index = (props) => {
                 >
                   <div
                     style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
                       position: "absolute",
-                      marginTop: "7px",
+                      marginTop: "0px",
                       padding: "6px",
                       color: "#fff",
                       backgroundColor: "#000",
                       opacity: "0.7",
                     }}
                   >
-                    <img src={Star} alt="" className="star" />
+                    <div>
+                      <StarIcon />
+                    </div>
                     {rating.vote_average}
                   </div>
                   <img
@@ -377,15 +393,20 @@ const index = (props) => {
                 >
                   <div
                     style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
                       position: "absolute",
-                      marginTop: "7px",
+                      marginTop: "0px",
                       padding: "6px",
                       color: "#fff",
                       backgroundColor: "#000",
                       opacity: "0.7",
                     }}
                   >
-                    <img src={Star} alt="" className="star" />
+                    <div>
+                      <StarIcon />
+                    </div>
                     {play.vote_average}
                   </div>
                   <img
