@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 
-const MovieDetail = ({ details, trailer, query }) => {
+const MovieDetail = ({ details, trailer }) => {
   var settings = {
     dots: false,
     infinite: false,
@@ -49,15 +49,15 @@ const MovieDetail = ({ details, trailer, query }) => {
         <br />
 
         <div>
-          <div className="text-lg">
+          <div className="text-2xl">
             <div>Bedømmelse: {router.query.rating}</div>
             <div>Genre: {router.query.genre}</div>
           </div>
         </div>
       </div>
       <br />
-      <div className="text-lg">Resume</div>
-      <div className="text-base">
+      <div className="text-2xl">Resume</div>
+      <div className="text-base sm:text-xl">
         {router.query.summary ? (
           router.query.summary
         ) : (
@@ -65,7 +65,7 @@ const MovieDetail = ({ details, trailer, query }) => {
         )}
       </div>
       <br /> <br />
-      <div className="text-xl">Sæsoner</div>
+      <div className="text-3xl">Sæsoner</div>
       <Slider>
         {details.seasons.map((details) => {
           return (
@@ -87,8 +87,8 @@ const MovieDetail = ({ details, trailer, query }) => {
           );
         })}
       </Slider>
-      <div className="text-xl">Trailer</div>
-      {trailer.results.map((test) => {
+      <div className="text-3xl">Trailer</div>
+      {trailer.results.map((youtube) => {
         return (
           <div>
             {" "}
@@ -97,7 +97,7 @@ const MovieDetail = ({ details, trailer, query }) => {
               height="250"
               maxLength="11"
               className="trailer"
-              src={`https://www.youtube.com/embed/${test.key}`}
+              src={`https://www.youtube.com/embed/${youtube.key}`}
             ></iframe>
           </div>
         );
