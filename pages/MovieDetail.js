@@ -94,8 +94,8 @@ const MovieDetail = ({ details, trailer }) => {
             <div>
               {" "}
               <iframe
-                width="500"
-                height="500"
+                width="300"
+                height="300"
                 className="w-full"
                 src={`https://www.youtube.com/embed/${test.key}`}
               ></iframe>
