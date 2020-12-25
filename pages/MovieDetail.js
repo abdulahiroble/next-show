@@ -2,14 +2,9 @@ import fetch from "isomorphic-unfetch";
 import React from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
+import { useRouter } from "next/router";
 
-const MovieDetail = ({
-  details,
-  trailer,
-  url: {
-    query: { title, rating, thumbnail, genre, summary, id },
-  },
-}) => {
+const MovieDetail = ({ details, trailer }) => {
   var settings = {
     dots: false,
     infinite: false,
@@ -18,6 +13,10 @@ const MovieDetail = ({
     slidesToScroll: 1,
     swipe: false,
   };
+
+  const router = useRouter();
+
+  console.log(router);
   return (
     <Layout>
       <style jsx>{`
@@ -36,45 +35,37 @@ const MovieDetail = ({
             width: 30%;
           }
 
-          .trailer {
-            width: 100%;
-            height: 600px;
-          }
-
-          // .poster {
-          //   margin-right: 55%;
-          //   display: column;
-          // }
-
-          // .info {
-          //   margin-left: 75%;
+          // .trailer {
+          //   width: 100%;
+          //   height: 600px;
           // }
         }
       `}</style>
       <div id="noflex">
         <div>
-          <img
-            src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
-            alt=""
-            className="poster"
-          />
+          <img src={`${router.query.thumbnail}`} alt="" className="poster" />
         </div>
 
         <br />
 
         <div>
-          <div className="info">
-            <h3>{title} </h3>
-            <h4>Bedømmelse: {rating}</h4>
-            <h4>Genre: {genre}</h4>
+          <div className="text-2xl">
+            <div>Bedømmelse: {router.query.rating}</div>
+            <div>Genre: {router.query.genre}</div>
           </div>
         </div>
       </div>
       <br />
-      <h2>Resume</h2>
-      {summary ? summary : <p>intet resume endnu</p>}
+      <div className="text-2xl">Resume</div>
+      <div className="text-base sm:text-xl">
+        {router.query.summary ? (
+          router.query.summary
+        ) : (
+          <p>intet resume endnu</p>
+        )}
+      </div>
       <br /> <br />
-      <h2>Sæsoner</h2>
+      <div className="text-3xl">Sæsoner</div>
       <Slider>
         {details.seasons.map((details) => {
           return (
@@ -96,40 +87,39 @@ const MovieDetail = ({
           );
         })}
       </Slider>
-      <h2>Trailer</h2>
-      {trailer.results.map((test) => {
-        return (
-          <div>
-            {" "}
-            <iframe
-              width="300"
-              height="250"
-              maxLength="11"
-              className="trailer"
-              src={`https://www.youtube.com/embed/${test.key}`}
-            ></iframe>
-          </div>
-        );
-      })}
+      <div className="text-3xl">
+        Trailer
+        {trailer.results.map((test) => {
+          return (
+            <div>
+              {" "}
+              <iframe
+                width="300"
+                height="300"
+                className="w-full"
+                src={`https://www.youtube.com/embed/${test.key}`}
+              ></iframe>
+            </div>
+          );
+        })}
+      </div>
     </Layout>
   );
 };
 
-MovieDetail.getInitialProps = async function (url) {
+MovieDetail.getInitialProps = async function (router) {
   const res = await fetch(
-    `https://api.themoviedb.org/3/tv/${url.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
+    `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
   );
 
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/${url.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-U"
+    `https://api.themoviedb.org/3/tv/${router.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-US
     `
   );
 
   const details = await res.json();
   const trailer = await response.json();
-
-  console.log(`Trailer: ${trailer.id}`);
 
   return { details, trailer };
 };

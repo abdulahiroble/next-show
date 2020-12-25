@@ -40,7 +40,6 @@ const index = (props: {
     arrows: false,
     swipe: false,
   };
-  console.log(props.popular.results);
   return (
     <Layout>
       <style jsx>{`
@@ -49,10 +48,6 @@ const index = (props: {
           .udsendes,
           .bedømte {
             max-width: 100% !important;
-          }
-
-          .star {
-            width: 100%;
           }
 
           .test {
@@ -66,24 +61,6 @@ const index = (props: {
           li {
             margin-left: 27% !important;
             padding: 0 !important;
-          }
-
-          li img {
-          }
-
-          .genre {
-            margin-right: 35%;
-            font-size: 25px;
-          }
-
-          .genre2 {
-            margin-right: 5%;
-            font-size: 25px;
-          }
-
-          .genre3 {
-            margin-right: 5%;
-            font-size: 25px;
           }
         }
       `}</style>
@@ -108,7 +85,6 @@ const index = (props: {
                   },
                 }}
                 as={`/MovieDetail/${popularity.id}`}
-                // style={{ cursor: "pointer" }}
               >
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
@@ -182,15 +158,7 @@ const index = (props: {
           );
         })}
       </Slider>
-      <h2
-        style={{
-          color: "#fff",
-          textTransform: "uppercase",
-          letterSpacing: "2px",
-        }}
-      >
-        Populære
-      </h2>
+      <h2 className="text-2xl text-white uppercase tracking-wide">Populære</h2>
       <Slider {...settings}>
         {props.popular.results.map((popularity) => {
           return (
@@ -252,7 +220,7 @@ const index = (props: {
                     {" "}
                     {popularity.title}
                   </h6>
-                  <div style={{ textAlign: "center" }} className="genre">
+                  <div className="text-left text-xl">
                     {" "}
                     {props.genres.genres.map((genre) => {
                       if (genre.id === popularity.genre_ids[0]) {
@@ -336,7 +304,7 @@ const index = (props: {
                     {" "}
                     {rating.title}
                   </h6>
-                  <div style={{ textAlign: "center" }} className="genre2">
+                  <div className="text-left text-xl">
                     {" "}
                     {props.genres.genres.map((genre) => {
                       if (genre.id === rating.genre_ids[0]) {
@@ -420,7 +388,7 @@ const index = (props: {
                     {" "}
                     {play.title}
                   </h6>
-                  <div style={{ textAlign: "center" }} className="genre3">
+                  <div className="text-left text-xl">
                     {" "}
                     {props.genres.genres.map((genre) => {
                       if (genre.id === play.genre_ids[0]) {
