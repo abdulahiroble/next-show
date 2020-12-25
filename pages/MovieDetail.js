@@ -35,10 +35,10 @@ const MovieDetail = ({ details, trailer }) => {
             width: 30%;
           }
 
-          .trailer {
-            width: 100%;
-            height: 600px;
-          }
+          // .trailer {
+          //   width: 100%;
+          //   height: 600px;
+          // }
         }
       `}</style>
       <div id="noflex">
@@ -87,21 +87,22 @@ const MovieDetail = ({ details, trailer }) => {
           );
         })}
       </Slider>
-      <div className="text-3xl">Trailer</div>
-      {trailer.results.map((youtube) => {
-        return (
-          <div>
-            {" "}
-            <iframe
-              width="300"
-              height="250"
-              maxLength="11"
-              className="trailer"
-              src={`https://www.youtube.com/embed/${youtube.key}`}
-            ></iframe>
-          </div>
-        );
-      })}
+      <div className="text-3xl">
+        Trailer
+        {trailer.results.map((test) => {
+          return (
+            <div>
+              {" "}
+              <iframe
+                width="500"
+                height="500"
+                className="w-full"
+                src={`https://www.youtube.com/embed/${test.key}`}
+              ></iframe>
+            </div>
+          );
+        })}
+      </div>
     </Layout>
   );
 };
@@ -113,7 +114,7 @@ MovieDetail.getInitialProps = async function (router) {
   );
 
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/${router.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
+    `https://api.themoviedb.org/3/tv/${router.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-US
     `
   );
 
