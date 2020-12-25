@@ -1,30 +1,31 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { Button } from "../stories/Button";
 
 const profile = () => {
   return (
     <Layout>
-      <h2>Formål med siden</h2>
+      <div className="text-2xl mb-3 text-white">Formål med siden</div>
 
-      <p>
-        Hjemmesiden har til formål at give folk indblik i hvilke serier der er
-        værd at se baseret på bruger anmeldelser.{" "}
-      </p>
+      <div className="flex flex-column justify-between">
+        <div className="text-base">
+          Hjemmesiden har til formål at give folk indblik i hvilke serier der er
+          værd at se baseret på bruger anmeldelser.{" "}
+        </div>
 
-      <p>
-        Det er muligt at se hvor mange sæsoner en bestemt serie har ved at
-        klikke på dens banner .
-      </p>
+        <div className="text-base my-3">
+          Det er muligt at se hvor mange sæsoner en bestemt serie har ved at
+          klikke på dens banner .
+        </div>
 
-      <p>
-        Hvis du vil komme i kontakt for at give feedback eller andet kan du
-        sende en mail: <br />
-        <a href="mailto: abdulahi_2610@hotmail.com" target="_blank">
-          abdulahi_2610@hotmail.com
-        </a>
-        .
-      </p>
+        <div className="text-base">
+          Hvis du vil komme i kontakt for at give feedback eller andet kan du
+          sende en mail: <br />
+          <a href="mailto: abdulahi_2610@hotmail.com" target="_blank">
+            abdulahi_2610@hotmail.com
+          </a>
+          .
+        </div>
+      </div>
     </Layout>
   );
 };
