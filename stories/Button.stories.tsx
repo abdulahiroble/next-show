@@ -7,20 +7,20 @@ export default {
 
 export const blackButton = () => (
   <div>
-    <Button variant="black" onClick></Button>
+    <Button variant="black">Button</Button>
   </div>
 );
 
 export const whiteButton = () => (
   <div>
-    <Button variant="white">button</Button>
+    <Button variant="white">Button</Button>
   </div>
 );
 
 export const DefaultComponent = () => {
   return (
     <div>
-      <Button onClick>Button</Button>
+      <Button>Button</Button>
     </div>
   );
 };
