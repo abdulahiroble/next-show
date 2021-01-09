@@ -78,7 +78,7 @@ const footer = () => {
       </ul>
       <br />
       <p style={{ color: "#d3d3d3" }}>
-        Copyright &copy;2020 <br /> Code and design by Abdulahi Roble
+        Copyright &copy;2021 <br /> Code and design by Abdulahi Roble
       </p>
       <br />
       <div
@@ -89,30 +89,12 @@ const footer = () => {
         }}
       >
         <img
-          style={{ width: "60%", marginRight: "50px" }}
+          className="w-10 h-10 mr-5"
+          style={{ marginRight: "50px" }}
           src="https://www.themoviedb.org/assets/2/v4/logos/408x161-powered-by-rectangle-green-bb4301c10ddc749b4e79463811a68afebeae66ef43d17bcfd8ff0e60ded7ce99.png"
           className="tmd"
         />
-        <div className="item">
-          <a href="https://www.instagram.com/abdulahicodes" target="_blank">
-            <img src={Instagram} alt="" />
-          </a>
-        </div>
-        <div
-          className="item"
-          style={{ paddingLeft: "6px", paddingRight: "6px" }}
-        >
-          <a href="https://twitter.com/AbdulahiRoble" target="_blank">
-            <img src={Twitter} alt="" />
-          </a>
-        </div>
-        <div className="item">
-          <a href="https://github.com/abdulahiroble" target="_blank">
-            <img src={Github} alt="" />
-          </a>
-        </div>
       </div>
-      <br />
     </footer>
   );
 };
