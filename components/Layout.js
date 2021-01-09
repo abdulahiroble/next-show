@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const Layout = (props) => {
   return (
-    <div>
+    <body className="flex flex-col min-h-screen">
       <Head>
         <title>Serier man skal se</title>
         <link
@@ -42,7 +42,7 @@ const Layout = (props) => {
 
       <Nav />
       <div
-        className="container"
+        className="container flex-grow"
         style={{ paddingLeft: "35px", paddingRight: "35px" }}
       >
         {props.children}
@@ -53,8 +53,10 @@ const Layout = (props) => {
           __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJKVMRK" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`,
         }}
       />
-      <Footer />
-    </div>
+      <div>
+        <Footer />
+      </div>
+    </body>
   );
 };
 

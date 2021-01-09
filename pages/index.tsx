@@ -3,7 +3,6 @@ import React from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import Link from "next/link";
-import Star from "../images/star.png";
 import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
 
