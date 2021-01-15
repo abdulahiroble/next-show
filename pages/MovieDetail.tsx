@@ -38,14 +38,14 @@ const MovieDetail = ({ details, trailer }) => {
         <br />
 
         <div>
-          <div className="text-2xl">
+          <div className="text-3xl font-bold">
             <div>Bedømmelse: {router.query.rating}</div>
             <div>Genre: {router.query.genre}</div>
           </div>
         </div>
       </div>
       <br />
-      <div className="text-2xl">Resume</div>
+      <div className="text-3xl font-bold mb-2">Resume</div>
       <div className="text-base sm:text-lg">
         {router.query.summary ? (
           router.query.summary
@@ -54,7 +54,7 @@ const MovieDetail = ({ details, trailer }) => {
         )}
       </div>
       <br /> <br />
-      <div className="text-3xl">Sæsoner</div>
+      <div className="text-3xl font-bold">Sæsoner</div>
       <Slider>
         {details.seasons.map((details) => {
           return (
@@ -67,7 +67,7 @@ const MovieDetail = ({ details, trailer }) => {
               />
               <br /> <br />
               <div>
-                <div className="text-2xl">
+                <div className="text-2xl font-bold">
                   <b>{details.name}</b>
                 </div>
                 <div className="text-base mb-5">
@@ -79,7 +79,7 @@ const MovieDetail = ({ details, trailer }) => {
         })}
       </Slider>
       <div className="text-3xl">
-        <div className="mb-3 mt-3">Trailers</div>
+        <div className="mb-3 mt-3 font-bold">Trailers</div>
         {trailer.results.map((youtube) => {
           return (
             <div>
