@@ -26,14 +26,10 @@ const MovieDetail = ({ details, trailer }) => {
             flex-direction: column !important;
           }
 
-          .seasons {
-            width: 40%;
-            margin-left: 28% !important;
-          }
-
-          img {
-            width: 30%;
-          }
+          // .seasons {
+          //   width: 40%;
+          //   margin-left: 28% !important;
+          // }
 
           // .trailer {
           //   width: 100%;
@@ -89,12 +85,12 @@ const MovieDetail = ({ details, trailer }) => {
       </Slider>
       <div className="text-3xl">
         <div className="mb-3 mt-3">Trailers</div>
-        {trailer.results.map((test) => {
+        {trailer.results.map((youtube) => {
           return (
             <div>
               <iframe
-                className="max-w-md mx-auto h-38 max-h-full sm:w-full lg:max-w-2xl  sm:h-64"
-                src={`https://www.youtube.com/embed/${test.key}`}
+                className="lg:h-screen lg:max-w-full mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                src={`https://www.youtube.com/embed/${youtube.key}`}
               ></iframe>
               <br />
             </div>
