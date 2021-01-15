@@ -88,17 +88,15 @@ const MovieDetail = ({ details, trailer }) => {
         })}
       </Slider>
       <div className="text-3xl">
-        Trailer
+        <div className="mb-3 mt-3">Trailers</div>
         {trailer.results.map((test) => {
           return (
             <div>
-              {" "}
               <iframe
-                width="300"
-                height="300"
-                className="w-full"
+                className="max-w-md mx-auto h-38 max-h-full sm:w-full lg:max-w-2xl  sm:h-64"
                 src={`https://www.youtube.com/embed/${test.key}`}
               ></iframe>
+              <br />
             </div>
           );
         })}
