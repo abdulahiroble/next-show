@@ -21,25 +21,18 @@ const MovieDetail = ({ details, trailer }) => {
     <Layout>
       <style jsx>{`
         @media (min-width: 1280px) {
-          #noflex {
-            display: flex;
-            flex-direction: column !important;
-          }
-
           // .seasons {
           //   width: 40%;
           //   margin-left: 28% !important;
           // }
-
-          // .trailer {
-          //   width: 100%;
-          //   height: 600px;
-          // }
         }
       `}</style>
-      <div id="noflex">
-        <div>
-          <img src={`${router.query.thumbnail}`} alt="" className="poster" />
+      <div className="flex flex-col">
+        <div className="">
+          <img
+            src={`${router.query.thumbnail}`}
+            className="w-9/12 sm:max-w-sm"
+          />
         </div>
 
         <br />
@@ -70,14 +63,16 @@ const MovieDetail = ({ details, trailer }) => {
                 src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
                 alt=""
                 style={{ marginLeft: "20%" }}
-                className="seasons"
+                className="w-9/12 mx-auto sm:max-w-sm mt-3 "
               />
               <br /> <br />
               <div>
-                <h4>
+                <div className="text-2xl">
                   <b>{details.name}</b>
-                </h4>
-                <p>Først udsendt: {details.air_date}</p>
+                </div>
+                <div className="text-base">
+                  Først udsendt: {details.air_date}
+                </div>
               </div>
             </div>
           );
