@@ -21,43 +21,32 @@ const MovieDetail = ({ details, trailer }) => {
     <Layout>
       <style jsx>{`
         @media (min-width: 1280px) {
-          #noflex {
-            display: flex;
-            flex-direction: column !important;
-          }
-
-          .seasons {
-            width: 40%;
-            margin-left: 28% !important;
-          }
-
-          img {
-            width: 30%;
-          }
-
-          // .trailer {
-          //   width: 100%;
-          //   height: 600px;
+          // .seasons {
+          //   width: 40%;
+          //   margin-left: 28% !important;
           // }
         }
       `}</style>
-      <div id="noflex">
-        <div>
-          <img src={`${router.query.thumbnail}`} alt="" className="poster" />
+      <div className="flex flex-col">
+        <div className="">
+          <img
+            src={`${router.query.thumbnail}`}
+            className="w-9/12 sm:max-w-sm"
+          />
         </div>
 
         <br />
 
         <div>
-          <div className="text-2xl">
+          <div className="text-3xl font-bold">
             <div>Bedømmelse: {router.query.rating}</div>
             <div>Genre: {router.query.genre}</div>
           </div>
         </div>
       </div>
       <br />
-      <div className="text-2xl">Resume</div>
-      <div className="text-base sm:text-xl">
+      <div className="text-3xl font-bold mb-2">Resume</div>
+      <div className="text-base sm:text-lg">
         {router.query.summary ? (
           router.query.summary
         ) : (
@@ -65,7 +54,7 @@ const MovieDetail = ({ details, trailer }) => {
         )}
       </div>
       <br /> <br />
-      <div className="text-3xl">Sæsoner</div>
+      <div className="text-3xl font-bold">Sæsoner</div>
       <Slider>
         {details.seasons.map((details) => {
           return (
@@ -74,31 +63,31 @@ const MovieDetail = ({ details, trailer }) => {
                 src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
                 alt=""
                 style={{ marginLeft: "20%" }}
-                className="seasons"
+                className="w-9/12 mx-auto sm:max-w-sm mt-3 "
               />
               <br /> <br />
               <div>
-                <h4>
+                <div className="text-2xl font-bold">
                   <b>{details.name}</b>
-                </h4>
-                <p>Først udsendt: {details.air_date}</p>
+                </div>
+                <div className="text-base mb-5">
+                  Først udsendt: {details.air_date}
+                </div>
               </div>
             </div>
           );
         })}
       </Slider>
       <div className="text-3xl">
-        Trailer
-        {trailer.results.map((test) => {
+        <div className="mb-3 mt-3 font-bold">Trailers</div>
+        {trailer.results.map((youtube) => {
           return (
             <div>
-              {" "}
               <iframe
-                width="300"
-                height="300"
-                className="w-full"
-                src={`https://www.youtube.com/embed/${test.key}`}
+                className="lg:h-screen lg:max-w-full mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                src={`https://www.youtube.com/embed/${youtube.key}`}
               ></iframe>
+              <br />
             </div>
           );
         })}
