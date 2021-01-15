@@ -46,7 +46,7 @@ const MovieDetail = ({ details, trailer }) => {
       </div>
       <br />
       <div className="text-2xl">Resume</div>
-      <div className="text-base sm:text-xl">
+      <div className="text-base sm:text-lg">
         {router.query.summary ? (
           router.query.summary
         ) : (
@@ -70,7 +70,7 @@ const MovieDetail = ({ details, trailer }) => {
                 <div className="text-2xl">
                   <b>{details.name}</b>
                 </div>
-                <div className="text-base">
+                <div className="text-base mb-5">
                   Først udsendt: {details.air_date}
                 </div>
               </div>
