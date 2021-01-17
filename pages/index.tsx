@@ -395,7 +395,7 @@ index.getInitialProps = async function ({ query }) {
 
   // Top rated movies
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
   );
 
   // Upcoming
