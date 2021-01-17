@@ -21,7 +21,7 @@ const index = (props: {
       Serier Man Skal Se | Populære serier baseret på brugerandmeldser
     </title>
   </Head>;
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -29,7 +29,7 @@ const index = (props: {
     slidesToScroll: 1,
     swipe: false,
   };
-  var setting = {
+  const setting = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -53,14 +53,14 @@ const index = (props: {
             width: 35%;
           }
 
-          .populær {
-            width: 100% !important;
-          }
+          // .populær {
+          //   width: 100% !important;
+          // }
 
-          li {
-            margin-left: 27% !important;
-            padding: 0 !important;
-          }
+          // li {
+          //   margin-left: 27% !important;
+          //   padding: 0 !important;
+          // }
         }
       `}</style>
       <Slider {...setting}>
@@ -157,7 +157,9 @@ const index = (props: {
           );
         })}
       </Slider>
-      <h2 className="text-2xl text-white uppercase tracking-wide">Populære</h2>
+      <div className="text-2xl text-white uppercase tracking-wide">
+        Populære
+      </div>
       <Slider {...settings}>
         {props.popular.results.map((popularity) => {
           return (
@@ -180,15 +182,7 @@ const index = (props: {
                 }}
                 as={`/MovieDetail/${popularity.id}`}
               >
-                <li
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-35px",
-                    cursor: "pointer",
-                  }}
-                  key={popularity.id}
-                  className="populær"
-                >
+                <li key={popularity.id} className="populær">
                   <div
                     style={{
                       display: "flex",
@@ -266,14 +260,7 @@ const index = (props: {
                 }}
                 as={`/MovieDetail/${rating.id}`}
               >
-                <li
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-35px",
-                    cursor: "pointer",
-                  }}
-                  key={rating.id}
-                >
+                <li key={rating.id}>
                   <div
                     style={{
                       display: "flex",
@@ -350,14 +337,7 @@ const index = (props: {
                 }}
                 as={`/MovieDetail/${play.id}`}
               >
-                <li
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-35px",
-                    cursor: "pointer",
-                  }}
-                  key={play.id}
-                >
+                <li key={play.id}>
                   <div
                     style={{
                       display: "flex",
