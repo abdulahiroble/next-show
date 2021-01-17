@@ -41,12 +41,7 @@ const Layout = (props) => {
       </Head>
 
       <Nav />
-      <div
-        className="container flex-grow"
-        style={{ paddingLeft: "35px", paddingRight: "35px" }}
-      >
-        {props.children}
-      </div>
+      <div className=" flex-grow">{props.children}</div>
       <br />
       <noscript
         dangerouslySetInnerHTML={{
