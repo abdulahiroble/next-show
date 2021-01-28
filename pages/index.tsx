@@ -102,7 +102,7 @@ const index = (props: {
       <div className="text-2xl text-white uppercase tracking-wide">
         Populære
       </div>
-      <div className="container">
+      <div className="w-9/12 mx-auto">
         <Slider {...settings}>
           {props.popular.results.map((popularity) => {
             return (
@@ -149,7 +149,7 @@ const index = (props: {
       <h2 className="text-2xl text-white uppercase tracking-wide my-3">
         Bedst Bedømte
       </h2>
-      <div className="container">
+      <div className="w-9/12 mx-auto">
         <Slider {...settings}>
           {props.rated.results.map((rating) => {
             return (
@@ -196,7 +196,7 @@ const index = (props: {
       <h2 className="text-2xl text-white uppercase tracking-wide my-3">
         Udsendes I Dag
       </h2>
-      <div className="container">
+      <div className="w-9/12 mx-auto">
         <Slider {...settings}>
           {props.playing.results.map((play) => {
             return (

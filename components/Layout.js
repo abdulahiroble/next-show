@@ -41,7 +41,7 @@ const Layout = (props) => {
       </Head>
 
       <Nav />
-      <div className=" flex-grow">{props.children}</div>
+      <div className="w-full">{props.children}</div>
       <br />
       <noscript
         dangerouslySetInnerHTML={{
