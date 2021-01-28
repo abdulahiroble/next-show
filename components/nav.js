@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const Nav = () => (
-  <nav className="navbar navbar-expand navba-dark bg-dark mb-4">
+  <nav className="navbar navbar-expand navba-dark bg-dark">
     <div className="container">
       <a href="/" className="navbar-brand">
         seriermanskalse.dk

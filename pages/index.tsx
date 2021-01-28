@@ -21,7 +21,7 @@ const index = (props: {
       Serier Man Skal Se | Populære serier baseret på brugerandmeldser
     </title>
   </Head>;
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -29,7 +29,7 @@ const index = (props: {
     slidesToScroll: 1,
     swipe: false,
   };
-  var setting = {
+  const setting = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -41,28 +41,6 @@ const index = (props: {
   };
   return (
     <Layout>
-      <style jsx>{`
-        @media (min-width: 1280px) {
-          .populære-poster,
-          .udsendes,
-          .bedømte {
-            max-width: 100% !important;
-          }
-
-          .test {
-            width: 35%;
-          }
-
-          .populær {
-            width: 100% !important;
-          }
-
-          li {
-            margin-left: 27% !important;
-            padding: 0 !important;
-          }
-        }
-      `}</style>
       <Slider {...setting}>
         {props.popular.results.map((popularity) => {
           return (
@@ -88,334 +66,193 @@ const index = (props: {
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
-                  className="test"
                 >
-                  <div
-                    style={{ position: "relative", marginLeft: "-35px" }}
-                    id="seneste"
-                  >
+                  <div className="mb-5">
                     <img
                       src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                      alt="poster"
+                      className="object-cover h-72 w-full opacity-30"
                       style={{
-                        display: "block",
-                        marginLeft: "auto",
-                        marginRight: "auto",
-                        width: "90%",
-                        opacity: "0.4",
+                        imageRendering: "crisp-edges",
                       }}
-                      className="poster"
                     />
-                    <br />
-                    <h2
-                      style={{
-                        color: "#fff",
-                        position: "absolute",
-                        bottom: "80%",
-                        left: "12%",
-                        fontWeight: "bold",
-                        letterSpacing: "2px",
-                      }}
-                    >
-                      Seneste
-                    </h2>
-                    <h3
-                      style={{
-                        color: "#fff",
-                        position: "absolute",
-                        bottom: "30%",
-                        left: "8%",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {" "}
-                      {popularity.original_name}
-                    </h3>
+                    <div className="-mt-24">
+                      <div className="text-2xl text-white font-bold mx-auto text-center">
+                        {" "}
+                        {popularity.original_name}
+                      </div>
 
-                    <h4
-                      style={{
-                        position: "absolute",
-                        color: "#fff",
-                        opacity: "0.7",
-                        bottom: "12%",
-                        left: "8%",
-                      }}
-                    >
-                      {popularity.vote_average} Bedømmelse |
-                      {props.genres.genres.map((genre) => {
+                      <div className="text-2xl text-white font-bold mx-auto text-center">
+                        {popularity.vote_average} Bedømmelse |
+                        {props.genres.genres.map((genre) => {
+                          if (genre.id === popularity.genre_ids[0]) {
+                            return genre.name;
+                          } else {
+                            return null;
+                          }
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </Link>
+            </ul>
+          );
+        })}
+      </Slider>
+      <div className="text-2xl text-white uppercase tracking-wide">
+        Populære
+      </div>
+      <div className="w-9/12 mx-auto">
+        <Slider {...settings}>
+          {props.popular.results.map((popularity) => {
+            return (
+              <ul className="">
+                <Link
+                  href={{
+                    pathname: "MovieDetail",
+                    query: {
+                      id: popularity.id,
+                      rating: popularity.vote_average,
+                      title: popularity.title,
+                      summary: popularity.overview,
+                      genre: props.genres.genres.map((genre) => {
                         if (genre.id === popularity.genre_ids[0]) {
                           return genre.name;
-                        } else {
-                          return null;
                         }
-                      })}
-                    </h4>
-                  </div>
-                </li>
-              </Link>
-            </ul>
-          );
-        })}
-      </Slider>
-      <h2 className="text-2xl text-white uppercase tracking-wide">Populære</h2>
-      <Slider {...settings}>
-        {props.popular.results.map((popularity) => {
-          return (
-            <ul>
-              <Link
-                href={{
-                  pathname: "MovieDetail",
-                  query: {
-                    id: popularity.id,
-                    rating: popularity.vote_average,
-                    title: popularity.title,
-                    summary: popularity.overview,
-                    genre: props.genres.genres.map((genre) => {
-                      if (genre.id === popularity.genre_ids[0]) {
-                        return genre.name;
-                      }
-                    }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
-                  },
-                }}
-                as={`/MovieDetail/${popularity.id}`}
-              >
-                <li
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-35px",
-                    cursor: "pointer",
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
+                    },
                   }}
-                  key={popularity.id}
-                  className="populær"
+                  as={`/MovieDetail/${popularity.id}`}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      position: "absolute",
-                      marginTop: "0px",
-                      padding: "6px",
-                      color: "#fff",
-                      backgroundColor: "#000",
-                      opacity: "0.7",
-                    }}
-                  >
-                    <div>
-                      <StarIcon />
+                  <li key={popularity.id}>
+                    <div className="mx-auto">
+                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                        <div>
+                          <StarIcon />
+                        </div>
+                        {popularity.vote_average}
+                      </div>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
+                        alt="poster"
+                        className="mx-auto"
+                      />
                     </div>
-
-                    {popularity.vote_average}
-                  </div>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                    alt="poster"
-                    style={{ maxWidth: "100px" }}
-                    className="populære-poster"
-                  />
-                  <br />
-                  <h6 style={{ textAlign: "center", color: "#fff" }}>
-                    {" "}
-                    {popularity.title}
-                  </h6>
-                  <div className="text-left text-xl">
-                    {" "}
-                    {props.genres.genres.map((genre) => {
-                      if (genre.id === popularity.genre_ids[0]) {
-                        return genre.name;
-                      } else {
-                        return null;
-                      }
-                    })}
-                  </div>
-                </li>
-              </Link>
-            </ul>
-          );
-        })}
-      </Slider>
-      <h2
-        style={{
-          color: "#fff",
-          textTransform: "uppercase",
-          letterSpacing: "2px",
-        }}
-      >
+                  </li>
+                </Link>
+              </ul>
+            );
+          })}
+        </Slider>
+      </div>
+      <h2 className="text-2xl text-white uppercase tracking-wide my-3">
         Bedst Bedømte
       </h2>
-      <Slider {...settings}>
-        {props.rated.results.map((rating) => {
-          return (
-            <ul>
-              <Link
-                href={{
-                  pathname: "MovieDetail",
-                  query: {
-                    id: rating.id,
-                    rating: rating.vote_average,
-                    title: rating.title,
-                    summary: rating.overview,
-                    genre: props.genres.genres.map((genre) => {
-                      if (genre.id === rating.genre_ids[0]) {
-                        return genre.name;
-                      }
-                    }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${rating.poster_path}`,
-                  },
-                }}
-                as={`/MovieDetail/${rating.id}`}
-              >
-                <li
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-35px",
-                    cursor: "pointer",
+      <div className="w-9/12 mx-auto">
+        <Slider {...settings}>
+          {props.rated.results.map((rating) => {
+            return (
+              <ul>
+                <Link
+                  href={{
+                    pathname: "MovieDetail",
+                    query: {
+                      id: rating.id,
+                      rating: rating.vote_average,
+                      title: rating.title,
+                      summary: rating.overview,
+                      genre: props.genres.genres.map((genre) => {
+                        if (genre.id === rating.genre_ids[0]) {
+                          return genre.name;
+                        }
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w200${rating.poster_path}`,
+                    },
                   }}
-                  key={rating.id}
+                  as={`/MovieDetail/${rating.id}`}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      position: "absolute",
-                      marginTop: "0px",
-                      padding: "6px",
-                      color: "#fff",
-                      backgroundColor: "#000",
-                      opacity: "0.7",
-                    }}
-                  >
-                    <div>
-                      <StarIcon />
+                  <li key={rating.id}>
+                    <div className="mx-auto">
+                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                        <div>
+                          <StarIcon />
+                        </div>
+                        {rating.vote_average}
+                      </div>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
+                        alt="poster"
+                        className="mx-auto"
+                      />
                     </div>
-                    {rating.vote_average}
-                  </div>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
-                    alt="poster"
-                    style={{ maxWidth: "100px" }}
-                    className="bedømte"
-                  />
-                  <br />
-                  <h6 style={{ textAlign: "center", color: "#fff" }}>
-                    {" "}
-                    {rating.title}
-                  </h6>
-                  <div className="text-left text-xl">
-                    {" "}
-                    {props.genres.genres.map((genre) => {
-                      if (genre.id === rating.genre_ids[0]) {
-                        return genre.name;
-                      } else {
-                        return null;
-                      }
-                    })}
-                  </div>
-                </li>
-              </Link>
-            </ul>
-          );
-        })}
-      </Slider>
-      <h2
-        style={{
-          color: "#fff",
-          textTransform: "uppercase",
-          letterSpacing: "2px",
-        }}
-      >
+                  </li>
+                </Link>
+              </ul>
+            );
+          })}
+        </Slider>
+      </div>
+      <h2 className="text-2xl text-white uppercase tracking-wide my-3">
         Udsendes I Dag
       </h2>
-      <Slider {...settings}>
-        {props.playing.results.map((play) => {
-          return (
-            <ul>
-              <Link
-                href={{
-                  pathname: "MovieDetail",
-                  query: {
-                    id: play.id,
-                    play: play.vote_average,
-                    title: play.title,
-                    summary: play.overview,
-                    genre: props.genres.genres.map((genre) => {
-                      if (genre.id === play.genre_ids[0]) {
-                        return genre.name;
-                      }
-                    }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${play.poster_path}`,
-                  },
-                }}
-                as={`/MovieDetail/${play.id}`}
-              >
-                <li
-                  style={{
-                    listStyleType: "none",
-                    marginLeft: "-35px",
-                    cursor: "pointer",
+      <div className="w-9/12 mx-auto">
+        <Slider {...settings}>
+          {props.playing.results.map((play) => {
+            return (
+              <ul>
+                <Link
+                  href={{
+                    pathname: "MovieDetail",
+                    query: {
+                      id: play.id,
+                      play: play.vote_average,
+                      title: play.title,
+                      summary: play.overview,
+                      genre: props.genres.genres.map((genre) => {
+                        if (genre.id === play.genre_ids[0]) {
+                          return genre.name;
+                        }
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w200${play.poster_path}`,
+                    },
                   }}
-                  key={play.id}
+                  as={`/MovieDetail/${play.id}`}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "center",
-                      position: "absolute",
-                      marginTop: "0px",
-                      padding: "6px",
-                      color: "#fff",
-                      backgroundColor: "#000",
-                      opacity: "0.7",
-                    }}
-                  >
-                    <div>
-                      <StarIcon />
+                  <li key={play.id}>
+                    <div className="mx-auto">
+                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                        <div>
+                          <StarIcon />
+                        </div>
+                        {play.vote_average}
+                      </div>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
+                        alt="poster"
+                        className="mx-auto"
+                      />
                     </div>
-                    {play.vote_average}
-                  </div>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
-                    alt="poster"
-                    style={{ maxWidth: "100px" }}
-                    className="udsendes"
-                  />
-                  <br />
-                  <h6 style={{ textAlign: "center", color: "#fff" }}>
-                    {" "}
-                    {play.title}
-                  </h6>
-                  <div className="text-left text-xl">
-                    {" "}
-                    {props.genres.genres.map((genre) => {
-                      if (genre.id === play.genre_ids[0]) {
-                        return genre.name;
-                      } else {
-                        return null;
-                      }
-                    })}
-                  </div>
-                </li>
-              </Link>
-            </ul>
-          );
-        })}
-      </Slider>
+                  </li>
+                </Link>
+              </ul>
+            );
+          })}
+        </Slider>
+      </div>
     </Layout>
   );
 };
 
 index.getInitialProps = async function ({ query }) {
-  // Popular Movies
+  // Popular series
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
   );
 
-  // Top rated movies
+  // Top rated series
   const response = await fetch(
-    `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+    `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
   );
 
   // Upcoming
