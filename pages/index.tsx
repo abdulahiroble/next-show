@@ -67,29 +67,30 @@ const index = (props: {
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
                 >
-                  <div className="">
+                  <div className="mb-5">
                     <img
                       src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                      className="object-cover h-48 w-full"
+                      className="object-cover h-72 w-full opacity-30"
+                      style={{
+                        imageRendering: "crisp-edges",
+                      }}
                     />
-                    <br />
-                    <div className="text-lg text-white font-bold mx-auto text-center">
-                      Seneste
-                    </div>
-                    <div className="text-lg text-white font-bold mx-auto text-center">
-                      {" "}
-                      {popularity.original_name}
-                    </div>
+                    <div className="-mt-24">
+                      <div className="text-2xl text-white font-bold mx-auto text-center">
+                        {" "}
+                        {popularity.original_name}
+                      </div>
 
-                    <div className="text-lg text-white font-bold mx-auto text-center">
-                      {popularity.vote_average} Bedømmelse |
-                      {props.genres.genres.map((genre) => {
-                        if (genre.id === popularity.genre_ids[0]) {
-                          return genre.name;
-                        } else {
-                          return null;
-                        }
-                      })}
+                      <div className="text-2xl text-white font-bold mx-auto text-center">
+                        {popularity.vote_average} Bedømmelse |
+                        {props.genres.genres.map((genre) => {
+                          if (genre.id === popularity.genre_ids[0]) {
+                            return genre.name;
+                          } else {
+                            return null;
+                          }
+                        })}
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -125,49 +126,19 @@ const index = (props: {
                   as={`/MovieDetail/${popularity.id}`}
                 >
                   <li key={popularity.id}>
-                    <div
-                    // style={{
-                    //   display: "flex",
-                    //   flexDirection: "column",
-                    //   justifyContent: "center",
-                    //   position: "absolute",
-                    //   marginTop: "0px",
-                    //   padding: "6px",
-                    //   color: "#fff",
-                    //   backgroundColor: "#000",
-                    //   opacity: "0.7",
-                    // }}
-                    // className="ml-10 absolute"
-                    >
-                      {/* <div>
-                        <StarIcon />
-                      </div> */}
-
-                      {popularity.vote_average}
-                    </div>
                     <div className="mx-auto">
-                      <div className="absolute">
-                        <StarIcon />
+                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                        <div>
+                          <StarIcon />
+                        </div>
+                        {popularity.vote_average}
                       </div>
                       <img
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                         alt="poster"
-                        // style={{ maxWidth: "100px" }}
                         className="mx-auto"
                       />
                     </div>
-                    {/* <h6 style={{ textAlign: "center", color: "#fff" }}>
-                      {popularity.title}
-                    </h6> */}
-                    {/* <div className="text-left text-xl">
-                      {props.genres.genres.map((genre) => {
-                        if (genre.id === popularity.genre_ids[0]) {
-                          return genre.name;
-                        } else {
-                          return null;
-                        }
-                      })}
-                    </div> */}
                   </li>
                 </Link>
               </ul>
@@ -175,13 +146,7 @@ const index = (props: {
           })}
         </Slider>
       </div>
-      <h2
-        style={{
-          color: "#fff",
-          textTransform: "uppercase",
-          letterSpacing: "2px",
-        }}
-      >
+      <h2 className="text-2xl text-white uppercase tracking-wide my-3">
         Bedst Bedømte
       </h2>
       <div className="container">
@@ -208,42 +173,18 @@ const index = (props: {
                   as={`/MovieDetail/${rating.id}`}
                 >
                   <li key={rating.id}>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        position: "absolute",
-                        marginTop: "0px",
-                        padding: "6px",
-                        color: "#fff",
-                        backgroundColor: "#000",
-                        opacity: "0.7",
-                      }}
-                    >
-                      <StarIcon />
-                      {rating.vote_average}
-                    </div>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
-                      alt="poster"
-                      style={{ maxWidth: "100px" }}
-                      className="bedømte"
-                    />
-                    <br />
-                    <h6 style={{ textAlign: "center", color: "#fff" }}>
-                      {" "}
-                      {rating.title}
-                    </h6>
-                    <div className="text-left text-xl">
-                      {" "}
-                      {props.genres.genres.map((genre) => {
-                        if (genre.id === rating.genre_ids[0]) {
-                          return genre.name;
-                        } else {
-                          return null;
-                        }
-                      })}
+                    <div className="mx-auto">
+                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                        <div>
+                          <StarIcon />
+                        </div>
+                        {rating.vote_average}
+                      </div>
+                      <img
+                        src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
+                        alt="poster"
+                        className="mx-auto"
+                      />
                     </div>
                   </li>
                 </Link>
@@ -252,13 +193,7 @@ const index = (props: {
           })}
         </Slider>
       </div>
-      <h2
-        style={{
-          color: "#fff",
-          textTransform: "uppercase",
-          letterSpacing: "2px",
-        }}
-      >
+      <h2 className="text-2xl text-white uppercase tracking-wide my-3">
         Udsendes I Dag
       </h2>
       <div className="container">
@@ -285,44 +220,18 @@ const index = (props: {
                   as={`/MovieDetail/${play.id}`}
                 >
                   <li key={play.id}>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "center",
-                        position: "absolute",
-                        marginTop: "0px",
-                        padding: "6px",
-                        color: "#fff",
-                        backgroundColor: "#000",
-                        opacity: "0.7",
-                      }}
-                    >
-                      <div>
-                        <StarIcon />
+                    <div className="mx-auto">
+                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                        <div>
+                          <StarIcon />
+                        </div>
+                        {play.vote_average}
                       </div>
-                      {play.vote_average}
-                    </div>
-                    <img
-                      src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
-                      alt="poster"
-                      style={{ maxWidth: "100px" }}
-                      className="udsendes"
-                    />
-                    <br />
-                    <h6 style={{ textAlign: "center", color: "#fff" }}>
-                      {" "}
-                      {play.title}
-                    </h6>
-                    <div className="text-left text-xl">
-                      {" "}
-                      {props.genres.genres.map((genre) => {
-                        if (genre.id === play.genre_ids[0]) {
-                          return genre.name;
-                        } else {
-                          return null;
-                        }
-                      })}
+                      <img
+                        src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
+                        alt="poster"
+                        className="mx-auto"
+                      />
                     </div>
                   </li>
                 </Link>
