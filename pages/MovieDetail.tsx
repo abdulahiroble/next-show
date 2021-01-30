@@ -19,14 +19,6 @@ const MovieDetail = ({ details, trailer }) => {
   console.log(router);
   return (
     <Layout>
-      <style jsx>{`
-        @media (min-width: 1280px) {
-          // .seasons {
-          //   width: 40%;
-          //   margin-left: 28% !important;
-          // }
-        }
-      `}</style>
       <div className="flex flex-col">
         <div className="">
           <img
@@ -96,7 +88,7 @@ const MovieDetail = ({ details, trailer }) => {
   );
 };
 
-MovieDetail.getInitialProps = async function (router) {
+MovieDetail.getInitialProps = async function (router: { query: { id: any } }) {
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `

@@ -6,12 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
 
-const index = (props: {
-  popular: { results: any[] };
-  genres: { genres: any[] };
-  rated: { results: any[] };
-  playing: { results: any[] };
-}) => {
+const index = (props) => {
   <Head>
     <meta
       name="description"
