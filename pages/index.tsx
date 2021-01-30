@@ -6,12 +6,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
 
-const index = (props: {
-  popular: { results: any[] };
-  genres: { genres: any[] };
-  rated: { results: any[] };
-  playing: { results: any[] };
-}) => {
+const index = (props) => {
   <Head>
     <meta
       name="description"
@@ -82,7 +77,7 @@ const index = (props: {
                       </div>
 
                       <div className="text-2xl text-white font-bold mx-auto text-center">
-                        {popularity.vote_average} Bedømmelse |
+                        {popularity.vote_average} Bedømmelse |{" "}
                         {props.genres.genres.map((genre) => {
                           if (genre.id === popularity.genre_ids[0]) {
                             return genre.name;
@@ -99,10 +94,11 @@ const index = (props: {
           );
         })}
       </Slider>
-      <div className="text-2xl text-white uppercase tracking-wide">
-        Populære
-      </div>
+
       <div className="w-9/12 mx-auto">
+        <div className="text-2xl text-white uppercase tracking-wide mb-3">
+          Populære
+        </div>
         <Slider {...settings}>
           {props.popular.results.map((popularity) => {
             return (
@@ -126,17 +122,18 @@ const index = (props: {
                   as={`/MovieDetail/${popularity.id}`}
                 >
                   <li key={popularity.id}>
-                    <div className="mx-auto">
-                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                    <div className="lg:ml-32">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
                         <div>
                           <StarIcon />
                         </div>
                         {popularity.vote_average}
                       </div>
+
                       <img
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                         alt="poster"
-                        className="mx-auto"
+                        className=""
                       />
                     </div>
                   </li>
@@ -146,10 +143,10 @@ const index = (props: {
           })}
         </Slider>
       </div>
-      <h2 className="text-2xl text-white uppercase tracking-wide my-3">
-        Bedst Bedømte
-      </h2>
-      <div className="w-9/12 mx-auto">
+      <div className="w-9/12 mx-auto my-4">
+        <div className="text-2xl text-white uppercase tracking-wide mb-3">
+          Udsendes i øjeblikket
+        </div>
         <Slider {...settings}>
           {props.rated.results.map((rating) => {
             return (
@@ -173,8 +170,8 @@ const index = (props: {
                   as={`/MovieDetail/${rating.id}`}
                 >
                   <li key={rating.id}>
-                    <div className="mx-auto">
-                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                    <div className="lg:ml-32">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
                         <div>
                           <StarIcon />
                         </div>
@@ -183,7 +180,7 @@ const index = (props: {
                       <img
                         src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
                         alt="poster"
-                        className="mx-auto"
+                        className=""
                       />
                     </div>
                   </li>
@@ -193,10 +190,10 @@ const index = (props: {
           })}
         </Slider>
       </div>
-      <h2 className="text-2xl text-white uppercase tracking-wide my-3">
-        Udsendes I Dag
-      </h2>
       <div className="w-9/12 mx-auto">
+        <div className="text-2xl text-white uppercase tracking-wide mb-3">
+          Udsendes i dag
+        </div>
         <Slider {...settings}>
           {props.playing.results.map((play) => {
             return (
@@ -220,8 +217,8 @@ const index = (props: {
                   as={`/MovieDetail/${play.id}`}
                 >
                   <li key={play.id}>
-                    <div className="mx-auto">
-                      <div className="flex flex-col absolute bg-black opacity-70 p-1.5 text-white lg:ml-40">
+                    <div className="lg:ml-32">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
                         <div>
                           <StarIcon />
                         </div>
@@ -230,7 +227,7 @@ const index = (props: {
                       <img
                         src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
                         alt="poster"
-                        className="mx-auto"
+                        className=""
                       />
                     </div>
                   </li>

@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const Layout = (props) => {
   return (
-    <body className="flex flex-col min-h-screen">
+    <body className="">
       <Head>
         <title>Serier man skal se</title>
         <link
