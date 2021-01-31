@@ -5,22 +5,24 @@ const cookies = () => {
   return (
     <Layout>
       <div className="w-9/12 mx-auto text-base ">
-        <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl">
+        <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl sm:p-1">
           Cookies
         </div>
-        <div>
+
+        <div className="mb-4">
           Hjemmesiden anvender "cookies". Cookies er en tekstfil, der gemmes på
           din computer, mobiltelefon, tablet eller tilsvarende med det formål at
           genkende den, huske indstillinger, udfører statistik og målrette
-          annoncer. Cookies kan ikke indeholde skadelig kode som f.eks virus.
+          annoncer. Cookies kan ikke indeholde skadelig kode som f.eks virus. Du
+          kan slette eller blokerer cookies. Se hvordan her:
         </div>
 
-        <div>
-          Du kan slette eller blokerer cookies. Se hvordan her{" "}
-          <a href="http://minecookies.org/cookiehandtering">
-            http://minecookies.org/cookiehandtering
-          </a>
-        </div>
+        <a
+          href="http://minecookies.org/cookiehandtering"
+          className="bg-blue-700 text-white"
+        >
+          http://minecookies.org/cookiehandtering
+        </a>
 
         <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl">
           Nødvendige cookies
@@ -44,7 +46,7 @@ const cookies = () => {
         </div>
         <a
           href="http://tools.google.com/dlpage/gaoptout"
-          className="bg-blue-700"
+          className="bg-blue-700 text-white"
         >
           Klik her for at fravælge cookies fra Google Analytics.
         </a>

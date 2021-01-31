@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const profile = () => {
   return (
     <Layout>
-      <div className="w-9/12 mx-auto text-base p-5">
+      <div className="w-full mx-auto text-base p-5">
         <div className="text-2xl mb-3 text-white sm:text-3xl">
           Formål med siden
         </div>
