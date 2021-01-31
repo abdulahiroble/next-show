@@ -5,7 +5,7 @@ import Footer from "./footer";
 
 const Layout = (props) => {
   return (
-    <body className="">
+    <body className="flex flex-col min-h-screen">
       <Head>
         <title>Serier man skal se</title>
         <link
@@ -41,7 +41,7 @@ const Layout = (props) => {
       </Head>
 
       <Nav />
-      <div className="w-full">{props.children}</div>
+      <div className="flex-1">{props.children}</div>
       <br />
       <noscript
         dangerouslySetInnerHTML={{
