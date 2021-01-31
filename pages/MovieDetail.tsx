@@ -20,14 +20,12 @@ const MovieDetail = ({ details, trailer }) => {
   return (
     <Layout>
       <div className="flex flex-col">
-        <div className="">
+        <div className="mb-5">
           <img
             src={`${router.query.thumbnail}`}
             className="w-9/12 sm:max-w-sm"
           />
         </div>
-
-        <br />
 
         <div>
           <div className="text-3xl font-bold">
@@ -36,7 +34,7 @@ const MovieDetail = ({ details, trailer }) => {
           </div>
         </div>
       </div>
-      <br />
+
       <div className="text-3xl font-bold mb-2">Resume</div>
       <div className="text-base sm:text-lg">
         {router.query.summary ? (
@@ -45,7 +43,7 @@ const MovieDetail = ({ details, trailer }) => {
           <p>intet resume endnu</p>
         )}
       </div>
-      <br /> <br />
+
       <div className="text-3xl font-bold">Sæsoner</div>
       <Slider>
         {details.seasons.map((details) => {
@@ -57,8 +55,7 @@ const MovieDetail = ({ details, trailer }) => {
                 style={{ marginLeft: "20%" }}
                 className="w-9/12 mx-auto sm:max-w-sm mt-3 "
               />
-              <br /> <br />
-              <div>
+              <div className="text-center mt-3">
                 <div className="text-2xl font-bold">
                   <b>{details.name}</b>
                 </div>
@@ -76,7 +73,9 @@ const MovieDetail = ({ details, trailer }) => {
           return (
             <div>
               <iframe
-                className="lg:h-screen lg:max-w-full mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                height="300"
+                width="300"
+                className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
                 src={`https://www.youtube.com/embed/${youtube.key}`}
               ></iframe>
               <br />
