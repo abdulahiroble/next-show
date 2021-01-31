@@ -61,7 +61,7 @@ export default function LayoutBlog({
             </>
           )}
         </header>
-        <main>{children}</main>
+        <main className="text-white">{children}</main>
         {!home && (
           <div className={styles.backToHome}>
             <Link href="/">
