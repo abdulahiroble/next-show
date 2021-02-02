@@ -64,8 +64,8 @@ const index = (props) => {
                 >
                   <div className="mb-5">
                     <img
-                      src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                      className="object-cover h-72 w-full opacity-30"
+                      src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                      className="object-cover h-72 w-full opacity-20"
                       style={{
                         imageRendering: "crisp-edges",
                       }}
