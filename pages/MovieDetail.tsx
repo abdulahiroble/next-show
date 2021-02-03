@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 
-const MovieDetail = ({ details, trailer }) => {
+const MovieDetail = ({ details, trailer, providers }) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -15,6 +15,8 @@ const MovieDetail = ({ details, trailer }) => {
   };
 
   const router = useRouter();
+
+  console.log(providers);
 
   console.log(router);
   return (
@@ -90,6 +92,32 @@ const MovieDetail = ({ details, trailer }) => {
           })}
         </div>
       </div>
+
+      <div>
+        {providers.results.DK.flatrate.map((test) => {
+          if (test.provider_name == "C More") {
+            return (
+              <a
+                href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
+                target="_blank"
+                className="text-center"
+              >
+                Se serie på C More!
+              </a>
+            );
+          } else if (test.provider_name == "Viaplay") {
+            return (
+              <a
+                href="https://viaplay.dk/"
+                target="_blank"
+                className="text-center"
+              >
+                Se serie på Viaplay!
+              </a>
+            );
+          }
+        })}
+      </div>
     </Layout>
   );
 };
@@ -105,10 +133,18 @@ MovieDetail.getInitialProps = async function (router: { query: { id: any } }) {
     `
   );
 
+  const provider = await fetch(
+    `https://api.themoviedb.org/3/tv/${router.query.id}/watch/providers?api_key=${process.env.NEXT_PUBLIC_API_SECRET}
+    `
+  );
+
+  // https://api.themoviedb.org/3/tv/79611/watch/providers?api_key=3e5072126511096a6377f77c742f2864
+
   const details = await res.json();
   const trailer = await response.json();
+  const providers = await provider.json();
 
-  return { details, trailer };
+  return { details, trailer, providers };
 };
 
 export default MovieDetail;
