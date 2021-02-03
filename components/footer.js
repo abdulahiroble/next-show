@@ -37,6 +37,11 @@ const footer = () => {
           <TmdLogo />
         </div>
         <div>Copyright &copy;2021</div>
+        <div>
+          {" "}
+          This product uses the TMDb API but is not endorsed or certified by
+          TMDb.
+        </div>
       </div>
     </footer>
   );
