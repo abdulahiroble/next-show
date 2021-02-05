@@ -116,10 +116,7 @@ const MovieDetail = ({ details, trailer, providers }) => {
                   verdensklasse, actionbrag, komedie, romantik og alle børnenes
                   favoritter.
                 </span>
-                <div>
-                  This source of the data was made possible by JustWatch
-                  <JustWatchLogo />
-                </div>
+                <JustWatchLogo />
               </div>
             );
           } else if (test.provider_name == "Viaplay") {
@@ -134,7 +131,7 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-sm text-white w-64 italic mb-10">
+                <span className="text-md text-white w-64 italic mb-10 sm:text-md">
                   Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
                   Viaplay-film og -serier gratis i to uger! Se online. På mobil,
                   computer, tablet eller Smart-Tv. Hvordan du vil og når det
