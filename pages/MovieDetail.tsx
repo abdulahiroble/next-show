@@ -105,10 +105,10 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     target="_blank"
                     className="hover:no-underline hover:text-white text-lg font-medium w-64"
                   >
-                    SE SERIE PÅ C MORE
+                    SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-sm text-white mt-8 w-64">
+                <span className="text-sm text-white mt-8 w-64 italic">
                   Prøv C More gratis og få fri adgang til streaming af nye film
                   og serier for hele familien. Hver eneste uge kommer der helt
                   nye film og serieafsnit til. Vælg mellem alt fra krimier i
@@ -126,9 +126,16 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     target="_blank"
                     className="hover:no-underline hover:text-white text-lg font-medium w-64"
                   >
-                    SE SERIE PÅ VIAPLAY
+                    SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
+                <span className="text-sm text-white mt-8 w-64 italic">
+                  Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
+                  Viaplay-film og -serier gratis i to uger! Se online. På mobil,
+                  computer, tablet eller Smart-Tv. Hvordan du vil og når det
+                  passer dig. I hele EU. Afslut når du vil. Hos os får du fuld
+                  fleksibilitet. Du kan opsige Viaplay når som helst.
+                </span>
               </div>
             );
           }
@@ -153,8 +160,6 @@ MovieDetail.getInitialProps = async function (router: { query: { id: any } }) {
     `https://api.themoviedb.org/3/tv/${router.query.id}/watch/providers?api_key=${process.env.NEXT_PUBLIC_API_SECRET}
     `
   );
-
-  // https://api.themoviedb.org/3/tv/79611/watch/providers?api_key=3e5072126511096a6377f77c742f2864
 
   const details = await res.json();
   const trailer = await response.json();
