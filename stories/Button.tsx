@@ -32,7 +32,7 @@ export const Button = (props: {
     case "red":
       return (
         <button
-          className="bg-red-600 w-64 no-underline mx-auto text-white px-3 py-3 my-2 rounded-md mb-3"
+          className="bg-red-600 w-64 no-underline mx-auto text-white px-3 py-3 my-2 rounded-lg mb-3"
           onClick={onClick}
         >
           {children}
@@ -42,7 +42,7 @@ export const Button = (props: {
     default:
       return (
         <button
-          className="bg-green-800 w-40 text-white px-3 py-3 mx-2 my-2 rounded-md"
+          className="bg-green-800 w-40 text-white px-3 py-3 mx-2 my-2 rounded-lg"
           onClick={onClick}
           style={{
             backgroundColor: "#4CAF50",
