@@ -22,10 +22,7 @@ const footer = () => {
         sociale medier og analysere vores traffik. Vi deler også information
         vedrørende din brug af vores hjemmeside med analytiske
         samarbejdspartnere.
-        <Link
-          href="/cookies"
-          style={{ textDecoration: "none", color: "yellow" }}
-        >
+        <Link href="/cookies">
           <a style={{ textDecoration: "none", color: "yellow" }}>
             Læs mere om cookies
           </a>
