@@ -109,7 +109,7 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-sm text-white mt-8 w-64 italic mb-10">
+                <span className="text-md text-white w-64 italic mb-10 sm:text-md">
                   Prøv C More gratis og få fri adgang til streaming af nye film
                   og serier for hele familien. Hver eneste uge kommer der helt
                   nye film og serieafsnit til. Vælg mellem alt fra krimier i
