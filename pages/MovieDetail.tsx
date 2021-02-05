@@ -94,19 +94,28 @@ const MovieDetail = ({ details, trailer, providers }) => {
         </div>
       </div>
 
-      <div className="mx-auto w-40">
+      <div className="mx-auto w-64 text-center">
         {providers.results.DK.flatrate.map((test) => {
           if (test.provider_name == "C More") {
             return (
-              <Button variant="red">
-                <a
-                  href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
-                  target="_blank"
-                  className="hover:no-underline hover:text-white text-lg font-medium"
-                >
-                  Se serie på C More!
-                </a>
-              </Button>
+              <div>
+                <Button variant="red">
+                  <a
+                    href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
+                    target="_blank"
+                    className="hover:no-underline hover:text-white text-lg font-medium w-64"
+                  >
+                    SE SERIE PÅ C MORE
+                  </a>
+                </Button>
+                <span className="text-sm text-white mt-8 w-64">
+                  Prøv C More gratis og få fri adgang til streaming af nye film
+                  og serier for hele familien. Hver eneste uge kommer der helt
+                  nye film og serieafsnit til. Vælg mellem alt fra krimier i
+                  verdensklasse, actionbrag, komedie, romantik og alle børnenes
+                  favoritter.
+                </span>
+              </div>
             );
           } else if (test.provider_name == "Viaplay") {
             return (
@@ -115,9 +124,9 @@ const MovieDetail = ({ details, trailer, providers }) => {
                   <a
                     href="https://viaplay.dk/"
                     target="_blank"
-                    className="hover:no-underline hover:text-white text-lg font-medium"
+                    className="hover:no-underline hover:text-white text-lg font-medium w-64"
                   >
-                    Se serie på Viaplay!
+                    SE SERIE PÅ VIAPLAY
                   </a>
                 </Button>
               </div>

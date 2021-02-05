@@ -32,7 +32,7 @@ export const Button = (props: {
     case "red":
       return (
         <button
-          className="bg-red-600 w-40 no-underline mx-auto text-white px-3 py-3 my-2 rounded-md"
+          className="bg-red-600 w-64 no-underline mx-auto text-white px-3 py-3 my-2 rounded-md"
           onClick={onClick}
         >
           {children}

@@ -9,25 +9,23 @@ const profile = () => {
           Formål med siden
         </div>
 
-        <div className="flex flex-column justify-between">
-          <div className="text-base">
-            Hjemmesiden har til formål at give folk indblik i hvilke serier der
-            er værd at se baseret på bruger anmeldelser.{" "}
-          </div>
+        <div className="text-lg">
+          Hjemmesiden har til formål at give folk indblik i hvilke serier der er
+          værd at se baseret på bruger anmeldelser. Det er muligt at se hvor
+          mange sæsoner en bestemt serie har ved at klikke på dens banner.{" "}
+          <br />
+          Det er også muligt at se trailers til et bestemt show.
+        </div>
 
-          <div className="text-base my-3">
-            Det er muligt at se hvor mange sæsoner en bestemt serie har ved at
-            klikke på dens banner .
-          </div>
+        <div className="text-2xl mb-2 mt-5 text-white sm:text-3xl">
+          Affiliate links
+        </div>
 
-          {/* <div className="text-base">
-            Hvis du vil komme i kontakt for at give feedback eller andet kan du
-            sende en mail: <br />
-            <a href="mailto: abdulahi_2610@hotmail.com" target="_blank">
-              abdulahi_2610@hotmail.com
-            </a>
-            .
-          </div> */}
+        <div className="text-lg my-3">
+          Denne hjemmeside er affiliate finansieret. Hver gang en besøgende
+          klikker på et af vores links og abonnerer til en streaming tjeneste,
+          modtager vi en lille kommision. <br />
+          Kommisionen går til vedligholdese og videreudvikling af hjemmesiden.
         </div>
       </div>
     </Layout>
