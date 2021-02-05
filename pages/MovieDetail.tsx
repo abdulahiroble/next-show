@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
+import { Button } from "../stories/Button";
 
 const MovieDetail = ({ details, trailer, providers }) => {
   var settings = {
@@ -93,27 +94,33 @@ const MovieDetail = ({ details, trailer, providers }) => {
         </div>
       </div>
 
-      <div>
+      <div className="mx-auto w-40">
         {providers.results.DK.flatrate.map((test) => {
           if (test.provider_name == "C More") {
             return (
-              <a
-                href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
-                target="_blank"
-                className="text-center"
-              >
-                Se serie på C More!
-              </a>
+              <Button variant="red">
+                <a
+                  href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
+                  target="_blank"
+                  className="hover:no-underline hover:text-white text-lg font-medium"
+                >
+                  Se serie på C More!
+                </a>
+              </Button>
             );
           } else if (test.provider_name == "Viaplay") {
             return (
-              <a
-                href="https://viaplay.dk/"
-                target="_blank"
-                className="text-center"
-              >
-                Se serie på Viaplay!
-              </a>
+              <div>
+                <Button variant="red">
+                  <a
+                    href="https://viaplay.dk/"
+                    target="_blank"
+                    className="hover:no-underline hover:text-white text-lg font-medium"
+                  >
+                    Se serie på Viaplay!
+                  </a>
+                </Button>
+              </div>
             );
           }
         })}

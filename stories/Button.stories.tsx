@@ -11,6 +11,12 @@ export const blackButton = () => (
   </div>
 );
 
+export const redButton = () => (
+  <div>
+    <Button variant="red">Button</Button>
+  </div>
+);
+
 export const whiteButton = () => (
   <div>
     <Button variant="white">Button</Button>
