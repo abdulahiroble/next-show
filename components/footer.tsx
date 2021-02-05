@@ -22,10 +22,7 @@ const footer = () => {
         sociale medier og analysere vores traffik. Vi deler også information
         vedrørende din brug af vores hjemmeside med analytiske
         samarbejdspartnere.
-        <Link
-          href="/cookies"
-          style={{ textDecoration: "none", color: "yellow" }}
-        >
+        <Link href="/cookies">
           <a style={{ textDecoration: "none", color: "yellow" }}>
             Læs mere om cookies
           </a>
@@ -36,12 +33,17 @@ const footer = () => {
         <div>
           <TmdLogo />
         </div>
-        <div>Copyright &copy;2021</div>
-        <div>
-          {" "}
-          This product uses the TMDb API but is not endorsed or certified by
-          TMDb.
+        <div className="mb-3">
+          This product uses the TMDb API but is not endorsed or certified by{" "}
+          <a
+            href="https://www.themoviedb.org/?language=da"
+            target="_blank"
+            className="no-underline text-yellow-300 hover:no-underline hover:text-yellow-300"
+          >
+            TMDb.
+          </a>
         </div>
+        <div>Copyright &copy;2021</div>
       </div>
     </footer>
   );
