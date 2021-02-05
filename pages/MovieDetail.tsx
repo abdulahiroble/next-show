@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { Button } from "../stories/Button";
+import { JustWatchLogo } from "../stories/JustWatchLogo";
 
 const MovieDetail = ({ details, trailer, providers }) => {
   var settings = {
@@ -108,13 +109,17 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-sm text-white mt-8 w-64 italic">
+                <span className="text-sm text-white mt-8 w-64 italic mb-10">
                   Prøv C More gratis og få fri adgang til streaming af nye film
                   og serier for hele familien. Hver eneste uge kommer der helt
                   nye film og serieafsnit til. Vælg mellem alt fra krimier i
                   verdensklasse, actionbrag, komedie, romantik og alle børnenes
                   favoritter.
                 </span>
+                <div>
+                  This source of the data was made possible by JustWatch
+                  <JustWatchLogo />
+                </div>
               </div>
             );
           } else if (test.provider_name == "Viaplay") {
@@ -129,13 +134,14 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-sm text-white mt-8 w-64 italic">
+                <span className="text-sm text-white w-64 italic mb-10">
                   Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
                   Viaplay-film og -serier gratis i to uger! Se online. På mobil,
                   computer, tablet eller Smart-Tv. Hvordan du vil og når det
                   passer dig. I hele EU. Afslut når du vil. Hos os får du fuld
                   fleksibilitet. Du kan opsige Viaplay når som helst.
                 </span>
+                <JustWatchLogo />
               </div>
             );
           }
