@@ -42,7 +42,7 @@ const index = (props) => {
             <ul>
               <Link
                 href={{
-                  pathname: "MovieDetail",
+                  pathname: "SerieInfo",
                   query: {
                     id: popularity.id,
                     rating: popularity.vote_average,
@@ -56,7 +56,7 @@ const index = (props) => {
                     thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
                   },
                 }}
-                as={`/MovieDetail/${popularity.id}`}
+                as={`/SerieInfo/${popularity.id}`}
               >
                 <li
                   style={{ listStyleType: "none", cursor: "pointer" }}
@@ -105,7 +105,7 @@ const index = (props) => {
               <ul className="">
                 <Link
                   href={{
-                    pathname: "MovieDetail",
+                    pathname: "SerieInfo",
                     query: {
                       id: popularity.id,
                       rating: popularity.vote_average,
@@ -119,7 +119,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
                     },
                   }}
-                  as={`/MovieDetail/${popularity.id}`}
+                  as={`/SerieInfo/${popularity.id}`}
                 >
                   <li key={popularity.id}>
                     <div className="lg:ml-32">
@@ -153,7 +153,7 @@ const index = (props) => {
               <ul>
                 <Link
                   href={{
-                    pathname: "MovieDetail",
+                    pathname: "SerieInfo",
                     query: {
                       id: rating.id,
                       rating: rating.vote_average,
@@ -167,7 +167,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w200${rating.poster_path}`,
                     },
                   }}
-                  as={`/MovieDetail/${rating.id}`}
+                  as={`/SerieInfo/${rating.id}`}
                 >
                   <li key={rating.id}>
                     <div className="lg:ml-32">
@@ -200,7 +200,7 @@ const index = (props) => {
               <ul>
                 <Link
                   href={{
-                    pathname: "MovieDetail",
+                    pathname: "SerieInfo",
                     query: {
                       id: play.id,
                       play: play.vote_average,
@@ -214,7 +214,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w200${play.poster_path}`,
                     },
                   }}
-                  as={`/MovieDetail/${play.id}`}
+                  as={`/SerieInfo/${play.id}`}
                 >
                   <li key={play.id}>
                     <div className="lg:ml-32">

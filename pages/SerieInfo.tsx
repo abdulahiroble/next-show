@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import { Button } from "../stories/Button";
 import { JustWatchLogo } from "../stories/JustWatchLogo";
 
-const MovieDetail = ({ details, trailer, providers }) => {
+const SerieInfo = ({ details, trailer, providers }) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -148,7 +148,7 @@ const MovieDetail = ({ details, trailer, providers }) => {
   );
 };
 
-MovieDetail.getInitialProps = async function (router: { query: { id: any } }) {
+SerieInfo.getInitialProps = async function (router: { query: { id: any } }) {
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
@@ -171,4 +171,4 @@ MovieDetail.getInitialProps = async function (router: { query: { id: any } }) {
   return { details, trailer, providers };
 };
 
-export default MovieDetail;
+export default SerieInfo;
