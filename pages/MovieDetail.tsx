@@ -95,7 +95,7 @@ const MovieDetail = ({ details, trailer, providers }) => {
         </div>
       </div>
 
-      <div className="mx-auto w-64 text-center">
+      <div className="mx-auto w-64 lg:w-72 text-center">
         {providers.results.DK.flatrate.map((test) => {
           if (test.provider_name == "C More") {
             return (
@@ -109,7 +109,7 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-md text-white w-64 italic mb-10 sm:text-md">
+                <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
                   Prøv C More gratis og få fri adgang til streaming af nye film
                   og serier for hele familien. Hver eneste uge kommer der helt
                   nye film og serieafsnit til. Vælg mellem alt fra krimier i
@@ -131,8 +131,8 @@ const MovieDetail = ({ details, trailer, providers }) => {
                     SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
-                <span className="text-md text-white w-64 italic mb-10 sm:text-md">
-                  Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
+                <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
+                  <br /> Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
                   Viaplay-film og -serier gratis i to uger! Se online. På mobil,
                   computer, tablet eller Smart-Tv. Hvordan du vil og når det
                   passer dig. I hele EU. Afslut når du vil. Hos os får du fuld
