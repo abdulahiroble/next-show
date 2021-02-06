@@ -16,7 +16,7 @@ export default function Blog({
   }[];
 }) {
   return (
-    <Layout>
+    <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
