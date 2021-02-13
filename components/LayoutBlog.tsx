@@ -2,9 +2,9 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
-import LayoutSite from "../components/Layout";
+// import LayoutSite from "../components/Layout";
 
-const name = "seriermanskalse.dk";
+const name = "Blog";
 export const siteTitle = "Next.js Sample Website";
 
 export default function LayoutBlog({
@@ -19,8 +19,8 @@ export default function LayoutBlog({
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Få overblik hvilke serier der er værd at se baseret på bruger scorer"
+          name="Serie man skal se"
+          content="Få overblik hvilke serier der er værd at se baseret på bruger score"
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
