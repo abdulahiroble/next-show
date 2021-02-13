@@ -4,8 +4,8 @@ import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 // import LayoutSite from "../components/Layout";
 
-const name = "Blog";
-export const siteTitle = "Next.js Sample Website";
+const name = "Serier man skal se";
+export const siteTitle = "Serie man skal se";
 
 export default function LayoutBlog({
   children,
@@ -27,7 +27,7 @@ export default function LayoutBlog({
       <header className={styles.header}>
         {home ? (
           <>
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h3 className={utilStyles.heading2Xl}>{name}</h3>
           </>
         ) : (
           <>

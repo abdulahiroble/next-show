@@ -19,9 +19,9 @@ export default function Blog({
   return (
     <LayoutSite>
       <Layout home>
-        <Head>
+        {/* <Head>
           <title>{siteTitle}</title>
-        </Head>
+        </Head> */}
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
           <ul className={utilStyles.list}>
             {allPostsData.map(({ id, date, title }) => (
