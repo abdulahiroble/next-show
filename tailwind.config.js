@@ -1,6 +1,7 @@
 module.exports = {
   purge: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class',
+  important: true,
   theme: {
     extend: {},
   },
@@ -8,6 +9,9 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  // corePlugins: {
+  //   preflight: false,
+  // },
   theme: {
     screens: {
       sm: "640px",

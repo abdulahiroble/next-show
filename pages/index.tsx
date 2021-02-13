@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
+// import "../components/layoutPage.module.css";
 
 const index = (props) => {
   <Head>

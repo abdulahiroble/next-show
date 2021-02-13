@@ -104,7 +104,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                   <a
                     href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
                     target="_blank"
-                    className="hover:no-underline hover:text-white text-lg font-medium w-64"
+                    className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
                   >
                     SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
                   </a>
@@ -126,7 +126,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                   <a
                     href="https://viaplay.dk/"
                     target="_blank"
-                    className="hover:no-underline hover:text-white text-lg font-medium w-64"
+                    className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
                   >
                     SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
                   </a>
