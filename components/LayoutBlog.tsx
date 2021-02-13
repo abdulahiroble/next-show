@@ -30,13 +30,7 @@ export default function LayoutBlog({
             <h3 className={utilStyles.heading2Xl}>{name}</h3>
           </>
         ) : (
-          <>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
+          <></>
         )}
       </header>
       <main>{children}</main>
