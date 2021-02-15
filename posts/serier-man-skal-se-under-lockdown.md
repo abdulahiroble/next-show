@@ -15,7 +15,7 @@ Det er breakout-stjerne Sope Dirisu, der stjæler showet her, men knækker krani
 
 Ja, det er gorier end de fleste horror-film, og du bruger meget af det på at blinke og se igennem fingrene, men dette er en gribende tur fra ende til anden.
 
-<div style="text-align:center">
+<div style="text-align:center; overflow:hidden; position: relative;">
  <iframe height="300"
                   width="550"
                   className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
@@ -52,7 +52,7 @@ Jed Mercurios serie sammen med Bodyguard beviste, at Storbritannien stadig hersk
 
 Line of Duty følger detektiv Seargent Steve Arnott (Martin Compston), en tidligere autoriseret skydevåbenofficer, der ledede en operation for at fange en islamisk terrorist, der havde til hensigt at detonere en bombe, men strejkeholdet fejlagtigt gik ind i den forkerte lejlighed og skød en ubevæbnet uskyldig mand til livs.
 
-<div style="text-align:center">
+<div style="text-align:center; overflow:hidden; position: relative;">
  <iframe height="300"
                   width="550"
                   className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
@@ -93,7 +93,7 @@ Når han vender tilbage til den nye serie, leverer Line of Duty-standarden Adria
 
 Ved at opretholde sit løfte om, at intet er helt, hvad det ser ud til, forbliver blod en omhyggeligt observeret familieaffære, der forsætter med at overraske.
 
-<div style="text-align:center">
+<div style="text-align:center; overflow:hidden; position: relative;">
  <iframe height="300"
                   width="550"
                   className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
@@ -132,10 +132,8 @@ serien er fyldt med sladder, pranks, romantik og generel tåbelighed hos Dunder-
 
 Når alt var sagt og gjort, pralede showet på en kombineret 188 episoder, alle fyldt til randen med historiefortællinger som gør det til et af de bedste komdieshows der nogenside er blevet lavet.
 
-<div style="text-align:center">
- <iframe height="300"
-                  width="550"
-                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+<div style="text-align:center; overflow:hidden; position: relative;">
+ <iframe height="300"width="550" 
 src="https://www.youtube.com/embed/LHOtME2DL4g" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
