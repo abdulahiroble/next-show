@@ -15,8 +15,17 @@ Det er breakout-stjerne Sope Dirisu, der stjæler showet her, men knækker krani
 
 Ja, det er gorier end de fleste horror-film, og du bruger meget af det på at blinke og se igennem fingrene, men dette er en gribende tur fra ende til anden.
 
-Plus, hvis afsnit 5 var en halv time længere, ville det være en deltager for årets bedste actionfilm.
+<div style="text-align:center">
+ <iframe height="300"
+                  width="550"
+                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+src="https://www.youtube.com/embed/4CJ5p4XisHs" SameSite=None
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
 
+<div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1&url=https://www.cmore.dk/serie/201848-gangs-of-london" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
@@ -25,9 +34,11 @@ Plus, hvis afsnit 5 var en halv time længere, ville det være en deltager for �
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+	margin-top: 15px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+	</div>
 
 <br><br>
 
@@ -41,6 +52,17 @@ Jed Mercurios serie sammen med Bodyguard beviste, at Storbritannien stadig hersk
 
 Line of Duty følger detektiv Seargent Steve Arnott (Martin Compston), en tidligere autoriseret skydevåbenofficer, der ledede en operation for at fange en islamisk terrorist, der havde til hensigt at detonere en bombe, men strejkeholdet fejlagtigt gik ind i den forkerte lejlighed og skød en ubevæbnet uskyldig mand til livs.
 
+<div style="text-align:center">
+ <iframe height="300"
+                  width="550"
+                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+src="https://www.youtube.com/embed/53V-eVvWLoM" SameSite=None
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+
+<div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1&url=https://www.cmore.dk/serie/139001-line-of-duty-under-mistanke" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
@@ -49,9 +71,11 @@ Line of Duty følger detektiv Seargent Steve Arnott (Martin Compston), en tidlig
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+	margin-top: 15px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+</div>
 
 <br><br>
 
@@ -69,17 +93,30 @@ Når han vender tilbage til den nye serie, leverer Line of Duty-standarden Adria
 
 Ved at opretholde sit løfte om, at intet er helt, hvad det ser ud til, forbliver blod en omhyggeligt observeret familieaffære, der forsætter med at overraske.
 
+<div style="text-align:center">
+ <iframe height="300"
+                  width="550"
+                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+src="https://www.youtube.com/embed/HL7m-dpE4SM" SameSite=None
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+
+<div style="text-align: center">
 <a href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1&url=https://www.cmore.dk/serie/213091-blood" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
+	margin-top: 15px;
 	font-family:Arial;
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+</div>
 
 <br><br>
 
@@ -95,6 +132,17 @@ serien er fyldt med sladder, pranks, romantik og generel tåbelighed hos Dunder-
 
 Når alt var sagt og gjort, pralede showet på en kombineret 188 episoder, alle fyldt til randen med historiefortællinger som gør det til et af de bedste komdieshows der nogenside er blevet lavet.
 
+<div style="text-align:center">
+ <iframe height="300"
+                  width="550"
+                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+src="https://www.youtube.com/embed/LHOtME2DL4g" SameSite=None
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+
+<div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1&url=https://www.cmore.dk/serie/51025-the-office-us" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
@@ -103,6 +151,8 @@ Når alt var sagt og gjort, pralede showet på en kombineret 188 episoder, alle 
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+	margin-top: 15px;
 	padding:16px 31px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+</div>
