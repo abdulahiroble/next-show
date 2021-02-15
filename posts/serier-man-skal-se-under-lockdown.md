@@ -3,9 +3,9 @@ title: "Serier du skal se under lockdown"
 date: "2020-02-10"
 ---
 
-![Gangs of london](/watch-gangs-of-london-trailer.jpg)
-
 ### 1. Gangs of london
+
+![Gangs of london](/watch-gangs-of-london-trailer.jpg)
 
 Gangs Of London er uden tvivl det mest voldelige show på tv; det er også en mesterklasse i handlingsretning og koreografi - men ingen af ​​disse ting bør være overraskende, da det kommer fra Gareth Evans, direktør for The Raid.
 
@@ -15,10 +15,18 @@ Det er breakout-stjerne Sope Dirisu, der stjæler showet her, men knækker krani
 
 Ja, det er gorier end de fleste horror-film, og du bruger meget af det på at blinke og se igennem fingrene, men dette er en gribende tur fra ende til anden.
 
-<div style="text-align:center; overflow:hidden; position: relative;">
+<div style="text-align:center; position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;">
  <iframe height="300"
-                  width="550"
-                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                  width="500"
+                  style="position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;"
 src="https://www.youtube.com/embed/4CJ5p4XisHs" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
@@ -42,9 +50,9 @@ allowfullscreen></iframe>
 
 <br><br>
 
-![line of duty](/landscape-desktop.764.430.jpg)
-
 ### 2. Line of duty
+
+![line of duty](/landscape-desktop.764.430.jpg)
 
 Forkortelsen glad politi korruptionsgruppe er den slags konfliktfulde helte, som vi kun er glade for at kunne henvende os til når vi er i knibe.
 
@@ -52,10 +60,18 @@ Jed Mercurios serie sammen med Bodyguard beviste, at Storbritannien stadig hersk
 
 Line of Duty følger detektiv Seargent Steve Arnott (Martin Compston), en tidligere autoriseret skydevåbenofficer, der ledede en operation for at fange en islamisk terrorist, der havde til hensigt at detonere en bombe, men strejkeholdet fejlagtigt gik ind i den forkerte lejlighed og skød en ubevæbnet uskyldig mand til livs.
 
-<div style="text-align:center; overflow:hidden; position: relative;">
+<div style="text-align:center; position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;">
  <iframe height="300"
-                  width="550"
-                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                  width="500"
+                  style="position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;"
 src="https://www.youtube.com/embed/53V-eVvWLoM" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
@@ -93,10 +109,18 @@ Når han vender tilbage til den nye serie, leverer Line of Duty-standarden Adria
 
 Ved at opretholde sit løfte om, at intet er helt, hvad det ser ud til, forbliver blod en omhyggeligt observeret familieaffære, der forsætter med at overraske.
 
-<div style="text-align:center; overflow:hidden; position: relative;">
+<div style="text-align:center; position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;">
  <iframe height="300"
-                  width="550"
-                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                  width="500"
+                  style="position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;"
 src="https://www.youtube.com/embed/HL7m-dpE4SM" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
@@ -132,8 +156,16 @@ serien er fyldt med sladder, pranks, romantik og generel tåbelighed hos Dunder-
 
 Når alt var sagt og gjort, pralede showet på en kombineret 188 episoder, alle fyldt til randen med historiefortællinger som gør det til et af de bedste komdieshows der nogenside er blevet lavet.
 
-<div style="text-align:center; overflow:hidden; position: relative;">
- <iframe height="300"width="550" 
+<div style="text-align:center; position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;">
+ <iframe height="300"width="500" style="position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;"
 src="https://www.youtube.com/embed/LHOtME2DL4g" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
