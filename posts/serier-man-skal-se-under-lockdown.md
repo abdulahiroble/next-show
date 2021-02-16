@@ -1,6 +1,6 @@
 ---
 title: "Serier du skal se under lockdown"
-date: "2020-10-15"
+date: "2020-12-05"
 ---
 
 ### 1. Gangs of london
