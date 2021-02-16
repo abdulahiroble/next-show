@@ -1,8 +1,23 @@
 import "../styles/global.css";
-// import "../styles/tailwind.css";
+import App from "next/app";
+import { DefaultSeo } from "next-seo";
+import React from "react";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+export default class MyApp extends App {
+  render() {
+    const { Component, pageProps } = this.props;
+    return (
+      <React.Fragment>
+        <DefaultSeo
+          openGraph={{
+            type: "website",
+            locale: "da_DK",
+            url: "https://seriermanskalse.dk/",
+            site_name: "Serier man skal se",
+          }}
+        />
+        <Component {...pageProps} />
+      </React.Fragment>
+    );
+  }
 }
-
-export default MyApp;
