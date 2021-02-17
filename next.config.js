@@ -6,10 +6,6 @@ module.exports = withImages({
     NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
   },
 
-  images: {
-    domains: ["localhost:3000"],
-  },
-
   exportPathMap: function () {
     return {
       "/": { page: "/" },
@@ -17,4 +13,8 @@ module.exports = withImages({
   },
 });
 
-// module.exports = withPlugins([[withImages]], nextConfig);
+module.exports = {
+  images: {
+    domains: ["https://image.tmdb.org/t/p/w500"],
+  },
+};
