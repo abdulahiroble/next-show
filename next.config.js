@@ -1,23 +1,20 @@
 const withImages = require("next-images");
-const withSass = require("@zeit/next-sass");
-// const sitemap = require("nextjs-sitemap-generator");
+// const withPlugins = require("next-compose-plugins");
 
-// sitemap({
-//   baseUrl: "https://seriermanskalse.dk",
-//   pagesDirectory: __dirname + "/pages",
-//   targetDirectory: "static/",
-// });
+module.exports = withImages({
+  env: {
+    NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
+  },
 
-module.exports = withImages(
-  {
-    env: {
-      NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
-    },
+  images: {
+    domains: ["localhost:3000"],
+  },
 
-    exportPathMap: function () {
-      return {
-        "/": { page: "/" },
-      };
-    },
-  }
-);
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+    };
+  },
+});
+
+// module.exports = withPlugins([[withImages]], nextConfig);

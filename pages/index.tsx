@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
+import Image from "next/image";
 // import "../components/layoutPage.module.css";
 
 const index = (props) => {
@@ -64,12 +65,11 @@ const index = (props) => {
                   key={popularity.id}
                 >
                   <div className="mb-5">
-                    <img
+                    <Image
+                      width={500}
+                      height={500}
                       src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                       className="object-cover h-72 w-full opacity-20"
-                      style={{
-                        imageRendering: "crisp-edges",
-                      }}
                     />
                     <div className="-mt-24">
                       <div className="text-2xl text-white font-bold mx-auto text-center">
