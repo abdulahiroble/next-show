@@ -65,9 +65,7 @@ const index = (props) => {
                   key={popularity.id}
                 >
                   <div className="mb-5">
-                    <Image
-                      width={500}
-                      height={500}
+                    <img
                       src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                       className="object-cover h-72 w-full opacity-20"
                     />
@@ -131,7 +129,9 @@ const index = (props) => {
                         {popularity.vote_average}
                       </div>
 
-                      <img
+                      <Image
+                        width={200}
+                        height={90}
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                         alt="poster"
                         className=""
