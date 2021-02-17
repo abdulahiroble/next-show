@@ -65,9 +65,11 @@ const index = (props) => {
                   key={popularity.id}
                 >
                   <div className="mb-5">
-                    <img
+                    <Image
+                      width={2000}
+                      height={2000}
                       src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                      className="object-cover h-72 w-full opacity-20"
+                      className="object-cover opacity-20"
                     />
                     <div className="-mt-24">
                       <div className="text-2xl text-white font-bold mx-auto text-center">
@@ -122,7 +124,7 @@ const index = (props) => {
                 >
                   <li key={popularity.id}>
                     <div className="lg:ml-32">
-                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
                           <StarIcon />
                         </div>
@@ -131,10 +133,9 @@ const index = (props) => {
 
                       <Image
                         width={200}
-                        height={90}
+                        height={300}
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                         alt="poster"
-                        className=""
                       />
                     </div>
                   </li>
@@ -172,13 +173,15 @@ const index = (props) => {
                 >
                   <li key={rating.id}>
                     <div className="lg:ml-32">
-                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
                           <StarIcon />
                         </div>
                         {rating.vote_average}
                       </div>
-                      <img
+                      <Image
+                        width={200}
+                        height={300}
                         src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
                         alt="poster"
                         className=""
@@ -219,13 +222,15 @@ const index = (props) => {
                 >
                   <li key={play.id}>
                     <div className="lg:ml-32">
-                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
                           <StarIcon />
                         </div>
                         {play.vote_average}
                       </div>
-                      <img
+                      <Image
+                        width={200}
+                        height={300}
                         src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
                         alt="poster"
                         className=""
