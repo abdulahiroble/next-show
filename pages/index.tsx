@@ -64,13 +64,16 @@ const index = (props) => {
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
                 >
-                  <div className="mb-5">
-                    <Image
-                      width={2000}
-                      height={2000}
-                      src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                      className="object-cover opacity-20"
-                    />
+                  <div className="text-center">
+                    <div className="h-72 w-full">
+                      <Image
+                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                        className="opacity-20 object-cover w-full"
+                        layout="responsive"
+                        width={700}
+                        height={475}
+                      />
+                    </div>
                     <div className="-mt-24">
                       <div className="text-2xl text-white font-bold mx-auto text-center">
                         {" "}
@@ -96,7 +99,7 @@ const index = (props) => {
         })}
       </Slider>
 
-      <div className="w-9/12 mx-auto">
+      <div className="w-9/12 mx-auto mt-5">
         <div className="text-2xl text-white uppercase tracking-wide mb-3">
           Populære
         </div>
