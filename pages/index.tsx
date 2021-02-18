@@ -74,7 +74,7 @@ const index = (props) => {
                         height={475}
                       />
                     </div>
-                    <div className="-mt-24">
+                    <div className="-mt-32">
                       <div className="text-2xl text-white font-bold mx-auto text-center">
                         {" "}
                         {popularity.original_name}
@@ -99,7 +99,7 @@ const index = (props) => {
         })}
       </Slider>
 
-      <div className="w-9/12 mx-auto mt-5">
+      <div className="w-9/12 mx-auto mt-3">
         <div className="text-2xl text-white uppercase tracking-wide mb-3">
           Populære
         </div>
