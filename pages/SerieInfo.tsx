@@ -113,6 +113,8 @@ const SerieInfo = ({ details, trailer, providers }) => {
                     SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
+                <span className="italic my-3">*Annoncelink</span> <br />
+                <br />
                 <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
                   Prøv C More gratis og få fri adgang til streaming af nye film
                   og serier for hele familien. Hver eneste uge kommer der helt
@@ -135,6 +137,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                     SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
                   </a>
                 </Button>
+                <span className="italic my-3">*Annoncelink</span> <br />
                 <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
                   <br /> Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
                   Viaplay-film og -serier gratis i to uger! Se online. På mobil,
