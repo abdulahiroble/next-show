@@ -1,23 +1,36 @@
 const withImages = require("next-images");
-const withSass = require("@zeit/next-sass");
-// const sitemap = require("nextjs-sitemap-generator");
+const withPlugins = require("next-compose-plugins");
 
-// sitemap({
-//   baseUrl: "https://seriermanskalse.dk",
-//   pagesDirectory: __dirname + "/pages",
-//   targetDirectory: "static/",
+// module.exports = withImages({
+//   env: {
+//     NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
+//   },
+
+//   images: {
+//     domains: ["https://image.tmdb.org/t/p/w200"],
+//   },
+
+//   exportPathMap: function () {
+//     return {
+//       "/": { page: "/" },
+//     };
+//   },
 // });
 
-module.exports = withImages(
-  {
-    env: {
-      NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
-    },
+const nextConfig = {
+  images: {
+    domains: ["image.tmdb.org"],
+  },
 
-    exportPathMap: function () {
-      return {
-        "/": { page: "/" },
-      };
-    },
-  }
-);
+  env: {
+    NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
+  },
+
+  exportPathMap: function () {
+    return {
+      "/": { page: "/" },
+    };
+  },
+};
+
+module.exports = withPlugins([[withImages]], nextConfig);

@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { Button } from "../stories/Button";
 import { JustWatchLogo } from "../stories/JustWatchLogo";
+import Image from "next/image";
 
 const SerieInfo = ({ details, trailer, providers }) => {
   var settings = {
@@ -25,7 +26,9 @@ const SerieInfo = ({ details, trailer, providers }) => {
     <Layout>
       <div className="flex flex-col w-9/12 mx-auto">
         <div className="mb-5">
-          <img
+          <Image
+            width={300}
+            height={400}
             src={`${router.query.thumbnail}`}
             className="w-9/12 sm:max-w-sm"
           />
@@ -55,12 +58,13 @@ const SerieInfo = ({ details, trailer, providers }) => {
         <Slider {...settings}>
           {details.seasons.map((details) => {
             return (
-              <div>
-                <img
+              <div className="text-center">
+                <Image
+                  width={400}
+                  height={600}
                   src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
                   alt=""
-                  style={{ marginLeft: "20%" }}
-                  className="w-9/12 mx-auto sm:max-w-sm mt-3 "
+                  className="w-9/12 mx-auto sm:max-w-sm mt-3"
                 />
                 <div className="text-center mt-3">
                   <div className="text-2xl font-bold">

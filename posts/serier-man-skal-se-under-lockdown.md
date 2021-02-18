@@ -43,9 +43,11 @@ allowfullscreen></iframe>
 	font-family:Arial;
 	font-size:17px;
 	margin-top: 15px;
+	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a><br>
+	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
 <br><br>
@@ -88,9 +90,11 @@ allowfullscreen></iframe>
 	font-family:Arial;
 	font-size:17px;
 	margin-top: 15px;
+	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a><br>
+	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 </div>
 
 <br><br>
@@ -135,11 +139,13 @@ allowfullscreen></iframe>
 	cursor:pointer;
 	color:#ffffff;
 	margin-top: 15px;
+	margin-bottom:5px;
 	font-family:Arial;
 	font-size:17px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a><br>
+	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 </div>
 
 <br><br>
@@ -182,7 +188,9 @@ allowfullscreen></iframe>
 	font-family:Arial;
 	font-size:17px;
 	margin-top: 15px;
+	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a><br>
+	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 </div>

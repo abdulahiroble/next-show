@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
+import Image from "next/image";
 // import "../components/layoutPage.module.css";
 
 const index = (props) => {
@@ -63,15 +64,17 @@ const index = (props) => {
                   style={{ listStyleType: "none", cursor: "pointer" }}
                   key={popularity.id}
                 >
-                  <div className="mb-5">
-                    <img
-                      src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                      className="object-cover h-72 w-full opacity-20"
-                      style={{
-                        imageRendering: "crisp-edges",
-                      }}
-                    />
-                    <div className="-mt-24">
+                  <div className="text-center">
+                    <div className="h-72 w-full">
+                      <Image
+                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                        className="opacity-20 object-cover w-full"
+                        layout="responsive"
+                        width={700}
+                        height={475}
+                      />
+                    </div>
+                    <div className="-mt-32">
                       <div className="text-2xl text-white font-bold mx-auto text-center">
                         {" "}
                         {popularity.original_name}
@@ -96,7 +99,7 @@ const index = (props) => {
         })}
       </Slider>
 
-      <div className="w-9/12 mx-auto">
+      <div className="w-9/12 mx-auto mt-3">
         <div className="text-2xl text-white uppercase tracking-wide mb-3">
           Populære
         </div>
@@ -124,17 +127,18 @@ const index = (props) => {
                 >
                   <li key={popularity.id}>
                     <div className="lg:ml-32">
-                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
                           <StarIcon />
                         </div>
                         {popularity.vote_average}
                       </div>
 
-                      <img
+                      <Image
+                        width={200}
+                        height={300}
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
                         alt="poster"
-                        className=""
                       />
                     </div>
                   </li>
@@ -172,13 +176,15 @@ const index = (props) => {
                 >
                   <li key={rating.id}>
                     <div className="lg:ml-32">
-                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
                           <StarIcon />
                         </div>
                         {rating.vote_average}
                       </div>
-                      <img
+                      <Image
+                        width={200}
+                        height={300}
                         src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
                         alt="poster"
                         className=""
@@ -219,13 +225,15 @@ const index = (props) => {
                 >
                   <li key={play.id}>
                     <div className="lg:ml-32">
-                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white">
+                      <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
                           <StarIcon />
                         </div>
                         {play.vote_average}
                       </div>
-                      <img
+                      <Image
+                        width={200}
+                        height={300}
                         src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
                         alt="poster"
                         className=""
