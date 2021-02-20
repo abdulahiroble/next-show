@@ -72,6 +72,7 @@ const index = (props) => {
                         layout="responsive"
                         width={700}
                         height={475}
+                        alt="banner"
                       />
                     </div>
                     <div className="-mt-32">
@@ -138,7 +139,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                       />
                     </div>
                   </li>
@@ -186,7 +187,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                         className=""
                       />
                     </div>
@@ -235,7 +236,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                         className=""
                       />
                     </div>

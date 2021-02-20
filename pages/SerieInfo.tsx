@@ -29,6 +29,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
           <Image
             width={300}
             height={400}
+            alt="banner"
             src={`${router.query.thumbnail}`}
             className="w-9/12 sm:max-w-sm"
           />
@@ -63,7 +64,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                   width={400}
                   height={600}
                   src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
-                  alt=""
+                  alt="sæsoner"
                   className="w-9/12 mx-auto sm:max-w-sm mt-3"
                 />
                 <div className="text-center mt-3">
