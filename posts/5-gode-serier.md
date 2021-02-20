@@ -140,11 +140,11 @@ allowfullscreen></iframe>
 
 ## 4. Bäckström
 
+![Bäckström](/crop16x9.jpg)
+
 Bäckström er korrupt kriminalkommissær som efterforsker et mord mysterium hvor en kvnindes kranium bliver fundet med skudhuller.
 
 Er der blevet begået et mord eller er der snarere tale om et selvmord? Det vil Bäckström gå til bunds i.
-
-![Bäckström](/crop16x9.jpg)
 
 <div style="text-align:center; position: relative;
     padding-bottom: 56.25%;
