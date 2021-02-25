@@ -67,6 +67,7 @@ const index = (props) => {
                   <div className="text-center">
                     <div className="h-72 w-full">
                       <Image
+                        alt="banner"
                         src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                         className="opacity-20 object-cover w-full"
                         layout="responsive"
@@ -138,7 +139,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                       />
                     </div>
                   </li>
@@ -186,7 +187,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                         className=""
                       />
                     </div>
@@ -235,7 +236,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                         className=""
                       />
                     </div>
