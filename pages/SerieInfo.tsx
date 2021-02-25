@@ -19,9 +19,9 @@ const SerieInfo = ({ details, trailer, providers }) => {
 
   const router = useRouter();
 
-  console.log(providers);
+  // console.log(providers);
 
-  console.log(router);
+  // console.log(router);
   return (
     <Layout>
       <div className="flex flex-col w-9/12 mx-auto">
@@ -37,6 +37,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
 
         <div>
           <div className="text-2xl font-bold">
+            <div className="mb-3">Titel: {router.query.original_name}</div>
             <div className="mb-3">Bedømmelse: {router.query.rating}</div>
             <div>
               Genre:{" "}

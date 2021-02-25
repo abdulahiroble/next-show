@@ -42,13 +42,14 @@ const index = (props) => {
         {props.popular.results.map((popularity) => {
           return (
             <ul>
+              {console.log(popularity)}
               <Link
                 href={{
                   pathname: "SerieInfo",
                   query: {
                     id: popularity.id,
                     rating: popularity.vote_average,
-                    title: popularity.title,
+                    original_name: popularity.original_name,
                     summary: popularity.overview,
                     genre: props.genres.genres.map((genre) => {
                       if (genre.id === popularity.genre_ids[0]) {
