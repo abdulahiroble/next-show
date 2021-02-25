@@ -42,13 +42,14 @@ const index = (props) => {
         {props.popular.results.map((popularity) => {
           return (
             <ul>
+              {console.log(popularity)}
               <Link
                 href={{
                   pathname: "SerieInfo",
                   query: {
                     id: popularity.id,
                     rating: popularity.vote_average,
-                    title: popularity.title,
+                    original_name: popularity.original_name,
                     summary: popularity.overview,
                     genre: props.genres.genres.map((genre) => {
                       if (genre.id === popularity.genre_ids[0]) {
@@ -65,8 +66,9 @@ const index = (props) => {
                   key={popularity.id}
                 >
                   <div className="text-center">
-                    <div className="h-72 w-full">
+                    <div className="h-60 w-full sm:h-80">
                       <Image
+                        alt="banner"
                         src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                         className="opacity-20 object-cover w-full"
                         layout="responsive"
@@ -74,21 +76,20 @@ const index = (props) => {
                         height={475}
                       />
                     </div>
-                    <div className="-mt-32">
+                    <div className="-mt-24 sm:-mt-20">
                       <div className="text-2xl text-white font-bold mx-auto text-center">
                         {" "}
                         {popularity.original_name}
-                      </div>
-
-                      <div className="text-2xl text-white font-bold mx-auto text-center">
-                        {popularity.vote_average} Bedømmelse |{" "}
-                        {props.genres.genres.map((genre) => {
-                          if (genre.id === popularity.genre_ids[0]) {
-                            return genre.name;
-                          } else {
-                            return null;
-                          }
-                        })}
+                        <div className="text-2xl text-white font-bold mx-auto text-center">
+                          {popularity.vote_average} Bedømmelse |{" "}
+                          {props.genres.genres.map((genre) => {
+                            if (genre.id === popularity.genre_ids[0]) {
+                              return genre.name;
+                            } else {
+                              return null;
+                            }
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -113,7 +114,7 @@ const index = (props) => {
                     query: {
                       id: popularity.id,
                       rating: popularity.vote_average,
-                      title: popularity.title,
+                      original_name: popularity.original_name,
                       summary: popularity.overview,
                       genre: props.genres.genres.map((genre) => {
                         if (genre.id === popularity.genre_ids[0]) {
@@ -125,7 +126,7 @@ const index = (props) => {
                   }}
                   as={`/SerieInfo/${popularity.id}`}
                 >
-                  <li key={popularity.id}>
+                  <li key={popularity.id} className="cursor-pointer">
                     <div className="lg:ml-32">
                       <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
@@ -138,7 +139,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${popularity.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                       />
                     </div>
                   </li>
@@ -162,7 +163,7 @@ const index = (props) => {
                     query: {
                       id: rating.id,
                       rating: rating.vote_average,
-                      title: rating.title,
+                      original_name: rating.original_name,
                       summary: rating.overview,
                       genre: props.genres.genres.map((genre) => {
                         if (genre.id === rating.genre_ids[0]) {
@@ -174,7 +175,7 @@ const index = (props) => {
                   }}
                   as={`/SerieInfo/${rating.id}`}
                 >
-                  <li key={rating.id}>
+                  <li key={rating.id} className="cursor-pointer">
                     <div className="lg:ml-32">
                       <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
@@ -186,7 +187,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                         className=""
                       />
                     </div>
@@ -210,8 +211,8 @@ const index = (props) => {
                     pathname: "SerieInfo",
                     query: {
                       id: play.id,
-                      play: play.vote_average,
-                      title: play.title,
+                      rating: play.vote_average,
+                      original_name: play.original_name,
                       summary: play.overview,
                       genre: props.genres.genres.map((genre) => {
                         if (genre.id === play.genre_ids[0]) {
@@ -223,7 +224,7 @@ const index = (props) => {
                   }}
                   as={`/SerieInfo/${play.id}`}
                 >
-                  <li key={play.id}>
+                  <li key={play.id} className="cursor-pointer">
                     <div className="lg:ml-32">
                       <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
@@ -235,7 +236,7 @@ const index = (props) => {
                         width={200}
                         height={300}
                         src={`https://image.tmdb.org/t/p/w200${play.poster_path}`}
-                        alt="poster"
+                        alt="banner"
                         className=""
                       />
                     </div>

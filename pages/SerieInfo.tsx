@@ -19,14 +19,15 @@ const SerieInfo = ({ details, trailer, providers }) => {
 
   const router = useRouter();
 
-  console.log(providers);
+  // console.log(providers);
 
-  console.log(router);
+  // console.log(router);
   return (
     <Layout>
       <div className="flex flex-col w-9/12 mx-auto">
         <div className="mb-5">
           <Image
+            alt="banner"
             width={300}
             height={400}
             src={`${router.query.thumbnail}`}
@@ -36,8 +37,16 @@ const SerieInfo = ({ details, trailer, providers }) => {
 
         <div>
           <div className="text-2xl font-bold">
+            <div className="mb-3">Titel: {router.query.original_name}</div>
             <div className="mb-3">Bedømmelse: {router.query.rating}</div>
-            <div>Genre: {router.query.genre}</div>
+            {/* <div>
+              Genre:{" "}
+              {router.query.genre ? (
+                router.query.genre
+              ) : (
+                <p>intet genre oplyst</p>
+              )}
+            </div> */}
           </div>
         </div>
       </div>
@@ -63,7 +72,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                   width={400}
                   height={600}
                   src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
-                  alt=""
+                  alt="sæsoner"
                   className="w-9/12 mx-auto sm:max-w-sm mt-3"
                 />
                 <div className="text-center mt-3">
@@ -86,12 +95,16 @@ const SerieInfo = ({ details, trailer, providers }) => {
           {trailer.results.map((youtube) => {
             return (
               <div>
-                <iframe
-                  height="300"
-                  width="300"
-                  className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
-                  src={`https://www.youtube.com/embed/${youtube.key}`}
-                ></iframe>
+                {trailer.results ? (
+                  <iframe
+                    height="300"
+                    width="300"
+                    className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                    src={`https://www.youtube.com/embed/${youtube.key}`}
+                  ></iframe>
+                ) : (
+                  <p>Ingen trailer tilgængelig</p>
+                )}
                 <br />
               </div>
             );
@@ -148,6 +161,29 @@ const SerieInfo = ({ details, trailer, providers }) => {
                 <JustWatchLogo />
               </div>
             );
+          } else if (test.provider_name == "Amazon Prime Video") {
+            return (
+              <div>
+                <Button variant="red">
+                  <a
+                    href="https://www.primevideo.com/?tag=serier-20"
+                    target="_blank"
+                    className="hover:no-underline text-white hover:text-white text-md font-medium"
+                  >
+                    SE SERIE PÅ AMAZON PRIME <br /> Start din gratis
+                    prøveperiode
+                  </a>
+                </Button>
+                <span className="italic my-3">*Annoncelink</span> <br />
+                <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
+                  <br /> Se eksklusive Amazon Originals og populære film og
+                  TV-serier for DKK 45/måned. Se nu, opsig når som helst.
+                </span>
+                <JustWatchLogo />
+              </div>
+            );
+          } else {
+            <div>Serie oplysninger ikke tilgængelig i øjeblikket</div>;
           }
         })}
       </div>

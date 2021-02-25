@@ -4,10 +4,8 @@ import Layout from "../components/Layout";
 const cookies = () => {
   return (
     <Layout>
-      <div className="w-9/12 mx-auto text-base ">
-        <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl sm:p-1">
-          Cookies
-        </div>
+      <div className="w-full mx-auto text-base p-3">
+        <div className="text-2xl mb-3 text-white sm:text-3xl">Cookies</div>
 
         <div className="mb-4">
           Hjemmesiden anvender "cookies". Cookies er en tekstfil, der gemmes på
@@ -24,21 +22,21 @@ const cookies = () => {
           http://minecookies.org/cookiehandtering
         </a>
 
-        <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl">
+        <div className="text-2xl mb-3 mt-5 text-white sm:text-3xl">
           Nødvendige cookies
         </div>
 
-        <div>
+        <div className="mb-5">
           Nogle cookies kræves for at hjemmesiden kan fungere. Hjemmesiden
           fungerer ikke korrekt uden disse cookies, og de er som standard
           aktiveret.
         </div>
 
-        <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl">
+        <div className="text-2xl mb-3 text-white sm:text-3xl">
           Google Analytics
         </div>
 
-        <div className="mb-4">
+        <div className="mt-3 mb-3">
           Disse cookies giver os mulighed for at tælle besøgende og
           trafikkilder, så vi kan måle og forbedre ydeevnen af vores hjemmeside.
           De hjælper os med at finde ud af, hvilke sider der er mest og mindst

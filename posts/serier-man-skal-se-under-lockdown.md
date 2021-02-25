@@ -1,7 +1,9 @@
 ---
 title: "Serier du skal se under lockdown"
-date: "2020-12-05"
+date: "2020-05-05"
 ---
+
+Lockdown har ramt os så her kommer en liste med 4 gode serier du skal se for at få tiden til at gå lidt hurtigere.
 
 ### 1. Gangs of london
 
