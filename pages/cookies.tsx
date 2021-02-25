@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 const cookies = () => {
   return (
     <Layout>
-      <div className="w-9/12 mx-auto text-base ">
+      <div className="w-10/12 mx-auto text-base ">
         <div className="text-2xl text-white p-5 -mx-12 sm:text-3xl sm:p-1">
           Cookies
         </div>
