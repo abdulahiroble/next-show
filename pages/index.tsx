@@ -66,7 +66,7 @@ const index = (props) => {
                   key={popularity.id}
                 >
                   <div className="text-center">
-                    <div className="h-80 w-full">
+                    <div className="h-64 w-full sm:h-80">
                       <Image
                         alt="banner"
                         src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
