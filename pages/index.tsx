@@ -77,7 +77,7 @@ const index = (props) => {
                       />
                     </div>
                     <div className="-mt-40 sm:-mt-20">
-                      <div className="text-2xl text-white font-bold mx-auto text-center">
+                      <div className="text-2xl text-white font-bold mx-auto text-center pb-10">
                         {" "}
                         {popularity.original_name}
                         <div className="text-2xl text-white font-bold mx-auto text-center">
