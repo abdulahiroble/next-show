@@ -168,7 +168,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                   <a
                     href="https://www.primevideo.com/?tag=serier-20"
                     target="_blank"
-                    className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
+                    className="hover:no-underline text-white hover:text-white text-md font-medium"
                   >
                     SE SERIE PÅ AMAZON PRIME <br /> Start din gratis
                     prøveperiode

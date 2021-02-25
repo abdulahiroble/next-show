@@ -77,7 +77,7 @@ const index = (props) => {
                       />
                     </div>
                     <div className="-mt-40 sm:-mt-20">
-                      <div className="text-2xl text-white font-bold mx-auto text-center pb-10">
+                      <div className="text-2xl text-white font-bold mx-auto text-center pb-3 sm:pb-10">
                         {" "}
                         {popularity.original_name}
                         <div className="text-2xl text-white font-bold mx-auto text-center">
@@ -126,7 +126,7 @@ const index = (props) => {
                   }}
                   as={`/SerieInfo/${popularity.id}`}
                 >
-                  <li key={popularity.id}>
+                  <li key={popularity.id} className="cursor-pointer">
                     <div className="lg:ml-32">
                       <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
@@ -175,7 +175,7 @@ const index = (props) => {
                   }}
                   as={`/SerieInfo/${rating.id}`}
                 >
-                  <li key={rating.id}>
+                  <li key={rating.id} className="cursor-pointer">
                     <div className="lg:ml-32">
                       <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>
@@ -224,7 +224,7 @@ const index = (props) => {
                   }}
                   as={`/SerieInfo/${play.id}`}
                 >
-                  <li key={play.id}>
+                  <li key={play.id} className="cursor-pointer">
                     <div className="lg:ml-32">
                       <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
                         <div>

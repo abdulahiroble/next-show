@@ -10,11 +10,13 @@ const profile = () => {
         </div>
 
         <div className="text-lg">
-          Hjemmesiden har til formål at give folk indblik i hvilke serier der er
-          værd at se baseret på bruger anmeldelser. Det er muligt at se hvor
-          mange sæsoner en bestemt serie har ved at klikke på dens banner.{" "}
-          <br />
-          Det er også muligt at se trailers til et bestemt show.
+          Hjemmesiden har til formål at give folk indblik i hvilke serier du
+          skal se baseret på brugerbedømmelse. Det er muligt at se hvor mange
+          sæsoner en bestemt serie har ved at klikke på dens banner. <br />
+          Det er også muligt at se trailers til et bestemt show og få et kort
+          resume af hvad serien handler om. <br /> <br />
+          Derudover har vi en blog hvor vi kommer med vores bud hvilke serier i
+          2020 man skal se og hvilke streamingstjenester man kan se dem på.
         </div>
 
         <div className="text-2xl mb-2 mt-5 text-white sm:text-3xl">

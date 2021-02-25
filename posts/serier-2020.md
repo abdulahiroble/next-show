@@ -3,6 +3,8 @@ title: "Serier du skal i 2020"
 date: "2020-12-10"
 ---
 
+2020 har været et år fyldt med gode serier. Så her kommer vores bud på 4 gode serier fra året der gik som du bør tjekke ud.
+
 ### 1. Schitt's Creek
 
 ![Schitt's Creek](/200114-moira-alexis-johnny-david-ew-444p_9610e314f170b2fa681be2b3a45d567d.jpg)
