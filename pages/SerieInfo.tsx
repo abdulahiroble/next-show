@@ -39,14 +39,14 @@ const SerieInfo = ({ details, trailer, providers }) => {
           <div className="text-2xl font-bold">
             <div className="mb-3">Titel: {router.query.original_name}</div>
             <div className="mb-3">Bedømmelse: {router.query.rating}</div>
-            <div>
+            {/* <div>
               Genre:{" "}
               {router.query.genre ? (
                 router.query.genre
               ) : (
                 <p>intet genre oplyst</p>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
