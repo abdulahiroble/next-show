@@ -34,7 +34,6 @@ const index = (props) => {
         title="Serier Man Skal Se | Populære serier baseret på brugerscorer"
         description="Gennemse gode serier fra 2020 og 2021. Få indblik i hvilke serier der er værd at se baseret på hvor manger stjerne en serie har fået"
       />
-      ;
       <Layout>
         <Slider {...setting}>
           {props.popular.results.map((popularity) => {
