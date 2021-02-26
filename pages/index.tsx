@@ -56,7 +56,7 @@ const index = (props) => {
                         return genre.name;
                       }
                     }),
-                    thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
+                    thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                   },
                 }}
                 as={`/SerieInfo/${popularity.id}`}
@@ -121,7 +121,7 @@ const index = (props) => {
                           return genre.name;
                         }
                       }),
-                      thumbnail: `https://image.tmdb.org/t/p/w200${popularity.poster_path}`,
+                      thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                     },
                   }}
                   as={`/SerieInfo/${popularity.id}`}
@@ -186,7 +186,7 @@ const index = (props) => {
                       <Image
                         width={200}
                         height={300}
-                        src={`https://image.tmdb.org/t/p/w200${rating.poster_path}`}
+                        src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                         alt="banner"
                         className=""
                       />
@@ -219,7 +219,7 @@ const index = (props) => {
                           return genre.name;
                         }
                       }),
-                      thumbnail: `https://image.tmdb.org/t/p/w200${play.poster_path}`,
+                      thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
                     },
                   }}
                   as={`/SerieInfo/${play.id}`}

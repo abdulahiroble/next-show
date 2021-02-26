@@ -28,10 +28,9 @@ const SerieInfo = ({ details, trailer, providers }) => {
         <div className="mb-5">
           <Image
             alt="banner"
-            width={300}
-            height={400}
+            width={400}
+            height={600}
             src={`${router.query.thumbnail}`}
-            className="w-9/12 sm:max-w-sm"
           />
         </div>
 
@@ -71,7 +70,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                 <Image
                   width={400}
                   height={600}
-                  src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w500${details.poster_path}`}
                   alt="sæsoner"
                   className="w-9/12 mx-auto sm:max-w-sm mt-3"
                 />
@@ -113,8 +112,8 @@ const SerieInfo = ({ details, trailer, providers }) => {
       </div>
 
       <div className="mx-auto w-64 lg:w-72 text-center">
-        {providers.results.DK.flatrate.map((test) => {
-          if (test.provider_name == "C More") {
+        {providers.results.DK.flatrate.map((provider) => {
+          if (provider.provider_name == "C More") {
             return (
               <div>
                 <Button variant="red">
@@ -138,7 +137,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                 <JustWatchLogo />
               </div>
             );
-          } else if (test.provider_name == "Viaplay") {
+          } else if (provider.provider_name == "Viaplay") {
             return (
               <div>
                 <Button variant="red">
@@ -161,7 +160,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
                 <JustWatchLogo />
               </div>
             );
-          } else if (test.provider_name == "Amazon Prime Video") {
+          } else if (provider.provider_name == "Amazon Prime Video") {
             return (
               <div>
                 <Button variant="red">
@@ -182,8 +181,6 @@ const SerieInfo = ({ details, trailer, providers }) => {
                 <JustWatchLogo />
               </div>
             );
-          } else {
-            <div>Serie oplysninger ikke tilgængelig i øjeblikket</div>;
           }
         })}
       </div>
