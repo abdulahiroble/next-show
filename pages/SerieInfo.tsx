@@ -27,7 +27,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
     <>
       <NextSeo
         title="Serie information | Få detaljer om en bestemt serie"
-        description="Få et indblik i en bestemt serie. Få information ved at læse et kort resume omkring showet. Dertil kan du se hvor mange sæsoner en bestemt serien har. Har du brug for noget visuelt har du også muglighed for at se trailers til en serie. Til sidst har du også mulighed for at se hvor serien kan streames henne."
+        description="Få et indblik i en bestemt serie. Få information ved at læse et kort resume omkring showet. Dertil kan du se hvor mange sæsoner en bestemt serien har. Har du brug for noget visuelt har du også mulighed for at se trailers serien. Til sidst har du også mulighed for at se hvor serien kan streames henne."
       />
       ;
       <Layout>
