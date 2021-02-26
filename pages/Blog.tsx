@@ -20,8 +20,8 @@ export default function Blog({
   return (
     <>
       <NextSeo
-        title="Blog omkring serier du skal se"
-        description="Blogartikler om de nyeste serier, samt serier der er værd at se baseret på brugeranmeldelser"
+        title="Blog omkring serier man skal se"
+        description="Blogartikler om de nyeste serier der er værd at se baseret på brugeranmeldelser"
       />
       <LayoutSite>
         <Layout home>

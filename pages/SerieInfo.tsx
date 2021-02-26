@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { Button } from "../stories/Button";
 import { JustWatchLogo } from "../stories/JustWatchLogo";
 import Image from "next/image";
+import { NextSeo } from "next-seo";
 
 const SerieInfo = ({ details, trailer, providers }) => {
   var settings = {
@@ -23,23 +24,28 @@ const SerieInfo = ({ details, trailer, providers }) => {
 
   // console.log(router);
   return (
-    <Layout>
-      <div className="flex flex-col w-9/12 mx-auto">
-        <div className="mb-5">
-          <Image
-            alt="banner"
-            width={300}
-            height={400}
-            src={`${router.query.thumbnail}`}
-            className="w-9/12 sm:max-w-sm"
-          />
-        </div>
+    <>
+      <NextSeo
+        title="Serie information | Få detaljer om en bestemt serie"
+        description="Få et indblik i en bestemt serie. Få information ved at læse et kort resume omkring showet. Dertil kan du se hvor mange sæsoner en bestemt serien har. Har du brug for noget visuelt har du også mulighed for at se trailers serien. Til sidst har du også mulighed for at se hvor serien kan streames henne."
+      />
+      ;
+      <Layout>
+        <div className="flex flex-col w-9/12 mx-auto">
+          <div className="mb-5">
+            <Image
+              alt="banner"
+              width={400}
+              height={600}
+              src={`${router.query.thumbnail}`}
+            />
+          </div>
 
-        <div>
-          <div className="text-2xl font-bold">
-            <div className="mb-3">Titel: {router.query.original_name}</div>
-            <div className="mb-3">Bedømmelse: {router.query.rating}</div>
-            {/* <div>
+          <div>
+            <div className="text-2xl font-bold">
+              <div className="mb-3">Titel: {router.query.original_name}</div>
+              <div className="mb-3">Bedømmelse: {router.query.rating}</div>
+              {/* <div>
               Genre:{" "}
               {router.query.genre ? (
                 router.query.genre
@@ -47,147 +53,146 @@ const SerieInfo = ({ details, trailer, providers }) => {
                 <p>intet genre oplyst</p>
               )}
             </div> */}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className="w-9/12 mx-auto my-5">
-        <div className="text-3xl font-bold mb-2 ">Resume</div>
-        <div className="text-base sm:text-lg">
-          {router.query.summary ? (
-            router.query.summary
-          ) : (
-            <p>intet resume endnu</p>
-          )}
+        <div className="w-9/12 mx-auto my-5">
+          <div className="text-3xl font-bold mb-2 ">Resume</div>
+          <div className="text-base sm:text-lg">
+            {router.query.summary ? (
+              router.query.summary
+            ) : (
+              <p>intet resume endnu</p>
+            )}
+          </div>
         </div>
-      </div>
 
-      <div className="w-9/12 mx-auto">
-        <div className="text-3xl font-bold">Sæsoner</div>
-        <Slider {...settings}>
-          {details.seasons.map((details) => {
-            return (
-              <div className="text-center">
-                <Image
-                  width={400}
-                  height={600}
-                  src={`https://image.tmdb.org/t/p/w200${details.poster_path}`}
-                  alt="sæsoner"
-                  className="w-9/12 mx-auto sm:max-w-sm mt-3"
-                />
-                <div className="text-center mt-3">
-                  <div className="text-2xl font-bold">
-                    <b>{details.name}</b>
-                  </div>
-                  <div className="text-base mb-5">
-                    Først udsendt: {details.air_date}
+        <div className="w-9/12 mx-auto">
+          <div className="text-3xl font-bold">Sæsoner</div>
+          <Slider {...settings}>
+            {details.seasons.map((details) => {
+              return (
+                <div className="text-center">
+                  <Image
+                    width={400}
+                    height={600}
+                    src={`https://image.tmdb.org/t/p/w500${details.poster_path}`}
+                    alt="sæsoner"
+                    className="w-9/12 mx-auto sm:max-w-sm mt-3"
+                  />
+                  <div className="text-center mt-3">
+                    <div className="text-2xl font-bold">
+                      <b>{details.name}</b>
+                    </div>
+                    <div className="text-base mb-5">
+                      Først udsendt: {details.air_date}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
+              );
+            })}
+          </Slider>
+        </div>
 
-      <div className="w-9/12 mx-auto">
-        <div className="text-3xl">
-          <div className="mb-3 mt-3 font-bold">Trailers</div>
-          {trailer.results.map((youtube) => {
-            return (
-              <div>
-                {trailer.results ? (
-                  <iframe
-                    height="300"
-                    width="300"
-                    className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
-                    src={`https://www.youtube.com/embed/${youtube.key}`}
-                  ></iframe>
-                ) : (
-                  <p>Ingen trailer tilgængelig</p>
-                )}
-                <br />
-              </div>
-            );
+        <div className="w-9/12 mx-auto">
+          <div className="text-3xl">
+            <div className="mb-3 mt-3 font-bold">Trailers</div>
+            {trailer.results.map((youtube) => {
+              return (
+                <div>
+                  {trailer.results ? (
+                    <iframe
+                      height="300"
+                      width="300"
+                      className="lg:h-96 lg:max-w-screen-lg mx-auto h-44 sm:w-full md:max-w-xl sm:h-64"
+                      src={`https://www.youtube.com/embed/${youtube.key}`}
+                    ></iframe>
+                  ) : (
+                    <p>Ingen trailer tilgængelig</p>
+                  )}
+                  <br />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mx-auto w-64 lg:w-72 text-center">
+          {providers.results.DK.flatrate.map((provider) => {
+            if (provider.provider_name == "C More") {
+              return (
+                <div>
+                  <Button variant="red">
+                    <a
+                      href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
+                      target="_blank"
+                      className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
+                    >
+                      SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
+                    </a>
+                  </Button>
+                  <span className="italic my-3">*Annoncelink</span> <br />
+                  <br />
+                  <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
+                    Prøv C More gratis og få fri adgang til streaming af nye
+                    film og serier for hele familien. Hver eneste uge kommer der
+                    helt nye film og serieafsnit til. Vælg mellem alt fra
+                    krimier i verdensklasse, actionbrag, komedie, romantik og
+                    alle børnenes favoritter.
+                  </span>
+                  <JustWatchLogo />
+                </div>
+              );
+            } else if (provider.provider_name == "Viaplay") {
+              return (
+                <div>
+                  <Button variant="red">
+                    <a
+                      href="https://viaplay.dk/"
+                      target="_blank"
+                      className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
+                    >
+                      SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
+                    </a>
+                  </Button>
+                  <span className="italic my-3">*Annoncelink</span> <br />
+                  <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
+                    <br /> Løft fredagsstemningen, togrejsen og sofa hyggen:
+                    prøv Viaplay-film og -serier gratis i to uger! Se online. På
+                    mobil, computer, tablet eller Smart-Tv. Hvordan du vil og
+                    når det passer dig. I hele EU. Afslut når du vil. Hos os får
+                    du fuld fleksibilitet. Du kan opsige Viaplay når som helst.
+                  </span>
+                  <JustWatchLogo />
+                </div>
+              );
+            } else if (provider.provider_name == "Amazon Prime Video") {
+              return (
+                <div>
+                  <Button variant="red">
+                    <a
+                      href="https://www.primevideo.com/?tag=serier-20"
+                      target="_blank"
+                      className="hover:no-underline text-white hover:text-white text-md font-medium"
+                    >
+                      SE SERIE PÅ AMAZON PRIME <br /> Start din gratis
+                      prøveperiode
+                    </a>
+                  </Button>
+                  <span className="italic my-3">*Annoncelink</span> <br />
+                  <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
+                    <br /> Se eksklusive Amazon Originals og populære film og
+                    TV-serier for DKK 45/måned. Se nu, opsig når som helst.
+                  </span>
+                  <JustWatchLogo />
+                </div>
+              );
+            }
           })}
         </div>
-      </div>
-
-      <div className="mx-auto w-64 lg:w-72 text-center">
-        {providers.results.DK.flatrate.map((test) => {
-          if (test.provider_name == "C More") {
-            return (
-              <div>
-                <Button variant="red">
-                  <a
-                    href="https://track.adtraction.com/t/t?a=1275838043&as=1580579680&t=2&tk=1"
-                    target="_blank"
-                    className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
-                  >
-                    SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis
-                  </a>
-                </Button>
-                <span className="italic my-3">*Annoncelink</span> <br />
-                <br />
-                <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
-                  Prøv C More gratis og få fri adgang til streaming af nye film
-                  og serier for hele familien. Hver eneste uge kommer der helt
-                  nye film og serieafsnit til. Vælg mellem alt fra krimier i
-                  verdensklasse, actionbrag, komedie, romantik og alle børnenes
-                  favoritter.
-                </span>
-                <JustWatchLogo />
-              </div>
-            );
-          } else if (test.provider_name == "Viaplay") {
-            return (
-              <div>
-                <Button variant="red">
-                  <a
-                    href="https://viaplay.dk/"
-                    target="_blank"
-                    className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
-                  >
-                    SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis
-                  </a>
-                </Button>
-                <span className="italic my-3">*Annoncelink</span> <br />
-                <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
-                  <br /> Løft fredagsstemningen, togrejsen og sofa hyggen: prøv
-                  Viaplay-film og -serier gratis i to uger! Se online. På mobil,
-                  computer, tablet eller Smart-Tv. Hvordan du vil og når det
-                  passer dig. I hele EU. Afslut når du vil. Hos os får du fuld
-                  fleksibilitet. Du kan opsige Viaplay når som helst.
-                </span>
-                <JustWatchLogo />
-              </div>
-            );
-          } else if (test.provider_name == "Amazon Prime Video") {
-            return (
-              <div>
-                <Button variant="red">
-                  <a
-                    href="https://www.primevideo.com/?tag=serier-20"
-                    target="_blank"
-                    className="hover:no-underline text-white hover:text-white text-md font-medium"
-                  >
-                    SE SERIE PÅ AMAZON PRIME <br /> Start din gratis
-                    prøveperiode
-                  </a>
-                </Button>
-                <span className="italic my-3">*Annoncelink</span> <br />
-                <span className="text-sm text-white w-64 italic mb-10 lg:text-lg">
-                  <br /> Se eksklusive Amazon Originals og populære film og
-                  TV-serier for DKK 45/måned. Se nu, opsig når som helst.
-                </span>
-                <JustWatchLogo />
-              </div>
-            );
-          } else {
-            <div>Serie oplysninger ikke tilgængelig i øjeblikket</div>;
-          }
-        })}
-      </div>
-    </Layout>
+      </Layout>
+    </>
   );
 };
 
