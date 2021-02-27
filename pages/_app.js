@@ -2,6 +2,7 @@ import "../styles/global.css";
 import App from "next/app";
 import { DefaultSeo } from "next-seo";
 import React from "react";
+import "../styles/tailwind.css";
 
 export default class MyApp extends App {
   render() {
@@ -13,7 +14,7 @@ export default class MyApp extends App {
             type: "website",
             locale: "da_DK",
             url: "https://seriermanskalse.dk/",
-            site_name: "Serier man skal se",
+            site_name: "serier man skal se",
           }}
         />
         <Component {...pageProps} />

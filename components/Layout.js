@@ -8,6 +8,7 @@ const Layout = (props) => {
     <body className="flex flex-col min-h-screen">
       <Head>
         <title>Serier man skal se</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"
@@ -21,12 +22,6 @@ const Layout = (props) => {
       })(window,document,'script','dataLayer','GTM-KJKVMRK');`,
           }}
         />
-
-        <script
-          src="https://kit.fontawesome.com/74cb01a65c.js"
-          crossOrigin="anonymous"
-          SameSite="Lax"
-        ></script>
         <link
           rel="stylesheet"
           type="text/css"
@@ -42,6 +37,7 @@ const Layout = (props) => {
           href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
           rel="stylesheet"
         />
+        {/* <link rel="stylesheet" href="../styles/tailwind.css" /> */}
       </Head>
 
       <Nav />

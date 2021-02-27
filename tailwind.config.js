@@ -9,9 +9,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  // corePlugins: {
-  //   preflight: false,
-  // },
   theme: {
     screens: {
       sm: "640px",

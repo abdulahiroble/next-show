@@ -39,7 +39,6 @@ const index = (props) => {
           {props.popular.results.map((popularity) => {
             return (
               <ul>
-                {console.log(popularity)}
                 <Link
                   href={{
                     pathname: "SerieInfo",
