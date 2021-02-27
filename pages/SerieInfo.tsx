@@ -29,7 +29,6 @@ const SerieInfo = ({ details, trailer, providers }) => {
         title="Serie information | Få detaljer om en bestemt serie"
         description="Få et indblik i en bestemt serie. Få information ved at læse et kort resume omkring showet. Dertil kan du se hvor mange sæsoner en bestemt serien har. Har du brug for noget visuelt har du også mulighed for at se trailers serien. Til sidst har du også mulighed for at se hvor serien kan streames henne."
       />
-      ;
       <Layout>
         <div className="flex flex-col w-9/12 mx-auto">
           <div className="mb-5">

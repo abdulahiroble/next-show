@@ -187,7 +187,6 @@ const index = (props) => {
                           src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                           alt="banner"
                           priority
-                          className=""
                         />
                       </div>
                     </li>
