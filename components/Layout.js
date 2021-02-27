@@ -12,6 +12,7 @@ const Layout = (props) => {
         <link
           rel="stylesheet"
           href="https://bootswatch.com/4/solar/bootstrap.min.css"
+          rel="preload"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -27,15 +28,18 @@ const Layout = (props) => {
           type="text/css"
           charset="UTF-8"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          rel="preload"
         />
         <link
           rel="stylesheet"
           type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          rel="preload"
         />
         <link
           href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
           rel="stylesheet"
+          rel="preload"
         />
         {/* <link rel="stylesheet" href="../styles/tailwind.css" /> */}
       </Head>

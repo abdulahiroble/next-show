@@ -4,6 +4,10 @@ import { DefaultSeo } from "next-seo";
 import React from "react";
 import "../styles/tailwind.css";
 
+export function reportWebVitals(metric) {
+  console.log(metric);
+}
+
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
