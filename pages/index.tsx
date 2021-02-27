@@ -39,7 +39,6 @@ const index = (props) => {
           {props.popular.results.map((popularity) => {
             return (
               <ul>
-                {console.log(popularity)}
                 <Link
                   href={{
                     pathname: "SerieInfo",
@@ -69,6 +68,7 @@ const index = (props) => {
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                           className="opacity-20 object-cover w-full"
                           layout="responsive"
+                          priority
                           width={700}
                           height={475}
                         />
@@ -137,6 +137,7 @@ const index = (props) => {
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                           alt="banner"
+                          priority
                         />
                       </div>
                     </li>
@@ -185,7 +186,7 @@ const index = (props) => {
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                           alt="banner"
-                          className=""
+                          priority
                         />
                       </div>
                     </li>
@@ -234,7 +235,7 @@ const index = (props) => {
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
                           alt="banner"
-                          className=""
+                          priority
                         />
                       </div>
                     </li>

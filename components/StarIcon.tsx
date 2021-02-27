@@ -11,8 +11,8 @@ export const StarIcon = () => {
           gradientUnits="userSpaceOnUse"
         />
         <linearGradient id="a">
-          <stop offset="0" stop-color="#fcd635" />
-          <stop offset="1" stop-color="#f7a928" />
+          <stop offset="0" stopColor="#fcd635" />
+          <stop offset="1" stopColor="#f7a928" />
         </linearGradient>
       </defs>
       <path
