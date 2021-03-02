@@ -74,10 +74,10 @@ const index = (props) => {
                         />
                       </div>
                       <div className="-mt-24 sm:-mt-20">
-                        <div className="text-xl text-white font-bold mx-auto text-center sm:text-2xl">
+                        <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
                           {" "}
                           {popularity.original_name}
-                          <div className="text-xl text-white font-bold mx-auto text-center sm:text-2xl">
+                          <div className="text-xl pb-2 text-white font-bold mx-auto text-center sm:text-3xl sm:pb-3">
                             {popularity.vote_average} Bedømmelse |{" "}
                             {props.genres.genres.map((genre) => {
                               if (genre.id === popularity.genre_ids[0]) {
