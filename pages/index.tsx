@@ -62,22 +62,22 @@ const index = (props) => {
                     key={popularity.id}
                   >
                     <div className="text-center">
-                      <div className="h-60 w-full sm:h-80">
+                      <div className="h-full w-full sm:max-h-80">
                         <Image
                           alt="banner"
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                          className="opacity-20 object-cover w-full"
+                          className="opacity-20"
                           layout="responsive"
-                          priority
                           width={700}
-                          height={475}
+                          height={400}
+                          quality={75}
                         />
                       </div>
                       <div className="-mt-24 sm:-mt-20">
-                        <div className="text-2xl text-white font-bold mx-auto text-center">
+                        <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
                           {" "}
                           {popularity.original_name}
-                          <div className="text-2xl text-white font-bold mx-auto text-center">
+                          <div className="text-xl pb-2 text-white font-bold mx-auto text-center sm:text-3xl sm:pb-3">
                             {popularity.vote_average} Bedømmelse |{" "}
                             {props.genres.genres.map((genre) => {
                               if (genre.id === popularity.genre_ids[0]) {
@@ -137,7 +137,6 @@ const index = (props) => {
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                           alt="banner"
-                          priority
                         />
                       </div>
                     </li>
@@ -186,7 +185,6 @@ const index = (props) => {
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                           alt="banner"
-                          priority
                         />
                       </div>
                     </li>
@@ -235,7 +233,6 @@ const index = (props) => {
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
                           alt="banner"
-                          priority
                         />
                       </div>
                     </li>
