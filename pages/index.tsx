@@ -68,6 +68,7 @@ const index = (props) => {
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                           className="opacity-20 object-cover w-full"
                           layout="responsive"
+                          priority
                           width={700}
                           height={475}
                         />
