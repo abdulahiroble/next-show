@@ -62,15 +62,15 @@ const index = (props) => {
                     key={popularity.id}
                   >
                     <div className="text-center">
-                      <div className="h-60 w-full sm:h-80">
+                      <div className="h-full w-full sm:max-h-80">
                         <Image
                           alt="banner"
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                          className="opacity-20 object-cover w-full"
+                          className="opacity-20"
                           layout="responsive"
                           width={700}
-                          height={475}
-                          quality={50}
+                          height={400}
+                          quality={75}
                           loading="lazy"
                         />
                       </div>
