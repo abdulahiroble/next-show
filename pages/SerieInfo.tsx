@@ -36,7 +36,6 @@ const SerieInfo = ({ details, trailer, providers }) => {
               alt="banner"
               width={400}
               height={600}
-              priority
               src={`${router.query.thumbnail}`}
             />
           </div>
@@ -79,7 +78,6 @@ const SerieInfo = ({ details, trailer, providers }) => {
                     height={600}
                     src={`https://image.tmdb.org/t/p/w500${details.poster_path}`}
                     alt="sæsoner"
-                    priority
                     className="w-9/12 mx-auto sm:max-w-sm mt-3"
                   />
                   <div className="text-center mt-3">
