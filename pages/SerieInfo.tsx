@@ -36,7 +36,6 @@ const SerieInfo = ({ details, trailer, providers }) => {
               alt="banner"
               width={400}
               height={600}
-              loading="lazy"
               src={`${router.query.thumbnail}`}
             />
           </div>
@@ -77,7 +76,6 @@ const SerieInfo = ({ details, trailer, providers }) => {
                   <Image
                     width={400}
                     height={600}
-                    loading="lazy"
                     src={`https://image.tmdb.org/t/p/w500${details.poster_path}`}
                     alt="sæsoner"
                     className="w-9/12 mx-auto sm:max-w-sm mt-3"
