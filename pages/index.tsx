@@ -247,7 +247,7 @@ const index = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps({ query }) {
   // Popular series
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
@@ -279,14 +279,14 @@ export async function getServerSideProps(context) {
   const playing = await reply.json();
   const genres = await genre.json();
 
-  if (!popular) {
+  if (!popular || !rated || !upcoming || !playing || !genres) {
     return {
       notFound: true,
     };
   }
 
   return {
-    props: { popular, rated, upcoming, playing, genres }, // will be passed to the page component as props
+    props: { popular, rated, upcoming, playing, genres },
   };
 }
 

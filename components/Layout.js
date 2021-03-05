@@ -36,7 +36,6 @@ const Layout = (props) => {
           href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
           rel="stylesheet"
         />
-        {/* <link rel="stylesheet" href="../styles/tailwind.css" /> */}
       </Head>
 
       <Nav />
