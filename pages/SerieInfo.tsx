@@ -195,7 +195,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
   );
 };
 
-SerieInfo.getInitialProps = async function (router: { query: { id: any } }) {
+export async function getServerSideProps(router: { query: { id: any } }) {
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
@@ -215,7 +215,7 @@ SerieInfo.getInitialProps = async function (router: { query: { id: any } }) {
   const trailer = await response.json();
   const providers = await provider.json();
 
-  return { details, trailer, providers };
-};
+  return { props: { details, trailer, providers } };
+}
 
 export default SerieInfo;
