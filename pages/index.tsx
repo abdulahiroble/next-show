@@ -247,7 +247,7 @@ const index = (props) => {
   );
 };
 
-export async function getServerSideProps({ query }) {
+export async function getServerSideProps() {
   // Popular series
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
