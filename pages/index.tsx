@@ -247,7 +247,7 @@ const index = (props) => {
   );
 };
 
-index.getInitialProps = async function ({ query }) {
+export async function getServerSideProps(context) {
   // Popular series
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
@@ -279,14 +279,57 @@ index.getInitialProps = async function ({ query }) {
   const playing = await reply.json();
   const genres = await genre.json();
 
+  if (!popular) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
-    popular: popular,
-    rated: rated,
-    upcoming: upcoming,
-    playing,
-    genres,
-    query,
+    props: { popular, rated, upcoming, playing, genres }, // will be passed to the page component as props
   };
-};
+}
+
+// index.getInitialProps = async function ({ query }) {
+//   // Popular series
+//   const res = await fetch(
+//     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+//   );
+
+//   // Top rated series
+//   const response = await fetch(
+//     `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+//   );
+
+//   // Upcoming
+//   const answer = await fetch(
+//     `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
+//   );
+
+//   // Now Playing
+//   const reply = await fetch(
+//     `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+//   );
+
+//   // Genres
+//   const genre = await fetch(
+//     `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
+//   );
+
+//   const popular = await res.json();
+//   const rated = await response.json();
+//   const upcoming = await answer.json();
+//   const playing = await reply.json();
+//   const genres = await genre.json();
+
+//   return {
+//     popular: popular,
+//     rated: rated,
+//     upcoming: upcoming,
+//     playing,
+//     genres,
+//     query,
+//   };
+// };
 
 export default index;
