@@ -63,14 +63,12 @@ const index = (props) => {
                   >
                     <div className="text-center">
                       <div className="h-full w-full sm:max-h-80">
-                        <Image
+                        <img
                           alt="banner"
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                           className="opacity-20"
-                          layout="responsive"
                           width={700}
                           height={400}
-                          quality={75}
                         />
                       </div>
                       <div className="-mt-24 sm:-mt-20">
@@ -132,7 +130,7 @@ const index = (props) => {
                           {popularity.vote_average}
                         </div>
 
-                        <Image
+                        <img
                           width={200}
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
@@ -180,7 +178,7 @@ const index = (props) => {
                           </div>
                           {rating.vote_average}
                         </div>
-                        <Image
+                        <img
                           width={200}
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
@@ -228,7 +226,7 @@ const index = (props) => {
                           </div>
                           {play.vote_average}
                         </div>
-                        <Image
+                        <img
                           width={200}
                           height={300}
                           src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
