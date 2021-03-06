@@ -44,13 +44,6 @@ export const Button = (props: {
         <button
           className="bg-green-800 w-40 text-white px-3 py-3 mx-2 my-2 rounded-lg"
           onClick={onClick}
-          style={{
-            backgroundColor: "#4CAF50",
-            borderRadius: "15px",
-            color: "#fff",
-            padding: "15px",
-            fontSize: "16px",
-          }}
         >
           {children}
         </button>
