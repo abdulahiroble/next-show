@@ -215,6 +215,12 @@ export async function getServerSideProps(router: { query: { id: any } }) {
   const trailer = await response.json();
   const providers = await provider.json();
 
+  if (!details || !trailer || !provider) {
+    return {
+      notFound: true,
+    };
+  }
+
   return { props: { details, trailer, providers } };
 }
 

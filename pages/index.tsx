@@ -125,7 +125,7 @@ const index = (props) => {
                   >
                     <li key={popularity.id} className="cursor-pointer">
                       <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                           <div>
                             <StarIcon />
                           </div>
@@ -174,7 +174,7 @@ const index = (props) => {
                   >
                     <li key={rating.id} className="cursor-pointer">
                       <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                           <div>
                             <StarIcon />
                           </div>
@@ -222,7 +222,7 @@ const index = (props) => {
                   >
                     <li key={play.id} className="cursor-pointer">
                       <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                           <div>
                             <StarIcon />
                           </div>
@@ -289,47 +289,5 @@ export async function getServerSideProps() {
     props: { popular, rated, upcoming, playing, genres },
   };
 }
-
-// index.getInitialProps = async function ({ query }) {
-//   // Popular series
-//   const res = await fetch(
-//     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-//   );
-
-//   // Top rated series
-//   const response = await fetch(
-//     `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-//   );
-
-//   // Upcoming
-//   const answer = await fetch(
-//     `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
-//   );
-
-//   // Now Playing
-//   const reply = await fetch(
-//     `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-//   );
-
-//   // Genres
-//   const genre = await fetch(
-//     `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
-//   );
-
-//   const popular = await res.json();
-//   const rated = await response.json();
-//   const upcoming = await answer.json();
-//   const playing = await reply.json();
-//   const genres = await genre.json();
-
-//   return {
-//     popular: popular,
-//     rated: rated,
-//     upcoming: upcoming,
-//     playing,
-//     genres,
-//     query,
-//   };
-// };
 
 export default index;
