@@ -2,7 +2,7 @@ import "../styles/global.css";
 import App from "next/app";
 import { DefaultSeo } from "next-seo";
 import React from "react";
-import "../styles/tailwind.css";
+import "../styles/main.css";
 
 export function reportWebVitals(metric) {
   console.log(metric);
