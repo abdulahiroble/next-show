@@ -125,7 +125,7 @@ const index = (props) => {
                   >
                     <li key={popularity.id} className="cursor-pointer">
                       <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                           <div>
                             <StarIcon />
                           </div>
@@ -174,7 +174,7 @@ const index = (props) => {
                   >
                     <li key={rating.id} className="cursor-pointer">
                       <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                           <div>
                             <StarIcon />
                           </div>
@@ -222,7 +222,7 @@ const index = (props) => {
                   >
                     <li key={play.id} className="cursor-pointer">
                       <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-1.5 text-white z-10">
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                           <div>
                             <StarIcon />
                           </div>
