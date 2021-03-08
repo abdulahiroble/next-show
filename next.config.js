@@ -1,20 +1,27 @@
 const withImages = require("next-images");
+const withMDX = require("@next/mdx")();
 
-module.exports = withImages({
-  env: {
-    NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
-  },
+module.exports = withImages(
+  withMDX({
+    env: {
+      NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
+    },
 
-  images: {
-    domains: ["image.tmdb.org"],
-  },
+    withMDX: {
+      pageExtensions: ["js", "jsx", "mdx"],
+    },
 
-  exportPathMap: function () {
-    return {
-      "/": { page: "/" },
-    };
-  },
-});
+    images: {
+      domains: ["image.tmdb.org"],
+    },
+
+    exportPathMap: function () {
+      return {
+        "/": { page: "/" },
+      };
+    },
+  })
+);
 
 // const nextConfig = {
 //   images: {

@@ -21,6 +21,8 @@ module.exports = {
           "./pages/**/*.{js,jsx,ts,tsx}",
           "./components/**/*.{js,jsx,ts,tsx}",
           "./stories/**/*.{js,jsx,ts,tsx}",
+          "./lib/**/*.{js,jsx,ts,tsx}",
+          "./posts/**/*.{js,jsx,ts,tsx,md}",
         ],
         defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
         safelist: ["html", "body", "img"],

@@ -8,7 +8,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     screens: {
       sm: "640px",
