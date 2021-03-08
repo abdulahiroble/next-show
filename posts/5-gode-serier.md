@@ -3,7 +3,7 @@ title: "5 Gode serier fra norden"
 date: "2021-02-05"
 ---
 
-    Vi har samlet en liste af 5 gode serier fra norden.
+   <p> Vi har samlet en liste af 5 gode serier fra norden.</p>
 
 <article class="lg:prose-xl">
   <h3>1. Rebecka Martinsson</h3>
