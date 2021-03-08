@@ -3,12 +3,26 @@ module.exports = {
   darkMode: false, // or 'media' or 'class',
   // important: true,
   theme: {
-    extend: {},
+    // extend: {
+    //   typography: {
+    //     DEFAULT: {
+    //       css: {
+    //         color: "#FFF",
+    //         a: {
+    //           color: "#FFF",
+    //           "&:hover": {
+    //             color: "#FFF",
+    //           },
+    //         },
+    //       },
+    //     },
+    //   },
+    // },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     screens: {
       sm: "640px",

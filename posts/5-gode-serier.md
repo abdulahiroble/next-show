@@ -5,11 +5,11 @@ date: "2021-02-05"
 
 Vi har samlet en liste af 5 gode serier fra norden.
 
-## 1. Rebecka Martinsson
+<h2 style="color: #fff">1. Rebecka Martinsson</h2>
 
 ![Rebecka Martinsson](/rebeca.jpg)
 
-"Rebecka" er advokat i et prestigefyldt Stockholm advokatfirma, der vender tilbage til sin hjemby for at begrave sin surrogatmor. Hun har en uhyggelig evne til at løse forbrydelser og mysterier.
+"Rebecka" er advokat i et prestigefyldt svensk advokatfirma, der vender tilbage til sin hjemby for at begrave sin surrogatmor. Hun har en uhyggelig evne til at løse forbrydelser og mysterier.
 
 Hun forbliver i sin hjemby og bliver anklager og arbejder med politiet for at løse forbrydelser. Denne serie skitserer 3-historier fortalt i 2-dele.
 
@@ -48,9 +48,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-## 2. Jægerne
+<h2 style="color: #fff">2. Jægerne</h2>
 
 ![Jægerne](/original.jpg)
 
@@ -93,9 +91,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-## 3. Savnet
+<h2 style="color: #fff">3. Savnet</h2>
 
 ![Savnet](/savnet.jpeg)
 
@@ -138,9 +134,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-## 4. Bäckström
+<h2 style="color: #fff">4. Bäckström</h2>
 
 ![Bäckström](/crop16x9.jpg)
 
@@ -183,7 +177,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-## 5. Fartblinda
+<h2 style="color: #fff">5. Fartblinda</h2>
 
 ![Fartblinda](/unnamed.jpg)
 

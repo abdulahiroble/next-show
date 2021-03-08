@@ -5,7 +5,7 @@ date: "2020-05-05"
 
 Lockdown har ramt os så her kommer en liste med 4 gode serier du skal se for at få tiden til at gå lidt hurtigere.
 
-### 1. Gangs of london
+<h2 style="color: #fff">1. Gangs of london</h2>
 
 ![Gangs of london](/watch-gangs-of-london-trailer.jpg)
 
@@ -52,9 +52,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-### 2. Line of duty
+<h2 style="color: #fff">2. Line of duty</h2>
 
 ![line of duty](/landscape-desktop.764.430.jpg)
 
@@ -99,9 +97,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 </div>
 
-<br><br>
-
-### 3. Blood
+<h2 style="color: #fff">3. Blood</h2>
 
 ![blood](/BLOOD_S2_Generic_Portrait-1-62a82a3.jpg)
 
@@ -150,9 +146,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 </div>
 
-<br><br>
-
-### 4. The Office
+<h2 style="color: #fff">4. The Office</h2>
 
 ![the offices](/1200x0.jpg)
 

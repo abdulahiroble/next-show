@@ -5,7 +5,7 @@ date: "2020-12-10"
 
 2020 har været et år fyldt med gode serier. Så her kommer vores bud på 4 gode serier fra året der gik som du bør tjekke ud.
 
-### 1. Schitt's Creek
+<h2 style="color: #fff">1. Schitt's Creek</h2>
 
 ![Schitt's Creek](/200114-moira-alexis-johnny-david-ew-444p_9610e314f170b2fa681be2b3a45d567d.jpg)
 
@@ -54,9 +54,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-### 2. Yellow Stone
+<h2 style="color: #fff">2. Yellow Stone</h2>
 
 ![Yellow stone](/yellowstone-season-2-costner.jpg)
 
@@ -103,9 +101,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-### 3. Gangs of london
+<h2 style="color: #fff">3. Gangs of london</h2>
 
 ![Gangs of london](/watch-gangs-of-london-trailer.jpg)
 
@@ -150,9 +146,7 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<br><br>
-
-### 4. Blood
+<h2 style="color: #fff">4. Blood</h2>
 
 ![blood](/BLOOD_S2_Generic_Portrait-1-62a82a3.jpg)
 
@@ -198,5 +192,3 @@ allowfullscreen></iframe>
 	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ C MORE <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 </div>
-
-<br><br>
