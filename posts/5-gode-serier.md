@@ -3,21 +3,15 @@ title: "5 Gode serier fra norden"
 date: "2021-02-05"
 ---
 
-   <p> Vi har samlet en liste af 5 gode serier fra norden.</p>
+Vi har samlet en liste af 5 gode serier fra norden.
 
-<article class="lg:prose-xl">
-  <h3>1. Rebecka Martinsson</h3>
+## 1. Rebecka Martinsson
 
-  <img src="/rebeca.jpg">
-  <p>
-    "Rebecka" er advokat i et prestigefyldt svensk advokatfirma, der vender tilbage til sin hjemby for at begrave sin surrogatmor. Hun har en uhyggelig evne til at løse forbrydelser og mysterier.
-  </p>
+![Rebecka Martinsson](/rebeca.jpg)
 
-  <p>
-    Hun forbliver i sin hjemby og bliver anklager og arbejder med politiet for at løse forbrydelser. Denne serie skitserer 3-historier fortalt i 2-dele.
-  </p>
-  <!-- ... -->
-</article>
+"Rebecka" er advokat i et prestigefyldt svensk advokatfirma, der vender tilbage til sin hjemby for at begrave sin surrogatmor. Hun har en uhyggelig evne til at løse forbrydelser og mysterier.
+
+Hun forbliver i sin hjemby og bliver anklager og arbejder med politiet for at løse forbrydelser. Denne serie skitserer 3-historier fortalt i 2-dele.
 
 <div style="text-align:center; position: relative;
     padding-bottom: 56.25%;
