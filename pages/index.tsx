@@ -38,73 +38,66 @@ const index = (props) => {
         <Slider {...setting}>
           {props.popular.results.map((popularity) => {
             return (
-              <ul>
-                <Link
-                  href={{
-                    pathname: "SerieInfo",
-                    query: {
-                      id: popularity.id,
-                      rating: popularity.vote_average,
-                      original_name: popularity.original_name,
-                      summary: popularity.overview,
-                      genre: props.genres.genres.map((genre) => {
-                        if (genre.id === popularity.genre_ids[0]) {
-                          return genre.name;
-                        }
-                      }),
-                      thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
-                    },
-                  }}
-                  as={`/SerieInfo/${popularity.id}`}
-                >
-                  <li
-                    style={{ listStyleType: "none", cursor: "pointer" }}
-                    key={popularity.id}
-                  >
-                    <div className="text-center">
-                      <div className="h-full w-full sm:max-h-80">
-                        <Image
-                          alt="banner"
-                          src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                          className="opacity-20"
-                          layout="responsive"
-                          width={700}
-                          height={400}
-                          quality={75}
-                        />
-                      </div>
-                      <div className="-mt-24 sm:-mt-20">
-                        <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
-                          {" "}
-                          {popularity.original_name}
-                          <div className="text-xl pb-2 text-white font-bold mx-auto text-center sm:text-3xl sm:pb-3">
-                            {popularity.vote_average} Bedømmelse |{" "}
-                            {props.genres.genres.map((genre) => {
-                              if (genre.id === popularity.genre_ids[0]) {
-                                return genre.name;
-                              } else {
-                                return null;
-                              }
-                            })}
-                          </div>
-                        </div>
+              <Link
+                href={{
+                  pathname: "SerieInfo",
+                  query: {
+                    id: popularity.id,
+                    rating: popularity.vote_average,
+                    original_name: popularity.original_name,
+                    summary: popularity.overview,
+                    genre: props.genres.genres.map((genre) => {
+                      if (genre.id === popularity.genre_ids) {
+                        return genre.name;
+                      }
+                    }),
+                    thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
+                  },
+                }}
+                as={`/SerieInfo/${popularity.id}`}
+              >
+                <div className="text-center">
+                  <div className="h-full w-full sm:max-h-80">
+                    <Image
+                      alt="banner"
+                      src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                      className="opacity-20"
+                      layout="responsive"
+                      width={700}
+                      height={400}
+                      quality={75}
+                    />
+                  </div>
+                  <div className="-mt-24 sm:-mt-20">
+                    <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
+                      {" "}
+                      {popularity.original_name}
+                      <div className="text-xl pb-2 text-white font-bold mx-auto text-center sm:text-3xl sm:pb-3">
+                        {popularity.vote_average} Bedømmelse |{" "}
+                        {props.genres.genres.map((genre) => {
+                          if (genre.id === popularity.genre_ids[0]) {
+                            return genre.name;
+                          } else {
+                            return null;
+                          }
+                        })}
                       </div>
                     </div>
-                  </li>
-                </Link>
-              </ul>
+                  </div>
+                </div>
+              </Link>
             );
           })}
         </Slider>
 
-        <div className="w-9/12 mx-auto mt-3">
+        <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Populære
           </div>
-          <Slider {...settings}>
-            {props.popular.results.map((popularity) => {
-              return (
-                <ul className="">
+          <div className="">
+            <Slider {...settings}>
+              {props.popular.results.map((popularity) => {
+                return (
                   <Link
                     href={{
                       pathname: "SerieInfo",
@@ -123,29 +116,28 @@ const index = (props) => {
                     }}
                     as={`/SerieInfo/${popularity.id}`}
                   >
-                    <li key={popularity.id} className="cursor-pointer">
-                      <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                          <div>
-                            <StarIcon />
-                          </div>
-                          {popularity.vote_average}
-                        </div>
-
-                        <Image
-                          width={200}
-                          height={300}
-                          src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                          alt="banner"
-                        />
+                    <div
+                      className="cursor-pointer mx-auto"
+                      style={{ maxWidth: 200 }}
+                    >
+                      <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                        <StarIcon />
+                        {popularity.vote_average}
                       </div>
-                    </li>
+                      <Image
+                        width={200}
+                        height={300}
+                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                        alt="banner"
+                      />
+                    </div>
                   </Link>
-                </ul>
-              );
-            })}
-          </Slider>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
+
         <div className="w-9/12 mx-auto my-4">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Udsendes i øjeblikket
@@ -153,47 +145,47 @@ const index = (props) => {
           <Slider {...settings}>
             {props.rated.results.map((rating) => {
               return (
-                <ul>
-                  <Link
-                    href={{
-                      pathname: "SerieInfo",
-                      query: {
-                        id: rating.id,
-                        rating: rating.vote_average,
-                        original_name: rating.original_name,
-                        summary: rating.overview,
-                        genre: props.genres.genres.map((genre) => {
-                          if (genre.id === rating.genre_ids[0]) {
-                            return genre.name;
-                          }
-                        }),
-                        thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
-                      },
-                    }}
-                    as={`/SerieInfo/${rating.id}`}
+                <Link
+                  href={{
+                    pathname: "SerieInfo",
+                    query: {
+                      id: rating.id,
+                      rating: rating.vote_average,
+                      original_name: rating.original_name,
+                      summary: rating.overview,
+                      genre: props.genres.genres.map((genre) => {
+                        if (genre.id === rating.genre_ids[0]) {
+                          return genre.name;
+                        }
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
+                    },
+                  }}
+                  as={`/SerieInfo/${rating.id}`}
+                >
+                  <div
+                    className="cursor-pointer mx-auto"
+                    style={{ maxWidth: 200 }}
                   >
-                    <li key={rating.id} className="cursor-pointer">
-                      <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                          <div>
-                            <StarIcon />
-                          </div>
-                          {rating.vote_average}
-                        </div>
-                        <Image
-                          width={200}
-                          height={300}
-                          src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
-                          alt="banner"
-                        />
+                    <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                      <div>
+                        <StarIcon />
                       </div>
-                    </li>
-                  </Link>
-                </ul>
+                      {rating.vote_average}
+                    </div>
+                    <Image
+                      width={200}
+                      height={300}
+                      src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
+                      alt="banner"
+                    />
+                  </div>
+                </Link>
               );
             })}
           </Slider>
         </div>
+
         <div className="w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Udsendes i dag
@@ -201,43 +193,40 @@ const index = (props) => {
           <Slider {...settings}>
             {props.playing.results.map((play) => {
               return (
-                <ul>
-                  <Link
-                    href={{
-                      pathname: "SerieInfo",
-                      query: {
-                        id: play.id,
-                        rating: play.vote_average,
-                        original_name: play.original_name,
-                        summary: play.overview,
-                        genre: props.genres.genres.map((genre) => {
-                          if (genre.id === play.genre_ids[0]) {
-                            return genre.name;
-                          }
-                        }),
-                        thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
-                      },
-                    }}
-                    as={`/SerieInfo/${play.id}`}
+                <Link
+                  href={{
+                    pathname: "SerieInfo",
+                    query: {
+                      id: play.id,
+                      rating: play.vote_average,
+                      original_name: play.original_name,
+                      summary: play.overview,
+                      genre: props.genres.genres.map((genre) => {
+                        if (genre.id === play.genre_ids[0]) {
+                          return genre.name;
+                        }
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
+                    },
+                  }}
+                  as={`/SerieInfo/${play.id}`}
+                >
+                  <div
+                    className="cursor-pointer mx-auto"
+                    style={{ maxWidth: 200 }}
                   >
-                    <li key={play.id} className="cursor-pointer">
-                      <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                          <div>
-                            <StarIcon />
-                          </div>
-                          {play.vote_average}
-                        </div>
-                        <Image
-                          width={200}
-                          height={300}
-                          src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
-                          alt="banner"
-                        />
-                      </div>
-                    </li>
-                  </Link>
-                </ul>
+                    <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                      <StarIcon />
+                      {play.vote_average}
+                    </div>
+                    <Image
+                      width={200}
+                      height={300}
+                      src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
+                      alt="banner"
+                    />
+                  </div>
+                </Link>
               );
             })}
           </Slider>
