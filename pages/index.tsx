@@ -138,54 +138,54 @@ const index = (props) => {
           </div>
         </div>
 
-        {/* <div className="w-9/12 mx-auto my-4">
+        <div className="w-9/12 mx-auto my-4">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Udsendes i øjeblikket
           </div>
           <Slider {...settings}>
             {props.rated.results.map((rating) => {
               return (
-                <ul>
-                  <Link
-                    href={{
-                      pathname: "SerieInfo",
-                      query: {
-                        id: rating.id,
-                        rating: rating.vote_average,
-                        original_name: rating.original_name,
-                        summary: rating.overview,
-                        genre: props.genres.genres.map((genre) => {
-                          if (genre.id === rating.genre_ids[0]) {
-                            return genre.name;
-                          }
-                        }),
-                        thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
-                      },
-                    }}
-                    as={`/SerieInfo/${rating.id}`}
+                <Link
+                  href={{
+                    pathname: "SerieInfo",
+                    query: {
+                      id: rating.id,
+                      rating: rating.vote_average,
+                      original_name: rating.original_name,
+                      summary: rating.overview,
+                      genre: props.genres.genres.map((genre) => {
+                        if (genre.id === rating.genre_ids[0]) {
+                          return genre.name;
+                        }
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
+                    },
+                  }}
+                  as={`/SerieInfo/${rating.id}`}
+                >
+                  <div
+                    className="cursor-pointer mx-auto"
+                    style={{ maxWidth: 200 }}
                   >
-                    <li key={rating.id} className="cursor-pointer">
-                      <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                          <div>
-                            <StarIcon />
-                          </div>
-                          {rating.vote_average}
-                        </div>
-                        <Image
-                          width={200}
-                          height={300}
-                          src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
-                          alt="banner"
-                        />
+                    <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                      <div>
+                        <StarIcon />
                       </div>
-                    </li>
-                  </Link>
-                </ul>
+                      {rating.vote_average}
+                    </div>
+                    <Image
+                      width={200}
+                      height={300}
+                      src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
+                      alt="banner"
+                    />
+                  </div>
+                </Link>
               );
             })}
           </Slider>
         </div>
+
         <div className="w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Udsendes i dag
@@ -193,47 +193,44 @@ const index = (props) => {
           <Slider {...settings}>
             {props.playing.results.map((play) => {
               return (
-                <ul>
-                  <Link
-                    href={{
-                      pathname: "SerieInfo",
-                      query: {
-                        id: play.id,
-                        rating: play.vote_average,
-                        original_name: play.original_name,
-                        summary: play.overview,
-                        genre: props.genres.genres.map((genre) => {
-                          if (genre.id === play.genre_ids[0]) {
-                            return genre.name;
-                          }
-                        }),
-                        thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
-                      },
-                    }}
-                    as={`/SerieInfo/${play.id}`}
+                <Link
+                  href={{
+                    pathname: "SerieInfo",
+                    query: {
+                      id: play.id,
+                      rating: play.vote_average,
+                      original_name: play.original_name,
+                      summary: play.overview,
+                      genre: props.genres.genres.map((genre) => {
+                        if (genre.id === play.genre_ids[0]) {
+                          return genre.name;
+                        }
+                      }),
+                      thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
+                    },
+                  }}
+                  as={`/SerieInfo/${play.id}`}
+                >
+                  <div
+                    className="cursor-pointer mx-auto"
+                    style={{ maxWidth: 200 }}
                   >
-                    <li key={play.id} className="cursor-pointer">
-                      <div className="lg:ml-32">
-                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                          <div>
-                            <StarIcon />
-                          </div>
-                          {play.vote_average}
-                        </div>
-                        <Image
-                          width={200}
-                          height={300}
-                          src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
-                          alt="banner"
-                        />
-                      </div>
-                    </li>
-                  </Link>
-                </ul>
+                    <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                      <StarIcon />
+                      {play.vote_average}
+                    </div>
+                    <Image
+                      width={200}
+                      height={300}
+                      src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
+                      alt="banner"
+                    />
+                  </div>
+                </Link>
               );
             })}
           </Slider>
-        </div> */}
+        </div>
       </Layout>
     </>
   );
