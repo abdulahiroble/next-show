@@ -31,3 +31,10 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.slick-slide {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}

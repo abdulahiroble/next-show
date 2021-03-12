@@ -3,6 +3,8 @@ import App from "next/app";
 import { DefaultSeo } from "next-seo";
 import React from "react";
 import "../styles/main.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 export function reportWebVitals(metric) {
   console.log(metric);
