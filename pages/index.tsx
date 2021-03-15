@@ -276,7 +276,7 @@ export async function getStaticProps() {
 
 export function Posts (props) {
   // Here the `fetcher` function will be executed on the client-side.
-  const { data, error } = useSWR(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`, fetcher, { initialData: props.popular })
+  const { data, error } = useSWR(props, fetcher, { initialData: props })
 
   if (error) return <div>failed to load</div>
   if (!data) return <div>loading...</div>
@@ -284,52 +284,5 @@ export function Posts (props) {
   return 
 
 }
-
-
-
-
-
-{/* export async function getServerSideProps() {
-  // Popular series
-  const res = await fetch(
-    `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-  );
-
-  // Top rated series
-  const response = await fetch(
-    `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-  );
-
-  // Upcoming
-  const answer = await fetch(
-    `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
-  );
-
-  // Now Playing
-  const reply = await fetch(
-    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-  );
-
-  // Genres
-  const genre = await fetch(
-    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
-  );
-
-  const popular = await res.json();
-  const rated = await response.json();
-  const upcoming = await answer.json();
-  const playing = await reply.json();
-  const genres = await genre.json();
-
-  if (!popular || !rated || !upcoming || !playing || !genres) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: { popular, rated, upcoming, playing, genres },
-  };
-} */}
 
 export default index;
