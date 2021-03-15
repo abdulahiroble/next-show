@@ -7,8 +7,9 @@ import { Button } from "../stories/Button";
 import { JustWatchLogo } from "../stories/JustWatchLogo";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
+import useSWR from "swr";
 
-const SerieInfo = ({ details, trailer, providers }) => {
+const SerieInfo = (props) => {
   var settings = {
     dots: false,
     infinite: true,
@@ -30,6 +31,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
         description="Få et indblik i en bestemt serie. Få information ved at læse et kort resume omkring showet. Dertil kan du se hvor mange sæsoner en bestemt serien har. Har du brug for noget visuelt har du også mulighed for at se trailers serien. Til sidst har du også mulighed for at se hvor serien kan streames henne."
         noindex={true}
       />
+      {Posts(props)}
       <Layout>
         <div className="flex flex-col w-9/12 mx-auto">
           <div className="mb-5">
@@ -71,7 +73,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
         <div className="w-9/12 mx-auto">
           <div className="text-3xl font-bold">Sæsoner</div>
           <Slider {...settings}>
-            {details.seasons.map((details) => {
+            {props.details.seasons.map((details: { poster_path: any; name: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; air_date: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal; }) => {
               return (
                 <div className="text-center">
                   <Image
@@ -98,10 +100,10 @@ const SerieInfo = ({ details, trailer, providers }) => {
         <div className="w-9/12 mx-auto">
           <div className="text-3xl">
             <div className="mb-3 mt-3 font-bold">Trailers</div>
-            {trailer.results.map((youtube) => {
+            {props.trailer.results.map((youtube: { key: any; }) => {
               return (
                 <div>
-                  {trailer.results ? (
+                  {props.trailer.results ? (
                     <iframe
                       height="300"
                       width="300"
@@ -119,7 +121,7 @@ const SerieInfo = ({ details, trailer, providers }) => {
         </div>
 
         <div className="mx-auto w-64 lg:w-72 text-center">
-          {providers.results.DK.flatrate.map((provider) => {
+          {props.providers.results.DK.flatrate.map((provider: { provider_name: string; }) => {
             if (provider.provider_name == "C More") {
               return (
                 <div>
@@ -196,33 +198,39 @@ const SerieInfo = ({ details, trailer, providers }) => {
   );
 };
 
-export async function getServerSideProps(router: { query: { id: any } }) {
-  const res = await fetch(
+const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
+
+export async function getServerSideProps(router) {
+  // `getStaticProps` is invoked on the server-side,
+  // so this `fetcher` function will be executed on the server-side.
+
+   const details = await fetcher(
     `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
   );
 
-  const response = await fetch(
+  const trailer = await fetcher(
     `https://api.themoviedb.org/3/tv/${router.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-US
     `
   );
 
-  const provider = await fetch(
+  const providers = await fetcher(
     `https://api.themoviedb.org/3/tv/${router.query.id}/watch/providers?api_key=${process.env.NEXT_PUBLIC_API_SECRET}
     `
   );
 
-  const details = await res.json();
-  const trailer = await response.json();
-  const providers = await provider.json();
+  return { props: { details, trailer, providers } }
+}
 
-  if (!details || !trailer || !provider) {
-    return {
-      notFound: true,
-    };
-  }
+export function Posts (props) {
+  // Here the `fetcher` function will be executed on the client-side.
+  const { data, error } = useSWR(props, fetcher, { initialData: props })
 
-  return { props: { details, trailer, providers } };
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  return <></>
+
 }
 
 export default SerieInfo;
