@@ -3,11 +3,10 @@ import React from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import Link from "next/link";
-// import Head from "next/head";
 import { StarIcon } from "../components/StarIcon";
 import Image from "next/image";
-// import "../components/layoutPage.module.css";
 import { NextSeo } from "next-seo";
+import useSWR from 'swr'
 
 const index = (props) => {
   const settings = {
@@ -35,6 +34,7 @@ const index = (props) => {
         description="Gennemse gode serier fra 2020 og 2021. Få indblik i hvilke serier der er værd at se baseret på hvor manger stjerne en serie har fået"
       />
       <Layout>
+        {Posts(props)}
         <Slider {...setting}>
           {props.popular.results.map((popularity) => {
             return (
@@ -236,7 +236,60 @@ const index = (props) => {
   );
 };
 
-export async function getServerSideProps() {
+// const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
+
+// export function Profile () {
+//   const { data, error } = useSWR(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`, fetcher)
+
+//   if (error) return <div>failed to load</div>
+//   if (!data) return <div>loading...</div>
+
+//   // render data
+//   return console.log(data)
+// }
+
+const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
+
+export async function getStaticProps() {
+  // `getStaticProps` is invoked on the server-side,
+  // so this `fetcher` function will be executed on the server-side.
+  const popular = await fetcher(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`)
+
+  const genres = await fetcher(
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
+  );
+
+    // Top rated series
+    const rated = await fetcher(
+      `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+    );
+  
+  
+    // Now Playing
+    const playing = await fetcher(
+      `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+    );
+  
+
+  return { props: { popular, genres, rated, playing } }
+}
+
+export function Posts (props) {
+  // Here the `fetcher` function will be executed on the client-side.
+  const { data, error } = useSWR(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`, fetcher, { initialData: props.popular })
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  return 
+
+}
+
+
+
+
+
+{/* export async function getServerSideProps() {
   // Popular series
   const res = await fetch(
     `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
@@ -277,6 +330,6 @@ export async function getServerSideProps() {
   return {
     props: { popular, rated, upcoming, playing, genres },
   };
-}
+} */}
 
 export default index;
