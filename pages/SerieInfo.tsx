@@ -7,6 +7,7 @@ import { Button } from "../stories/Button";
 import { JustWatchLogo } from "../stories/JustWatchLogo";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
+import useSWR from "swr";
 
 const SerieInfo = ({ details, trailer, providers }) => {
   var settings = {
@@ -196,13 +197,18 @@ const SerieInfo = ({ details, trailer, providers }) => {
   );
 };
 
-export async function getServerSideProps(router: { query: { id: any } }) {
-  const res = await fetch(
+const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
+
+export async function getStaticProps(router) {
+  // `getStaticProps` is invoked on the server-side,
+  // so this `fetcher` function will be executed on the server-side.
+
+  const details = await fetch(
     `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
   );
 
-  const response = await fetch(
+  const trailer = await fetch(
     `https://api.themoviedb.org/3/tv/${router.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-US
     `
   );
@@ -212,17 +218,18 @@ export async function getServerSideProps(router: { query: { id: any } }) {
     `
   );
 
-  const details = await res.json();
-  const trailer = await response.json();
-  const providers = await provider.json();
+  return { props: { details, trailer, provider } }
+}
 
-  if (!details || !trailer || !provider) {
-    return {
-      notFound: true,
-    };
-  }
+export function Posts (props) {
+  // Here the `fetcher` function will be executed on the client-side.
+  const { data, error } = useSWR(props, fetcher, { initialData: props })
 
-  return { props: { details, trailer, providers } };
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  return 
+
 }
 
 export default SerieInfo;

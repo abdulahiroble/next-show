@@ -253,8 +253,11 @@ const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
 export async function getStaticProps() {
   // `getStaticProps` is invoked on the server-side,
   // so this `fetcher` function will be executed on the server-side.
+
+  // Popular
   const popular = await fetcher(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`)
 
+  // Genre
   const genres = await fetcher(
     `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
   );
