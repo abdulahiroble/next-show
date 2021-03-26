@@ -281,8 +281,8 @@ export function Posts (props) {
   // Here the `fetcher` function will be executed on the client-side.
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  // if (error) return <div>failed to load</div>
+  // if (!data) return <div>loading...</div>
 
   return <></>
 

@@ -151,7 +151,7 @@ const SerieInfo = (props) => {
                 <div>
                   <Button variant="red">
                     <a
-                      href="https://viaplay.dk/"
+                      href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1"
                       target="_blank"
                       className="hover:no-underline text-white hover:text-white text-lg font-medium w-64"
                     >
@@ -226,8 +226,8 @@ export function Posts (props) {
   // Here the `fetcher` function will be executed on the client-side.
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 
-  if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  // if (error) return <div>failed to load</div>
+  // if (!data) return <div>loading...</div>
 
   return <></>
 
