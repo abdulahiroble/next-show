@@ -282,7 +282,7 @@ export function Posts (props) {
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 
   // if (error) return <div>failed to load</div>
-  // if (!data) return <div>loading...</div>
+  if (!data) return <div>loading...</div>
 
   return <></>
 
