@@ -48,7 +48,7 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
@@ -96,7 +96,7 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
@@ -143,7 +143,7 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
@@ -191,7 +191,7 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
@@ -238,7 +238,7 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
@@ -285,19 +285,27 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<h2 style="color: #fff">7. Family Guy</h2>
+<h2 style="color: #fff">7. How I Met Your Mother</h2>
 
-![The good doctor](/the-good-doctor.jpg)
+![How i met your mother](/how-i-met-your-mother.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Hvis du godt kan lide klassiske sitecoms før reality tv tog over så vil du sandsynligvis lide How I Met Your Mother. Komedien er meget vittig, og det er grund nok til at se showet.
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+Du lever gennem 9 år af hver karakters liv og ser dem opleve op- og nedture, gennemgå relationer, håndtere karriereudfordringer og styrke deres venskaber. Når du ser dem ændre sig over tid, lærer du dem at kende og virkelig passer på dem.
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Udgangspunktet for showet er, at hovedpersonen (Ted Mosby) fortæller sine børn historien om, hvordan han mødte deres mor. 
+
+Han fortæller historien i år 2030, og mens han fortæller det, blinker vi tilbage for at se begivenhederne, da de udfoldede sig. Historien fortælles fra hans synspunkt, så tingene bliver ofte overdrevet eller filtreret. 
+
+Der er mange sceneskift, da personerne i showet fortæller historier inden for historier, hvilket gør showet virkelig interresant. Der er flere romantiske forhold, der opstår i løbet af de 9 sæsoner, og du har tendens til at rodfæste visse mennesker. 
+
+Der er også et mysteriumselement, når vi prøver at gætte, hvem der i sidste ende ender med at blive moderen.
+
+Showet har 9 sæsoner, og hver sæson har 20 - 24 episoder.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -313,14 +321,14 @@ Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der 
     left: 0;
     width: 100%;
     height: 100%;"
-src="https://www.youtube.com/embed/fYlZDTru55g" SameSite=None
+src="https://www.youtube.com/embed/C8-4jMTOUJI" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
 
 <div style="text-align:center">
-<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/good-doctor-the" target="_blank"  style="background-color:#f44336; 
+<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/how-i-met-your-mother" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
@@ -332,19 +340,22 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
 <h2 style="color: #fff">8. Prison Break</h2>
 
-![The good doctor](/the-good-doctor.jpg)
+![Prison break](/prison-break-1.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Prison break er en action serie hvor Michael Scofield vil gøre alt for at redde hans bror Lincoln. 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+Hans er nemlig blevet dømt til at dø for en forbrydelse, han ikke begik, og den eneste måde at redde ham på ved at bryde ind i fængslet og få ham ud. 
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Bevæbnet med fængselsplaner og en indviklet flugtplan får Michael sig selv fængslet, og timeuret er i gang. Nu har han brug for alt det listige, vovede og held, han kan mønstre… sammen med hjælp fra nogle af fængselsets mest ondsindede og farlige forbrydere.
+
+Prison Break er et suspenefult show med masser af gode plot twist der både overrasker og endda chokere på nogle punkter.
+
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -360,14 +371,14 @@ Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der 
     left: 0;
     width: 100%;
     height: 100%;"
-src="https://www.youtube.com/embed/fYlZDTru55g" SameSite=None
+src="https://www.youtube.com/embed/AL9zLctDJaU" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
 
 <div style="text-align:center">
-<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/good-doctor-the" target="_blank"  style="background-color:#f44336; 
+<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/prison-break" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
@@ -379,19 +390,22 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
 <h2 style="color: #fff">9. Family Guy</h2>
 
-![The good doctor](/the-good-doctor.jpg)
+![Family guy](/family-guy.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Family guy er en sjov politisk ukorrekt serie som fortæller om Griffin-familiens skøre eventyrer.
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+Peter og Lois har tre børn - den yngste er en strålende, sadistisk baby, der er tilbøjelig til at dræbe sin mor og ødelægge verden. 
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Deres talende hund Brian holder baby Stewie i skak, mens han nipper til martini og sorterer gennem sine egne livsproblemer.
+
+Dette er en fantastisk serie masser af god humor. Der er udgivet 19 sæsoner så rig mulighed for at binge showet.
+
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -407,14 +421,14 @@ Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der 
     left: 0;
     width: 100%;
     height: 100%;"
-src="https://www.youtube.com/embed/fYlZDTru55g" SameSite=None
+src="https://www.youtube.com/embed/Le1x2To-e6g" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
 
 <div style="text-align:center">
-<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/good-doctor-the" target="_blank"  style="background-color:#f44336; 
+<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/family-guy" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
@@ -426,13 +440,13 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
 <h2 style="color: #fff">10. Supernatural</h2>
 
-![The good doctor](/the-good-doctor.jpg)
+![Supernatural](/supernatural.jpg)
 
 Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
 
@@ -454,14 +468,14 @@ Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der 
     left: 0;
     width: 100%;
     height: 100%;"
-src="https://www.youtube.com/embed/fYlZDTru55g" SameSite=None
+src="https://www.youtube.com/embed/_hlkNQL5Ecg" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
 
 <div style="text-align:center">
-<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/good-doctor-the" target="_blank"  style="background-color:#f44336; 
+<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/supernatural" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
@@ -473,7 +487,7 @@ allowfullscreen></iframe>
 	margin-bottom:5px;
 	padding:16px 31px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLY <br /> Prøv 2 uger gratis</a><br>
+	text-shadow:0px 1px 0px #2f6627;" > SE SERIE PÅ VIAPLAY <br /> Prøv 2 uger gratis</a><br>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
