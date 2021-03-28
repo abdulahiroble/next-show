@@ -3,7 +3,7 @@ title: "10 Gode Serier i 2021"
 date: "2021-03-26"
 ---
 
-Her er 10 gode serier du skal se i din efterårsferie.
+Her er 10 gode serier du skal se i 2021.
 
 <h2 style="color: #fff">1. Criminal Minds</h2>
 
@@ -11,9 +11,9 @@ Her er 10 gode serier du skal se i din efterårsferie.
 
 Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+I løbet af 15 nervepirrende sæsoner møder teamet de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for enheden hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -34,6 +34,8 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
+
+<br/>
 
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/criminal-minds" target="_blank"  style="background-color:#f44336; 
@@ -57,11 +59,11 @@ allowfullscreen></iframe>
 
 ![Greys anatomy](/greys-anatomy.png)
 
-Grey's Anatomy også kaldet Grey's hvide verden er en serie hvor vi møder Meredith Gray, en strålende førsteårs kirurgisk praktikant på Seattle Grace Hospital. 
+Grey's Anatomy også kaldet Greys hvide verden er en serie hvor vi møder Meredith Gray, en strålende førsteårs kirurgisk praktikant på Seattle Grace Hospital. 
 
 Sammen med sine medbeboere i træning navigerer Meredith sig gennem de daglige traumer og sociale landminer i livet på hospitalet og ude i den virkelige verden. 
 
-GREY'S ANATOMY er et smart og vittigt blik på unge mennesker, der kæmper for at være læger, og læger, der kæmper for at forblive mennesker.
+Serien er med til at give et blik på unge mennesker, der kæmper for at være læger, og læger, der kæmper for at forblive mennesker.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -82,6 +84,8 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
+
+<br/>
 
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/greys-hvide-verden" target="_blank"  style="background-color:#f44336; 
@@ -108,7 +112,7 @@ Efter at have vågnet op fra koma finder politimanden (Rick Grimes), sig i en ve
 
 Han finder snart nogle mennesker i en lejr som med nød og næppe har overlevet zombie apokalypsen. Dette er en historie om menneskets overlevelse mod katastrofale odds.
 
-Et rigt fantastisk karakterdrevet drama med suspens men også god humor.
+Et rigt fantastisk karakterdrevet drama med suspens, men også god humor.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -129,6 +133,8 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
+
+<br/>
 
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/walking-dead-the" target="_blank"  style="background-color:#f44336; 
@@ -176,6 +182,8 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 
+<br/>
+
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/vikings" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
@@ -197,13 +205,13 @@ allowfullscreen></iframe>
 
 ![Homeland](/Homeland-Season-Ranked.jpg)
 
-HOMELAND leverer overbevisende karakterer, spændende vendinger og betagende spænding. 
+Hovedpersonen Carrie Mathison en strålende, men ustabil CIA-agent, har mistanke om, at en reddet amerikansk krigsfanger muligvis ikke er, hvad han ser ud til. 
 
-Hovedpersonen Carrie Mathison en strålende, men ustabil CIA-agent, har mistanke om, at en reddet amerikansk krigsfanger muligvis ikke er, hvad han synes. 
-
-Er Marine Sgt. Nicholas Brody_ (Damian Lewis) en krigshelt ... eller en Al Qaida-sovende agent, der planlægger et spektakulært terrorangreb på amerikansk jord? 
+Er Marine Sgt. Nicholas Brody en krigshelt ... eller en Al Qaida agent, der planlægger et spektakulært terrorangreb på amerikansk jord? 
 
 Efter hendes instinkter risikerer Mathison alt for at afdække sandheden hendes omdømme, hendes karriere og endda hendes fornuft.
+
+Serien leverer overbevisende karakterer og interresante plot twists. 
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -224,6 +232,8 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
+
+<br/>
 
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/homeland" target="_blank"  style="background-color:#f44336; 
@@ -246,9 +256,9 @@ allowfullscreen></iframe>
 
 ![The good doctor](/the-good-doctor.jpg)
 
-Shaun Murphy, en ung kirurg med autisme og Savant syndrom, rekrutteres til kirurgisk enhed på et prestigefyldt hospital. 
+Shaun Murphy, en ung kirurg med autisme og savant syndrom, flytter fra et stille landeliv for at slutte sig til et prestigefyldt hospitals kirurgiske enhed. 
 
-Dette er historien hvordan han, flytter fra et stille landeliv for at slutte sig til en prestigefyldt hospitalskirurgisk enhed og hvilke udfordringer det vil medføre.
+Shaun alene i verden og ude af stand til personligt at få tilknytning med dem omkring ham, bliver nødt til at arbejde hårdere, end han nogensinde har gjort før, da han navigerer gennem sit nye miljø og forhold for at bevise over for sine kolleger, at hans ekstraordinære medicinske evner vil redde liv.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -291,19 +301,15 @@ allowfullscreen></iframe>
 
 ![How i met your mother](/how-i-met-your-mother.jpg)
 
-Hvis du godt kan lide klassiske sitecoms før reality tv tog over så vil du sandsynligvis lide How I Met Your Mother. Komedien er meget vittig, og det er grund nok til at se showet.
 
-Du lever gennem 9 år af hver karakters liv og ser dem opleve op- og nedture, gennemgå relationer, håndtere karriereudfordringer og styrke deres venskaber. Når du ser dem ændre sig over tid, lærer du dem at kende og virkelig passer på dem.
+How I Met Your Mother er en serie hvor hovedpersonen (Ted Mosby) fortæller sine børn historien om, hvordan han mødte deres mor. 
 
-Udgangspunktet for showet er, at hovedpersonen (Ted Mosby) fortæller sine børn historien om, hvordan han mødte deres mor. 
-
-Han fortæller historien i år 2030, og mens han fortæller det, blinker vi tilbage for at se begivenhederne, da de udfoldede sig. Historien fortælles fra hans synspunkt, så tingene bliver ofte overdrevet eller filtreret. 
+Han fortæller historien i år 2030, og mens han fortæller det, bliver vi ført tilbage i tiden for at se begivenhederne, da de udfoldede sig. Historien fortælles fra hans synspunkt, så tingene bliver ofte overdrevet eller filtreret. 
 
 Der er mange sceneskift, da personerne i showet fortæller historier inden for historier, hvilket gør showet virkelig interresant. Der er flere romantiske forhold, der opstår i løbet af de 9 sæsoner, og du har tendens til at rodfæste visse mennesker. 
 
 Der er også et mysteriumselement, når vi prøver at gætte, hvem der i sidste ende ender med at blive moderen.
 
-Showet har 9 sæsoner, og hver sæson har 20 - 24 episoder.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -324,6 +330,8 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
+
+<br/>
 
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/how-i-met-your-mother" target="_blank"  style="background-color:#f44336; 
@@ -375,6 +383,8 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 
+<br/>
+
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/prison-break" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
@@ -425,6 +435,8 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 
+<br/>
+
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/family-guy" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
@@ -446,11 +458,9 @@ allowfullscreen></iframe>
 
 ![Supernatural](/supernatural.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Supernatural handler om brødrene Sam og Dean, som rejser mod de mørkeste afkroge af det amerikanske landskab på jagt efter deres far, der er forsvundet under jagt på de ondsindede kræfter, der fører til deres mors død. 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
-
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+I løbet af deres søgning møder brødrerne en lang række andre væsner, herunder vampyrer, spøgelser og hekse, og andre fænomener som der vil få de fleste til at gyse.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -471,6 +481,8 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
+
+<br/>
 
 <div style="text-align:center">
 <a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/supernatural" target="_blank"  style="background-color:#f44336; 
