@@ -57,11 +57,11 @@ allowfullscreen></iframe>
 
 ![Greys anatomy](/greys-anatomy.png)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Grey's Anatomy også kaldet Grey's hvide verden er en serie hvor vi møder Meredith Gray, en strålende førsteårs kirurgisk praktikant på Seattle Grace Hospital. 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+Sammen med sine medbeboere i træning navigerer Meredith sig gennem de daglige traumer og sociale landminer i livet på hospitalet og ude i den virkelige verden. 
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+GREY'S ANATOMY er et smart og vittigt blik på unge mennesker, der kæmper for at være læger, og læger, der kæmper for at forblive mennesker.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -104,11 +104,11 @@ allowfullscreen></iframe>
 
 ![The walking dead](/the-walking-dead.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Efter at have vågnet op fra koma finder politimanden (Rick Grimes), sig i en verden som har forandret sig drastisk. Atlanta, Georgia er øde, og han finder ud af, at zombier har overtaget det! 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+Han finder snart nogle mennesker i en lejr som med nød og næppe har overlevet zombie apokalypsen. Dette er en historie om menneskets overlevelse mod katastrofale odds.
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Et rigt fantastisk karakterdrevet drama med suspens men også god humor.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -152,11 +152,9 @@ allowfullscreen></iframe>
 
 ![Vikings](/vikings.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Vikinger transporterer os til den brutale og mystiske verden hvor Ragnar Lothbrok, en vikingekriger og landmand, der længes efter at udforske - og plyndre - de fjerne kyster over havet for at opnå rigdomme.
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
-
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Vikings er et fantastisk show, interessant historie, farverige karakterer og en vidunderlig natur. Hvis du er fan af vikinger er dette show for dig.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -195,15 +193,17 @@ allowfullscreen></iframe>
 	<span style="font-style: italic; font-size: 16px; margin-top: 5px;">*Annoncelink</span>
 	</div>
 
-<h2 style="color: #fff">5. Are You Afraid of the Dark?</h2>
+<h2 style="color: #fff">5. Homeland</h2>
 
-![Are you afraid of the dark](/are-you-afraid-of-the-dark.jpg)
+![Homeland](/Homeland-Season-Ranked.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+HOMELAND leverer overbevisende karakterer, spændende vendinger og betagende spænding. 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
+Hovedpersonen Carrie Mathison en strålende, men ustabil CIA-agent, har mistanke om, at en reddet amerikansk krigsfanger muligvis ikke er, hvad han synes. 
 
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Er Marine Sgt. Nicholas Brody_ (Damian Lewis) en krigshelt ... eller en Al Qaida-sovende agent, der planlægger et spektakulært terrorangreb på amerikansk jord? 
+
+Efter hendes instinkter risikerer Mathison alt for at afdække sandheden hendes omdømme, hendes karriere og endda hendes fornuft.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -219,14 +219,14 @@ Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der 
     left: 0;
     width: 100%;
     height: 100%;"
-src="https://www.youtube.com/embed/bg6f32E9vN0" SameSite=None
+src="https://www.youtube.com/embed/KyFmS3wRPCQ" SameSite=None
 frameborder="0" 
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 allowfullscreen></iframe>
 </div>
 
 <div style="text-align:center">
-<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/born/er-du-morkeraed" target="_blank"  style="background-color:#f44336; 
+<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/homeland" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
@@ -246,11 +246,9 @@ allowfullscreen></iframe>
 
 ![The good doctor](/the-good-doctor.jpg)
 
-Criminal Minds er en krimi serie hvor FBI's adfærdsanalyseenhed bruger sit team af agenter til at løse landets mest snoede mysterier og chokerende mord. 
+Shaun Murphy, en ung kirurg med autisme og Savant syndrom, rekrutteres til kirurgisk enhed på et prestigefyldt hospital. 
 
-I løbet af 15 nervepirrende sæsoner møder BAU de professionelle risici og personlige omkostninger ved at bringe mordere for retten. 
-
-Farlige opgør. Grufulde trusler. Heltofre. Hver af de hundredvis af sager, der er indsamlet her, får dig til at gætte fra start til slut, da uret tikker for BAU hvis de skal nå at redde liv og bevise, at de er de bedste til at udføre jobbet.
+Dette er historien hvordan han, flytter fra et stille landeliv for at slutte sig til en prestigefyldt hospitalskirurgisk enhed og hvilke udfordringer det vil medføre.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -404,7 +402,7 @@ Peter og Lois har tre børn - den yngste er en strålende, sadistisk baby, der e
 
 Deres talende hund Brian holder baby Stewie i skak, mens han nipper til martini og sorterer gennem sine egne livsproblemer.
 
-Dette er en fantastisk serie masser af god humor. Der er udgivet 19 sæsoner så rig mulighed for at binge showet.
+Dette er en fantastisk serie med masser af god humor. Der er udgivet 19 sæsoner så rig mulighed for at binge showet.
 
 
 <h3 style="color: #fff">Trailer</h3>
