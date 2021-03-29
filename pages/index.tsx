@@ -161,7 +161,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
                     },
                   }}
-                  as={`/SerieInfo/${rating.id}`}
+                  as={`/SerieInfo`}
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -209,7 +209,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
                     },
                   }}
-                  as={`/SerieInfo/${play.id}`}
+                  as={`/SerieInfo`}
                 >
                   <div
                     className="cursor-pointer mx-auto"
