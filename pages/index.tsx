@@ -54,7 +54,7 @@ const index = (props) => {
                     thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                   },
                 }}
-                as={`/SerieInfo/${popularity.id}`}
+                as={`/SerieInfo`}
               >
                 <div className="text-center">
                   <div className="h-full w-full sm:max-h-80">
@@ -114,7 +114,7 @@ const index = (props) => {
                         thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                       },
                     }}
-                    as={`/SerieInfo/${popularity.id}`}
+                    as={`/SerieInfo`}
                   >
                     <div
                       className="cursor-pointer mx-auto"
@@ -161,7 +161,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
                     },
                   }}
-                  as={`/SerieInfo/${rating.id}`}
+                  as={`/SerieInfo`}
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -209,7 +209,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
                     },
                   }}
-                  as={`/SerieInfo/${play.id}`}
+                  as={`/SerieInfo`}
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -236,17 +236,6 @@ const index = (props) => {
   );
 };
 
-// const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
-
-// export function Profile () {
-//   const { data, error } = useSWR(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`, fetcher)
-
-//   if (error) return <div>failed to load</div>
-//   if (!data) return <div>loading...</div>
-
-//   // render data
-//   return console.log(data)
-// }
 
 const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
 

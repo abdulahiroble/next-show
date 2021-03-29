@@ -120,8 +120,9 @@ const SerieInfo = (props) => {
           </div>
         </div>
 
+            {console.log(props.providers.results)}
         <div className="mx-auto w-64 lg:w-72 text-center">
-          {props.providers.results.DK.flatrate.map((provider: { provider_name: string; }) => {
+          {props?.providers?.results?.DK?.flatrate.map((provider: { provider_name: string; }) => {
             if (provider.provider_name == "C More") {
               return (
                 <div>
@@ -190,7 +191,7 @@ const SerieInfo = (props) => {
                   <JustWatchLogo />
                 </div>
               );
-            }
+            } 
           })}
         </div>
       </Layout>
