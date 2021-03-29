@@ -236,17 +236,6 @@ const index = (props) => {
   );
 };
 
-// const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
-
-// export function Profile () {
-//   const { data, error } = useSWR(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`, fetcher)
-
-//   if (error) return <div>failed to load</div>
-//   if (!data) return <div>loading...</div>
-
-//   // render data
-//   return console.log(data)
-// }
 
 const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
 
