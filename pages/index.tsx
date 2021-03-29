@@ -54,7 +54,7 @@ const index = (props) => {
                     thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                   },
                 }}
-                as={`/SerieInfo/${popularity.id}`}
+                as={`/SerieInfo`}
               >
                 <div className="text-center">
                   <div className="h-full w-full sm:max-h-80">
@@ -114,7 +114,7 @@ const index = (props) => {
                         thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                       },
                     }}
-                    as={`/SerieInfo/${popularity.id}`}
+                    as={`/SerieInfo`}
                   >
                     <div
                       className="cursor-pointer mx-auto"
