@@ -130,6 +130,7 @@ const index = (props) => {
                         src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                         alt="banner"
                       />
+                      <div className="text-center text-sm italic">Tryk på banner for mere info 👆</div>
                     </div>
                   </Link>
                 );
