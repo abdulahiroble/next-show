@@ -73,7 +73,7 @@ const SerieInfo = (props) => {
         <div className="w-9/12 mx-auto">
           <div className="text-3xl font-bold">Sæsoner</div>
           <Slider {...settings}>
-            {props.details.seasons.map((details: { poster_path: any; name: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; air_date: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal; }) => {
+            {props.details.seasons?.map((details: { poster_path: any; name: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal; air_date: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal; }) => {
               return (
                 <div className="text-center">
                   <Image
@@ -100,7 +100,7 @@ const SerieInfo = (props) => {
         <div className="w-9/12 mx-auto">
           <div className="text-3xl">
             <div className="mb-3 mt-3 font-bold">Trailers</div>
-            {props.trailer.results.map((youtube: { key: any; }) => {
+            {props.trailer.results?.map((youtube: { key: any; }) => {
               return (
                 <div>
                   {props.trailer.results ? (
@@ -201,22 +201,22 @@ const SerieInfo = (props) => {
 
 const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
 
-export async function getServerSideProps(router) {
+export async function getServerSideProps(context) {
   // `getStaticProps` is invoked on the server-side,
   // so this `fetcher` function will be executed on the server-side.
 
    const details = await fetcher(
-    `https://api.themoviedb.org/3/tv/${router.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
+    `https://api.themoviedb.org/3/tv/${context.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
   );
 
   const trailer = await fetcher(
-    `https://api.themoviedb.org/3/tv/${router.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-US
+    `https://api.themoviedb.org/3/tv/${context.query.id}/videos?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=en-US
     `
   );
 
   const providers = await fetcher(
-    `https://api.themoviedb.org/3/tv/${router.query.id}/watch/providers?api_key=${process.env.NEXT_PUBLIC_API_SECRET}
+    `https://api.themoviedb.org/3/tv/${context.query.id}/watch/providers?api_key=${process.env.NEXT_PUBLIC_API_SECRET}
     `
   );
 
