@@ -54,10 +54,9 @@ const index = (props) => {
                     thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                   },
                 }}
-                as={`/SerieInfo`}
               >
                 <div className="text-center">
-                  <div className="h-full w-full sm:max-h-80">
+                  <div className="h-full cursor-pointer w-full sm:max-h-80">
                     <Image
                       alt="banner"
                       src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
@@ -114,7 +113,7 @@ const index = (props) => {
                         thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                       },
                     }}
-                    as={`/SerieInfo`}
+                    
                   >
                     <div
                       className="cursor-pointer mx-auto"
@@ -130,7 +129,7 @@ const index = (props) => {
                         src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                         alt="banner"
                       />
-                      <div className="text-center text-sm italic">Tryk på banner for mere info 👆</div>
+                      <div className="text-center text-sm px-3 italic sm:text-xs">Tryk for mere info 👆</div>
                     </div>
                   </Link>
                 );
@@ -162,7 +161,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
                     },
                   }}
-                  as={`/SerieInfo`}
+                  
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -210,7 +209,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
                     },
                   }}
-                  as={`/SerieInfo`}
+                  
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -240,7 +239,9 @@ const index = (props) => {
 
 const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
+
+
   // `getStaticProps` is invoked on the server-side,
   // so this `fetcher` function will be executed on the server-side.
 
@@ -264,7 +265,7 @@ export async function getStaticProps() {
     );
   
 
-  return { props: { popular, genres, rated, playing } }
+  return { props: { popular, genres, rated, playing },  revalidate: 1 }
 }
 
 export function Posts (props) {
