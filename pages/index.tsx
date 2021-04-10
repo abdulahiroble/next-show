@@ -129,7 +129,7 @@ const index = (props) => {
                         src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                         alt="banner"
                       />
-                      <div className="text-center text-sm px-3 italic sm:text-xs">Tryk for mere info 👆</div>
+                      <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                     </div>
                   </Link>
                 );
@@ -179,6 +179,7 @@ const index = (props) => {
                       src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                       alt="banner"
                     />
+                        <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                   </div>
                 </Link>
               );
@@ -225,6 +226,7 @@ const index = (props) => {
                       src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
                       alt="banner"
                     />
+                        <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                   </div>
                 </Link>
               );
