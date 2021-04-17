@@ -7,6 +7,7 @@ import { StarIcon } from "../components/StarIcon";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import useSWR from 'swr'
+import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box } from "@chakra-ui/react"
 
 const index = (props) => {
   const settings = {
@@ -89,12 +90,25 @@ const index = (props) => {
           })}
         </Slider>
 
+
+        <Skeleton startColor="pink.500" endColor="orange.500" height="100px" color="red.500" backgroundColor="red.700" isLoaded={props}>
+          <div>contents wrapped</div>
+          <div>won't be visible</div>
+        </Skeleton>
+
+        {/* <Box>
+          <Skeleton isLoaded={!props}>
+            <div>{props.popular.results.map((test) => test.name)}</div>
+          </Skeleton>
+        </Box> */}
+
         <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Populære
           </div>
           <div className="">
             <Slider {...settings}>
+
               {props.popular.results.map((popularity) => {
                 return (
                   <Link
@@ -113,30 +127,33 @@ const index = (props) => {
                         thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                       },
                     }}
-                    
+
                   >
+
                     <div
-                      className="cursor-pointer mx-auto"
-                      style={{ maxWidth: 200 }}
-                    >
+                      className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
                       <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
                         <StarIcon />
                         {popularity.vote_average}
                       </div>
-                      <Image
-                        width={200}
-                        height={300}
-                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                        alt="banner"
-                      />
+                      <Skeleton startColor="pink.500" endColor="orange.500" color="red.500" backgroundColor="red.700" isLoaded={!popularity}>
+                        <Image
+                          width={200}
+                          height={300}
+                          src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                          alt="banner"
+                        />
+                      </Skeleton>
                       <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                     </div>
                   </Link>
                 );
               })}
+
             </Slider>
           </div>
         </div>
+
 
         <div className="w-9/12 mx-auto my-4">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
@@ -161,7 +178,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
                     },
                   }}
-                  
+
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -179,7 +196,7 @@ const index = (props) => {
                       src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                       alt="banner"
                     />
-                        <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                    <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                   </div>
                 </Link>
               );
@@ -210,7 +227,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
                     },
                   }}
-                  
+
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -226,7 +243,7 @@ const index = (props) => {
                       src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
                       alt="banner"
                     />
-                        <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                    <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                   </div>
                 </Link>
               );
@@ -255,22 +272,22 @@ export async function getStaticProps(context) {
     `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
   );
 
-    // Top rated series
-    const rated = await fetcher(
-      `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-    );
-  
-  
-    // Now Playing
-    const playing = await fetcher(
-      `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-    );
-  
+  // Top rated series
+  const rated = await fetcher(
+    `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+  );
 
-  return { props: { popular, genres, rated, playing },  revalidate: 1 }
+
+  // Now Playing
+  const playing = await fetcher(
+    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+  );
+
+
+  return { props: { popular, genres, rated, playing }, revalidate: 1 }
 }
 
-export function Posts (props) {
+export function Posts(props) {
   // Here the `fetcher` function will be executed on the client-side.
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 
