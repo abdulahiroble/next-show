@@ -7,9 +7,9 @@ import { StarIcon } from "../components/StarIcon";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import useSWR from 'swr'
-import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box } from "@chakra-ui/react"
+import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box, Heading } from "@chakra-ui/react"
 
-const index = (props) => {
+const index = (props, data) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -91,16 +91,16 @@ const index = (props) => {
         </Slider>
 
 
-        <Skeleton startColor="pink.500" endColor="orange.500" height="100px" color="red.500" backgroundColor="red.700" isLoaded={props}>
+        {/* <Skeleton startColor="pink.500" endColor="orange.500" height="100px" color="red.500" backgroundColor="red.700" isLoaded={props}>
           <div>contents wrapped</div>
           <div>won't be visible</div>
-        </Skeleton>
+        </Skeleton> */}
 
-        {/* <Box>
-          <Skeleton isLoaded={!props}>
-            <div>{props.popular.results.map((test) => test.name)}</div>
+        <Box>
+          <Skeleton isLoaded={props} startColor="pink.500" endColor="orange.500" color="red.500" backgroundColor="red.700">
+            <Heading>{props.popular.results.map((test) => test.name)}</Heading>
           </Skeleton>
-        </Box> */}
+        </Box>
 
         <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
