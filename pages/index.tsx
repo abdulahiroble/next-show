@@ -90,16 +90,11 @@ const index = (props) => {
           })}
         </Slider>
 
-
-        <Skeleton height="40px">{props.popular.results.map((popularity) => popularity.original_name)}</Skeleton>
-
-        {/* <Box as="tr">
-          <Skeleton height="10px" />
-          <Skeleton height="10px" />
-          <Skeleton height="10px" />
-          <Skeleton height="10px" />
+        {/* <Box padding="6" boxShadow="lg">
+          <SkeletonCircle size="10" />
+          <SkeletonText mt="4" noOfLines={4} spacing="4" />
+          {props.popular.results.map((popularity) => popularity.original_name)}
         </Box> */}
-
 
 
         <div className="mt-3 w-9/12 mx-auto">
@@ -133,17 +128,26 @@ const index = (props) => {
 
                     <div
                       className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
-                      <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                        <StarIcon />
-                        {popularity.vote_average}
-                      </div>
-                      <Image
-                        width={200}
-                        height={300}
-                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                        alt="banner"
-                      />
-                      <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                      <Skeleton>
+                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                          <StarIcon />
+                          {popularity.vote_average}
+                        </div>
+                      </Skeleton>
+                      <Box>
+                        <Skeleton>
+                          <img
+                            width={200}
+                            height={300}
+                            // width="200"
+                            // height="300"
+                            // src="/1200x0.jpg"
+                            src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                            alt="banner"
+                          />
+                        </Skeleton>
+                        <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!popularity} ><div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div></SkeletonText>
+                      </Box>
                     </div>
                   </Link>
                 );
