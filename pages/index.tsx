@@ -9,7 +9,7 @@ import { NextSeo } from "next-seo";
 import useSWR from 'swr'
 import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box, Heading } from "@chakra-ui/react"
 
-const index = (props, data) => {
+const index = (props) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -90,64 +90,66 @@ const index = (props, data) => {
           })}
         </Slider>
 
-        {/* <Box>
-          <Skeleton isLoaded={props} startColor="pink.500" endColor="orange.500" color="red.500" backgroundColor="red.700">
-            <Heading>{props.popular.results.map((test) => test.name)}</Heading>
-          </Skeleton>
+
+        <Skeleton height="40px">{props.popular.results.map((popularity) => popularity.original_name)}</Skeleton>
+
+        {/* <Box as="tr">
+          <Skeleton height="10px" />
+          <Skeleton height="10px" />
+          <Skeleton height="10px" />
+          <Skeleton height="10px" />
         </Box> */}
+
+
 
         <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Populære
           </div>
           <div className="">
-            <Box>
-              <Skeleton isLoaded={props.popular}>
-                <Slider {...settings}>
 
-                  {props.popular.results.map((popularity) => {
-                    return (
-                      <Link
-                        href={{
-                          pathname: "SerieInfo",
-                          query: {
-                            id: popularity.id,
-                            rating: popularity.vote_average,
-                            original_name: popularity.original_name,
-                            summary: popularity.overview,
-                            genre: props.genres.genres.map((genre) => {
-                              if (genre.id === popularity.genre_ids[0]) {
-                                return genre.name;
-                              }
-                            }),
-                            thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
-                          },
-                        }}
+            <Slider {...settings}>
 
-                      >
+              {props.popular.results.map((popularity) => {
+                return (
+                  <Link
+                    href={{
+                      pathname: "SerieInfo",
+                      query: {
+                        id: popularity.id,
+                        rating: popularity.vote_average,
+                        original_name: popularity.original_name,
+                        summary: popularity.overview,
+                        genre: props.genres.genres.map((genre) => {
+                          if (genre.id === popularity.genre_ids[0]) {
+                            return genre.name;
+                          }
+                        }),
+                        thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
+                      },
+                    }}
 
-                        <div
-                          className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
-                          <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                            <StarIcon />
-                            {popularity.vote_average}
-                          </div>
+                  >
 
-                          <Image
-                            width={200}
-                            height={300}
-                            src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                            alt="banner"
-                          />
-                          <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
-                        </div>
-                      </Link>
-                    );
-                  })}
+                    <div
+                      className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
+                      <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                        <StarIcon />
+                        {popularity.vote_average}
+                      </div>
+                      <Image
+                        width={200}
+                        height={300}
+                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                        alt="banner"
+                      />
+                      <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                    </div>
+                  </Link>
+                );
+              })}
 
-                </Slider>
-              </Skeleton>
-            </Box>
+            </Slider>
           </div>
         </div>
 

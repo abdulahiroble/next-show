@@ -5,15 +5,41 @@ import React from "react";
 import "../styles/main.css";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
+import { ThemeProvider, CSSReset } from "@chakra-ui/react"
+import { Global, css } from '@emotion/react';
+import customTheme from "../styles/theme"
 
 export function reportWebVitals(metric) {
   console.log(metric);
 }
 
+const GlobalStyle = ({ children }) => {
+  return (
+    <>
+      <CSSReset />
+      <Global
+        styles={css`
+          html {
+            min-width: 360px;
+            scroll-behavior: smooth;
+          }
+          #__next {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+          }
+        `}
+      />
+      {children}
+    </>
+  );
+};
+
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
+
       <React.Fragment>
         <DefaultSeo
           openGraph={{
@@ -23,7 +49,10 @@ export default class MyApp extends App {
             site_name: "serier man skal se",
           }}
         />
-        <Component {...pageProps} />
+        <ThemeProvider theme={customTheme}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </ThemeProvider>
       </React.Fragment>
     );
   }
