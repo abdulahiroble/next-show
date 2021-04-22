@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.5.1",
+    "@chakra-ui/skeleton": "^1.1.10",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fortawesome/fontawesome-free": "^5.12.0",

@@ -90,67 +90,64 @@ const index = (props, data) => {
           })}
         </Slider>
 
-
-        {/* <Skeleton startColor="pink.500" endColor="orange.500" height="100px" color="red.500" backgroundColor="red.700" isLoaded={props}>
-          <div>contents wrapped</div>
-          <div>won't be visible</div>
-        </Skeleton> */}
-
-        <Box>
+        {/* <Box>
           <Skeleton isLoaded={props} startColor="pink.500" endColor="orange.500" color="red.500" backgroundColor="red.700">
             <Heading>{props.popular.results.map((test) => test.name)}</Heading>
           </Skeleton>
-        </Box>
+        </Box> */}
 
         <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Populære
           </div>
           <div className="">
-            <Slider {...settings}>
+            <Box>
+              <Skeleton isLoaded={props.popular}>
+                <Slider {...settings}>
 
-              {props.popular.results.map((popularity) => {
-                return (
-                  <Link
-                    href={{
-                      pathname: "SerieInfo",
-                      query: {
-                        id: popularity.id,
-                        rating: popularity.vote_average,
-                        original_name: popularity.original_name,
-                        summary: popularity.overview,
-                        genre: props.genres.genres.map((genre) => {
-                          if (genre.id === popularity.genre_ids[0]) {
-                            return genre.name;
-                          }
-                        }),
-                        thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
-                      },
-                    }}
+                  {props.popular.results.map((popularity) => {
+                    return (
+                      <Link
+                        href={{
+                          pathname: "SerieInfo",
+                          query: {
+                            id: popularity.id,
+                            rating: popularity.vote_average,
+                            original_name: popularity.original_name,
+                            summary: popularity.overview,
+                            genre: props.genres.genres.map((genre) => {
+                              if (genre.id === popularity.genre_ids[0]) {
+                                return genre.name;
+                              }
+                            }),
+                            thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
+                          },
+                        }}
 
-                  >
+                      >
 
-                    <div
-                      className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
-                      <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                        <StarIcon />
-                        {popularity.vote_average}
-                      </div>
-                      <Skeleton startColor="pink.500" endColor="orange.500" color="red.500" backgroundColor="red.700" isLoaded={!popularity}>
-                        <Image
-                          width={200}
-                          height={300}
-                          src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                          alt="banner"
-                        />
-                      </Skeleton>
-                      <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
-                    </div>
-                  </Link>
-                );
-              })}
+                        <div
+                          className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
+                          <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                            <StarIcon />
+                            {popularity.vote_average}
+                          </div>
 
-            </Slider>
+                          <Image
+                            width={200}
+                            height={300}
+                            src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                            alt="banner"
+                          />
+                          <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                        </div>
+                      </Link>
+                    );
+                  })}
+
+                </Slider>
+              </Skeleton>
+            </Box>
           </div>
         </div>
 
@@ -258,7 +255,7 @@ const index = (props, data) => {
 
 const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
 
 
   // `getStaticProps` is invoked on the server-side,
