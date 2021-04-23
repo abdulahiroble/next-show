@@ -13,47 +13,47 @@ export function reportWebVitals(metric) {
   console.log(metric);
 }
 
-const GlobalStyle = ({ children }) => {
-  return (
-    <>
-      <CSSReset />
-      <Global
-        styles={css`
-          html {
-            min-width: 360px;
-            scroll-behavior: smooth;
-          }
-          #__next {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-          }
-        `}
-      />
-      {children}
-    </>
-  );
-};
+// const GlobalStyle = ({ children }) => {
+//   return (
+//     <>
+//       <CSSReset />
+//       <Global
+//         styles={css`
+//           html {
+//             min-width: 360px;
+//             scroll-behavior: smooth;
+//           }
+//           #__next {
+//             display: flex;
+//             flex-direction: column;
+//             min-height: 100vh;
+//           }
+//         `}
+//       />
+//       {children}
+//     </>
+//   );
+// };
 
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     return (
 
-      <React.Fragment>
-        <DefaultSeo
-          openGraph={{
-            type: "website",
-            locale: "da_DK",
-            url: "https://seriermanskalse.dk/",
-            site_name: "serier man skal se",
-          }}
-        />
-        <ThemeProvider theme={customTheme}>
-          <GlobalStyle />
+      <ThemeProvider theme={customTheme}>
+        <React.Fragment>
+          <DefaultSeo
+            openGraph={{
+              type: "website",
+              locale: "da_DK",
+              url: "https://seriermanskalse.dk/",
+              site_name: "serier man skal se",
+            }}
+          />
+          {/* <GlobalStyle /> */}
           <Component {...pageProps} />
-        </ThemeProvider>
-      </React.Fragment>
+        </React.Fragment>
+      </ThemeProvider>
     );
   }
 }

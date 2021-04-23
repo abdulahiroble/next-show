@@ -1,11 +1,14 @@
-const withImages = require("next-images");
+// const withImages = require("next-images");
 const withMDX = require("@next/mdx")();
 
-module.exports = withImages(
+module.exports =
   withMDX({
     env: {
       NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
     },
+
+    // assetPrefix: 'image.tmdb.org',
+    // dynamicAssetPrefix: true,
 
     withMDX: {
       pageExtensions: ["js", "jsx", "mdx"],
@@ -21,7 +24,7 @@ module.exports = withImages(
       };
     },
   })
-);
+  ;
 
 // const nextConfig = {
 //   images: {

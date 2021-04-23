@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 import { StarIcon } from "../components/StarIcon";
 import Image from "next/image";
+// import { Image } from "@chakra-ui/react"
 import { NextSeo } from "next-seo";
 import useSWR from 'swr'
 import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box, Heading } from "@chakra-ui/react"
@@ -97,13 +98,6 @@ const index = (props) => {
           })}
         </Slider>
 
-        {/* <Box padding="6" boxShadow="lg">
-          <SkeletonCircle size="10" />
-          <SkeletonText mt="4" noOfLines={4} spacing="4" />
-          {props.popular.results.map((popularity) => popularity.original_name)}
-        </Box> */}
-
-
         <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Populære
@@ -142,17 +136,16 @@ const index = (props) => {
                             {popularity.vote_average}
                           </div>
                         </Skeleton>
-                        <Skeleton isLoaded={!popularity}>
-                          <Image
-                            width={200}
-                            height={300}
-                            // width="200"
-                            // height="300"
-                            // src="/1200x0.jpg"
-                            src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                            alt="banner"
-                          />
-                        </Skeleton>
+                        <Box>
+                          <Skeleton>
+                            <Image
+                              width={200}
+                              height={300}
+                              src="/1200x0.jpg"
+                              alt="banner"
+                            />
+                          </Skeleton>
+                        </Box>
                         <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!popularity} ><div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div></SkeletonText>
                       </Box>
                     </div>
@@ -163,7 +156,6 @@ const index = (props) => {
             </Slider>
           </div>
         </div>
-
 
         <div className="w-9/12 mx-auto my-4">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">

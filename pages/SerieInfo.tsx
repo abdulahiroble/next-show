@@ -8,6 +8,7 @@ import { JustWatchLogo } from "../stories/JustWatchLogo";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import useSWR from "swr";
+import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box, Heading } from "@chakra-ui/react"
 
 const SerieInfo = (props) => {
   var settings = {
@@ -35,12 +36,14 @@ const SerieInfo = (props) => {
       <Layout>
         <div className="flex flex-col w-9/12 mx-auto">
           <div className="mb-5">
-            <Image
-              alt="banner"
-              width={400}
-              height={600}
-              src={`${router.query.thumbnail}`}
-            />
+            <Skeleton className="z-10">
+              <Image
+                alt="banner"
+                width={400}
+                height={600}
+                src={`${router.query.thumbnail}`}
+              />
+            </Skeleton>
           </div>
 
           <div>
@@ -120,7 +123,7 @@ const SerieInfo = (props) => {
           </div>
         </div>
 
-            {console.log(props.providers.results)}
+        {console.log(props.providers.results)}
         <div className="mx-auto w-64 lg:w-72 text-center">
           {props?.providers?.results?.DK?.flatrate.map((provider: { provider_name: string; }) => {
             if (provider.provider_name == "C More") {
@@ -191,7 +194,7 @@ const SerieInfo = (props) => {
                   <JustWatchLogo />
                 </div>
               );
-            } 
+            }
           })}
         </div>
       </Layout>
@@ -205,7 +208,7 @@ export async function getServerSideProps(context) {
   // `getStaticProps` is invoked on the server-side,
   // so this `fetcher` function will be executed on the server-side.
 
-   const details = await fetcher(
+  const details = await fetcher(
     `https://api.themoviedb.org/3/tv/${context.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
   );
@@ -223,7 +226,7 @@ export async function getServerSideProps(context) {
   return { props: { details, trailer, providers } }
 }
 
-export function Posts (props) {
+export function Posts(props) {
   // Here the `fetcher` function will be executed on the client-side.
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 
