@@ -69,20 +69,27 @@ const index = (props) => {
                     />
                   </div>
                   <div className="-mt-24 sm:-mt-20">
-                    <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
-                      {" "}
-                      {popularity.original_name}
-                      <div className="text-xl pb-2 text-white font-bold mx-auto text-center sm:text-3xl sm:pb-3">
-                        {popularity.vote_average} Bedømmelse |{" "}
-                        {props.genres.genres.map((genre) => {
-                          if (genre.id === popularity.genre_ids[0]) {
-                            return genre.name;
-                          } else {
-                            return null;
-                          }
-                        })}
-                      </div>
-                    </div>
+                    <Box boxShadow="lg" padding="6">
+                      <SkeletonText mt="4" noOfLines={2} spacing="4">
+                        <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
+
+                          {popularity.original_name}
+
+
+                          <div className="text-xl pb-2 text-white font-bold mx-auto text-center sm:text-3xl sm:pb-3">
+                            {popularity.vote_average} Bedømmelse |{" "}
+                            {props.genres.genres.map((genre) => {
+                              if (genre.id === popularity.genre_ids[0]) {
+                                return genre.name;
+                              } else {
+                                return null;
+                              }
+                            })}
+                          </div>
+
+                        </div>
+                      </SkeletonText>
+                    </Box>
                   </div>
                 </div>
               </Link>
@@ -128,15 +135,15 @@ const index = (props) => {
 
                     <div
                       className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
-                      <Skeleton>
-                        <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                          <StarIcon />
-                          {popularity.vote_average}
-                        </div>
-                      </Skeleton>
                       <Box>
                         <Skeleton>
-                          <img
+                          <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                            <StarIcon />
+                            {popularity.vote_average}
+                          </div>
+                        </Skeleton>
+                        <Skeleton isLoaded={!popularity}>
+                          <Image
                             width={200}
                             height={300}
                             // width="200"
