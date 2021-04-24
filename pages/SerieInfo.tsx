@@ -36,14 +36,12 @@ const SerieInfo = (props) => {
       <Layout>
         <div className="flex flex-col w-9/12 mx-auto">
           <div className="mb-5">
-            <Skeleton className="z-10">
-              <Image
-                alt="banner"
-                width={400}
-                height={600}
-                src={`${router.query.thumbnail}`}
-              />
-            </Skeleton>
+            <Image
+              alt="banner"
+              width={400}
+              height={600}
+              src={`${router.query.thumbnail}`}
+            />
           </div>
 
           <div>
