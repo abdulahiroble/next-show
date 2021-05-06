@@ -1,5 +1,5 @@
 import fetch from "isomorphic-unfetch";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import Link from "next/link";
@@ -9,6 +9,10 @@ import Image from "next/image";
 import { NextSeo } from "next-seo";
 import useSWR from 'swr'
 import { Skeleton, SkeletonCircle, SkeletonText, Stack, Box, Heading } from "@chakra-ui/react"
+import { Table, Tr, Th, Td } from '../components/Table';
+import SiteTableSkeleton from "../components/SiteTableSkeleton";
+import { SkeletonRow } from "../components/SkeletonRow";
+import SiteTable from "../components/SiteTable"
 
 const index = (props) => {
   const settings = {
@@ -29,14 +33,16 @@ const index = (props) => {
     arrows: false,
     swipe: false,
   };
+
+
   return (
     <>
       <NextSeo
         title="Serier Man Skal Se | Populære serier baseret på brugerscorer"
         description="Gennemse gode serier fra 2020 og 2021. Få indblik i hvilke serier der er værd at se baseret på hvor manger stjerne en serie har fået"
       />
+      {Posts(props)}
       <Layout>
-        {Posts(props)}
         <Slider {...setting}>
           {props.popular.results.map((popularity) => {
             return (
@@ -59,18 +65,18 @@ const index = (props) => {
               >
                 <div className="text-center h-full">
                   <div className="h-full cursor-pointer w-full sm:max-h-80">
-                    <Skeleton isLoaded>
-                      <Image
-                        alt="banner"
-                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                        className="opacity-20"
-                        layout="responsive"
-                        width={700}
-                        height={600}
-                        quality={75}
-                      />
-                    </Skeleton>
+                    <Image
+                      alt="banner"
+                      src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                      className="opacity-20"
+                      layout="responsive"
+                      width={700}
+                      height={600}
+                      quality={75}
+                    />
                   </div>
+
+
 
                   <div className="text-xl text-white font-bold mx-auto text-center sm:text-3xl">
                     <SkeletonText mt="4" noOfLines={2} spacing="4" isLoaded>
@@ -96,6 +102,8 @@ const index = (props) => {
           })}
         </Slider>
 
+        <SkeletonRow />
+
         <div className="mt-3 w-9/12 mx-auto">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Populære
@@ -103,8 +111,7 @@ const index = (props) => {
           <div className="">
 
             <Slider {...settings}>
-
-              {props.popular.results.map((popularity) => {
+              {props?.popular.results.map((popularity) => {
                 return (
                   <Link
                     href={{
@@ -127,25 +134,20 @@ const index = (props) => {
 
                     <div
                       className="cursor-pointer mx-auto" style={{ maxWidth: 200 }}>
-                      <Box>
-                        <Skeleton>
-                          <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
-                            <StarIcon />
-                            {popularity.vote_average}
-                          </div>
-                        </Skeleton>
-                        <Box>
-                          <Skeleton>
-                            <Image
-                              width={200}
-                              height={300}
-                              src="/1200x0.jpg"
-                              alt="banner"
-                            />
-                          </Skeleton>
-                        </Box>
-                        <SkeletonText mt="4" noOfLines={1} spacing="4" isLoaded={!popularity} ><div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div></SkeletonText>
-                      </Box>
+
+                      <div className="justify-self-start absolute bg-black opacity-70 p-2 text-white z-10">
+                        <StarIcon />
+                        {popularity.vote_average}
+                      </div>
+                      <Skeleton isLoaded={props}>
+                        <Image
+                          width={200}
+                          height={300}
+                          src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
+                          alt="banner"
+                        />
+                      </Skeleton>
+                      <SkeletonText mt="4" noOfLines={1} spacing="4" ><div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div></SkeletonText>
                     </div>
                   </Link>
                 );
@@ -155,7 +157,7 @@ const index = (props) => {
           </div>
         </div>
 
-        <div className="w-9/12 mx-auto my-4">
+        {/* <div className="w-9/12 mx-auto my-4">
           <div className="text-2xl text-white uppercase tracking-wide mb-3">
             Udsendes i øjeblikket
           </div>
@@ -249,14 +251,14 @@ const index = (props) => {
               );
             })}
           </Slider>
-        </div>
+        </div> */}
       </Layout>
     </>
   );
 };
 
 
-const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
+const fetcher = (url) => fetch(url).then(r => r.json())
 
 export async function getStaticProps() {
 
@@ -266,6 +268,7 @@ export async function getStaticProps() {
 
   // Popular
   const popular = await fetcher(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`)
+
 
   // Genre
   const genres = await fetcher(
@@ -284,17 +287,21 @@ export async function getStaticProps() {
   );
 
 
-  return { props: { popular, genres, rated, playing }, revalidate: 1 }
+  return { props: { popular, genres, rated, playing } }
 }
 
-export function Posts(props) {
+export const Posts = (props) => {
   // Here the `fetcher` function will be executed on the client-side.
-  const { data, error } = useSWR(props, fetcher, { initialData: props })
+  const { data } = useSWR(props, fetcher, { initialData: props })
 
-  // if (error) return <div>failed to load</div>
-  if (!data) return <div>loading...</div>
+  if (!data) return <SiteTableSkeleton />
+
+  // return (
+  //   <SiteTable sites={data} />
+  // )
 
   return <></>
+
 
 }
 

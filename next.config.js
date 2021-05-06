@@ -7,8 +7,9 @@ module.exports =
       NEXT_PUBLIC_API_SECRET: process.env.NEXT_PUBLIC_API_SECRET,
     },
 
-    // assetPrefix: 'image.tmdb.org',
-    // dynamicAssetPrefix: true,
+    future: {
+      webpack5: true,
+    },
 
     withMDX: {
       pageExtensions: ["js", "jsx", "mdx"],
