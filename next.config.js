@@ -11,6 +11,10 @@ module.exports = withImages(
       pageExtensions: ["js", "jsx", "mdx"],
     },
 
+    future: {
+      webpack5: true
+    },
+
     images: {
       domains: ["image.tmdb.org"],
     },
