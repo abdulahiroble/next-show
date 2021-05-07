@@ -38,6 +38,7 @@ const footer = () => {
           <a
             href="https://www.themoviedb.org/?language=da"
             target="_blank"
+            rel="noopener"
             className="no-underline text-yellow-300 hover:no-underline hover:text-yellow-300"
           >
             TMDb.
