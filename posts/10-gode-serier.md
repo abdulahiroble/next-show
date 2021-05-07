@@ -46,6 +46,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -57,13 +58,13 @@ allowfullscreen></iframe>
 
 <h2 style="color: #fff">2. Grey's Anatomy</h2>
 
-![Greys anatomy](/greys-anatomy.png)
+![Grey's anatomy](/greys-anatomy.png)
 
 Grey's Anatomy også kaldet Greys hvide verden er en serie hvor vi møder Meredith Gray, en strålende førsteårs kirurgisk praktikant på Seattle Grace Hospital. 
 
-Sammen med sine medbeboere i træning navigerer Meredith sig gennem de daglige traumer og sociale landminer i livet på hospitalet og ude i den virkelige verden. 
+Sammen med sine kollegaer i træning navigerer Meredith sig gennem de daglige traumer og sociale landminer i livet på hospitalet og ude i den virkelige verden. 
 
-Serien er med til at give et blik på unge mennesker, der kæmper for at være læger, og læger, der kæmper for at forblive mennesker.
+Greys hvide verden karakterer er med til at give et indblik i unge mennesker, der kæmper for at være læger, og læger, der kæmper for at forblive mennesker.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -96,6 +97,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -113,6 +115,8 @@ Efter at have vågnet op fra koma finder politimanden (Rick Grimes), sig i en ve
 Han finder snart nogle mennesker i en lejr som med nød og næppe har overlevet zombie apokalypsen. Dette er en historie om menneskets overlevelse mod katastrofale odds.
 
 Et rigt fantastisk karakterdrevet drama med suspens, men også god humor.
+
+Med Viaplay kan du se the walking dead season 1 til 9 så der er rig muligheden for at binge serien.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -145,6 +149,8 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
+	font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -193,6 +199,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -244,6 +251,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -259,6 +267,8 @@ allowfullscreen></iframe>
 Shaun Murphy, en ung kirurg med autisme og savant syndrom, flytter fra et stille landeliv for at slutte sig til et prestigefyldt hospitals kirurgiske enhed. 
 
 Shaun alene i verden og ude af stand til personligt at få tilknytning med dem omkring ham, bliver nødt til at arbejde hårdere, end han nogensinde har gjort før, da han navigerer gennem sit nye miljø og forhold for at bevise over for sine kolleger, at hans ekstraordinære medicinske evner vil redde liv.
+
+Du kan se The Good Doctor season 3 og alle øvrige sæsoner på Viaplay.
 
 <h3 style="color: #fff">Trailer</h3>
 
@@ -289,6 +299,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -342,6 +353,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -394,6 +406,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -446,6 +459,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
@@ -493,6 +507,7 @@ allowfullscreen></iframe>
 	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
+		font-weight: bold;
 	margin-top: 15px;
 	margin-bottom:5px;
 	padding:16px 31px;
