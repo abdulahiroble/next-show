@@ -45,8 +45,8 @@ const SerieInfo = (props) => {
 
           <div>
             <div className="text-2xl font-bold">
-              <div className="mb-3">Titel: {router.query.original_name}</div>
-              <div className="mb-3">Bedømmelse: {router.query.rating}</div>
+              <div className="mb-3">{router.query.original_name}</div>
+              <div className="mb-3"> {router.query.rating}</div>
               {/* <div>
               Genre:{" "}
               {router.query.genre ? (
@@ -120,7 +120,7 @@ const SerieInfo = (props) => {
           </div>
         </div>
 
-            {console.log(props.providers.results)}
+        {console.log(props.providers.results)}
         <div className="mx-auto w-64 lg:w-72 text-center">
           {props?.providers?.results?.DK?.flatrate.map((provider: { provider_name: string; }) => {
             if (provider.provider_name == "C More") {
@@ -191,7 +191,7 @@ const SerieInfo = (props) => {
                   <JustWatchLogo />
                 </div>
               );
-            } 
+            }
           })}
         </div>
       </Layout>
@@ -205,7 +205,7 @@ export async function getServerSideProps(context) {
   // `getStaticProps` is invoked on the server-side,
   // so this `fetcher` function will be executed on the server-side.
 
-   const details = await fetcher(
+  const details = await fetcher(
     `https://api.themoviedb.org/3/tv/${context.query.id}?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da
     `
   );
@@ -223,7 +223,7 @@ export async function getServerSideProps(context) {
   return { props: { details, trailer, providers } }
 }
 
-export function Posts (props) {
+export function Posts(props) {
   // Here the `fetcher` function will be executed on the client-side.
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 
