@@ -264,7 +264,7 @@ allowfullscreen></iframe>
 <br/>
 
 <div style="text-align:center">
-<a href="hhttps://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/vampire-diaries-the" target="_blank"  style="background-color:#f44336; 
+<a href="https://track.adtraction.com/t/t?a=1531118376&as=1580579680&t=2&tk=1&url=https://viaplay.dk/serier/vampire-diaries-the" target="_blank"  style="background-color:#f44336; 
 	border-radius:28px;
 	border:1px solid #f44336;
 	display:inline-block;
