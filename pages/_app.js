@@ -20,13 +20,6 @@ export default class MyApp extends App {
             locale: "da_DK",
             url: "https://seriermanskalse.dk/",
             site_name: "serier man skal se",
-            images: [
-              {
-                url: 'https://seriermanskalse/hompage.png',
-                width: 1280,
-                height: 720
-              }
-            ]
           }}
         />
         <Component {...pageProps} />
