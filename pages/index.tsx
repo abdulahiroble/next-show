@@ -7,6 +7,7 @@ import { StarIcon } from "../components/StarIcon";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import useSWR from 'swr'
+import author from '../public/atlanta.jpg'
 
 const index = (props) => {
   const settings = {
@@ -62,6 +63,8 @@ const index = (props) => {
                       src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
                       className="opacity-20"
                       layout="responsive"
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       width={700}
                       height={400}
                       quality={75}
@@ -113,7 +116,7 @@ const index = (props) => {
                         thumbnail: `https://image.tmdb.org/t/p/w500${popularity.poster_path}`,
                       },
                     }}
-                    
+
                   >
                     <div
                       className="cursor-pointer mx-auto"
@@ -126,9 +129,9 @@ const index = (props) => {
                       <Image
                         width={200}
                         height={300}
-                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`}
-                        alt="banner"
-                      />
+                        blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                        placeholder="blur"
+                        src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`} alt="Poster" />
                       <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                     </div>
                   </Link>
@@ -161,7 +164,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${rating.poster_path}`,
                     },
                   }}
-                  
+
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -176,10 +179,12 @@ const index = (props) => {
                     <Image
                       width={200}
                       height={300}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       src={`https://image.tmdb.org/t/p/w500${rating.poster_path}`}
                       alt="banner"
                     />
-                        <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                    <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                   </div>
                 </Link>
               );
@@ -210,7 +215,7 @@ const index = (props) => {
                       thumbnail: `https://image.tmdb.org/t/p/w500${play.poster_path}`,
                     },
                   }}
-                  
+
                 >
                   <div
                     className="cursor-pointer mx-auto"
@@ -223,10 +228,12 @@ const index = (props) => {
                     <Image
                       width={200}
                       height={300}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                       src={`https://image.tmdb.org/t/p/w500${play.poster_path}`}
                       alt="banner"
                     />
-                        <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
+                    <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                   </div>
                 </Link>
               );
@@ -239,7 +246,7 @@ const index = (props) => {
 };
 
 
-const fetcher = (url: RequestInfo) => fetch(url).then(r => r.json())
+const fetcher = (url) => fetch(url).then(r => r.json())
 
 export async function getStaticProps(context) {
 
@@ -255,22 +262,22 @@ export async function getStaticProps(context) {
     `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.NEXT_PUBLIC_API_SECRET}`
   );
 
-    // Top rated series
-    const rated = await fetcher(
-      `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-    );
-  
-  
-    // Now Playing
-    const playing = await fetcher(
-      `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
-    );
-  
+  // Top rated series
+  const rated = await fetcher(
+    `https://api.themoviedb.org/3/tv/airing_today?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+  );
 
-  return { props: { popular, genres, rated, playing },  revalidate: 1 }
+
+  // Now Playing
+  const playing = await fetcher(
+    `https://api.themoviedb.org/3/tv/on_the_air?api_key=${process.env.NEXT_PUBLIC_API_SECRET}&language=da&page=1`
+  );
+
+
+  return { props: { popular, genres, rated, playing }, revalidate: 1 }
 }
 
-export function Posts (props) {
+export function Posts(props) {
   // Here the `fetcher` function will be executed on the client-side.
   const { data, error } = useSWR(props, fetcher, { initialData: props })
 

@@ -39,6 +39,8 @@ const SerieInfo = (props) => {
               alt="banner"
               width={400}
               height={600}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               src={`${router.query.thumbnail}`}
             />
           </div>
@@ -47,14 +49,6 @@ const SerieInfo = (props) => {
             <div className="text-2xl font-bold">
               <div className="mb-3">{router.query.original_name}</div>
               <div className="mb-3"> {router.query.rating}</div>
-              {/* <div>
-              Genre:{" "}
-              {router.query.genre ? (
-                router.query.genre
-              ) : (
-                <p>intet genre oplyst</p>
-              )}
-            </div> */}
             </div>
           </div>
         </div>
@@ -98,9 +92,9 @@ const SerieInfo = (props) => {
         </div>
 
         <div className="w-9/12 mx-auto">
-          <div className="text-3xl">
-            <div className="mb-3 mt-3 font-bold">Trailers</div>
-            {props.trailer.results?.map((youtube: { key: any; }) => {
+          <div>
+            <div className="text-3xl mb-3 mt-3 font-bold">Trailers</div>
+            {props.trailer.results != "" ? props.trailer.results.map((youtube: { key: any; }) => {
               return (
                 <div>
                   {props.trailer.results ? (
@@ -111,12 +105,12 @@ const SerieInfo = (props) => {
                       src={`https://www.youtube.com/embed/${youtube.key}`}
                     ></iframe>
                   ) : (
-                    <p>Ingen trailer tilgængelig</p>
+                    <></>
                   )}
                   <br />
                 </div>
               );
-            })}
+            }) : <div>Ingen trailer tilgængelig</div>}
           </div>
         </div>
 
