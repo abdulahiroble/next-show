@@ -124,7 +124,7 @@ const index = (props) => {
                         <StarIcon />
                         {popularity.vote_average}
                       </div>
-                      <Image src={author} placeholder="blur" alt="Picture of the author" />
+                      <Image src={`https://image.tmdb.org/t/p/w500${popularity.poster_path}`} placeholder="blur" alt="Picture of the author" />
                       <div className="text-center text-sm px-2 italic sm:text-md">Tryk for mere info 👆</div>
                     </div>
                   </Link>
