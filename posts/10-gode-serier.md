@@ -1,6 +1,6 @@
 ---
 title: "10 Gode Serier i 2021"
-date: "2021-03-26"
+date: "2021-06-15"
 ---
 
 Her er 10 gode serier du skal se i 2021.
